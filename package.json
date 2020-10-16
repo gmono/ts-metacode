@@ -1,0 +1,9 @@
+{
+  "name": "ts-metacode",
+  "version": "0.5.0",
+  "description": "typescript的元编程工具包",
+  "main": "index.js",
+  "repository": "https://github.com/gmono/ts-metacode.git",
+  "author": "gmono",
+  "license": "MIT"
+}
