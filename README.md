@@ -1,3 +1,131 @@
+**[中文](#说明)**
+[English](#Description)
+
+
+
+
+# Description
+**Packages for typescript metaprogramming**
+
+The functionality has several major components:
+1. **Logic**, including generic comparison templates such as If Equal and a complete mathematical logic system based on and non-operational
+2. **Math**, based on string implementation, support for natural number operations, up to about 12-bit mathematical operations, with two kinds of representation, binary string representation and internal representation (SNum), providing conversion templates, conversion to internal representation can be calculated and compared to make up for the inadequacy of typescript metaprogramming does not support number operations. **Supports the addition, subtraction, multiplication and division of the quadratic arithmetic operations, supports the comparison of numbers greater than or less than or equal to the results of digital comparisons compatible with the logic system, can be used directly for control flow **
+3. **array operations** , support for type mapping of array elements , add delete , etc. , including **typescript-tuple** package most of the functionality of ** while supporting Filter, Zip and other common operations ** .
+4. **object types**, support for object type mapping and fusion, where fusion is a custom fusion policy, the actual object fusion function should be implemented by yourself, according to a predefined fusion policy, such as the name array attributes should be concat or mixed, should not be replaced, the same name attribute will be converted to A|B type, etc.
+5. **Type manipulation**, mainly type mapper, type mapping representation unit, MapUnit, null type None, can be used to map various types, can provide an array such as [[a,b], [b,c], [c,d]] used to represent mapping rules, can be used to convert model types such as crawler to content types (combined with object type manipulation section)
+6. ** string manipulation **, currently implemented JOIN and Split, the future will add more operations
+# Caution
+Logic does not use normal true and false in the system, but uses **[true]**,**[false]** to facilitate multi-bit arithmetic.
+**All logical operations can be performed simultaneously on a boolean array**.
+# Function examples
+## Array manipulation
+**including ordinary add-delete-change, including two special Remove series of functions, can be realized from behind or in front of the excision of a paragraph of the same sequence, return the rest, with MapElement and Filter two collection of operational functions, including Filter supporting a series of judgment templates, such as DeleteSome function, the following string filtering function demo is used This function**
+```ts
+type a=Push<[1,2],1>;
+type b=Concat<a,a>;
+type c=Concat<b,b>;
+type d=Shift<c,3>;
+type e=RemoveEnd<d,[1,2,1]>. type f=Tail<e>; type d=Shift<c,3>; type e=RemoveEnd<d,[1,2,1]>;
+type f=Tail<e>;
+//type f = [1, 2, 1, 1, 2, 1, 1, 2, 1]
+type h=MapElement<f,[[1,5],[2, "hello"]]>
+//type h = [5, "hello", 5, "hello", 5, "hello", 5, "hello", 5]
+```
+## String filtering
+```ts
+//This is an array operation.
+type aaa=Filter<["", "a",""],DeleteSome<[""]>>
+//aaa=["a"]
+```
+
+## String merging and splitting
+```ts
+type a=JOIN<["aaaa", "bbbb"],",">//a="aaaabbbb"
+type b=Split<"aaa","">;//b=["a", "a", "a"]
+type c=Split<"aaa,bbb","">;//a = ["aaa", "bbb"]
+```
+
+## Array type mapping
+```ts
+
+type a=MapElement<[1,2,3,4], [[4,1],[1,2],[2,3],[3,4]]>;
+//type a = [2, 3, 4, 1]
+```
+
+## Recursive mapping of object types
+```ts
+type s=MapRecursion<{
+    a:string;
+    a:string; b:number;
+    test:{
+        b:string;
+    }
+}, [[string, number],[number, string]]>; 
+/**
+ type s = {
+    a: number. b: string; and
+    a: number; b: string. test: {
+    test: {
+        a: number; b: string; test: {
+        }
+};
+
+*/
+```
+**Note that MapElement and its alias MapProp can be used to perform single-level implication of Object's attribute types**.
+## Numbers and comparisons
+**Special values: Zero, One, all operations start with lowercase s, including three comparisons > < =, quadratic operations, with the extends statement can implement complex custom formulas**.
+```ts
+type a=BinToSNum<"1110001">
+type b=BinToSNum<"1001">
+type s=sMul<a,b>
+type isok=sEqual<s,BinToSNum<"111111001">>;
+type n=If<isok, "hello", "world">>; type n=If<isok, "hello", "world">
+//type n = "hello"
+//In this case, s is a string of 1017 x's.
+```
+
+## Typed nested classes based on number crunching
+**currently measured up to 23 layers of nesting, nesting process does not lose type**
+```ts
+class test<A extends string,H=(sEqual<A,Zero> extends [false]? test<sDec<A>>>:void)>{
+    get test():H{
+        return null as unknown as H;
+    }
+    public hello():(H extends void? "hello": "word"){
+        return "" as unknown as any;
+    }
+}
+
+// 23 heavy types It seems that nesting can only nest 23 layers.
+let a=new test<BinToSNum<"10111">>()
+a.test.test.test.test.hello();
+```
+
+## Logic control
+Note that before using control flow templates such as If, you should consider whether the evaluation is **recursive**, because the parameters passed such as templates are **pre-calculated**, and the extends operation is **short-circuited**, using If instead of extends may lead to **infinite recursion **problems, it is recommended to use control flow templates such as If in the case that **then** and **else** are directly evaluable.
+```ts
+type ttt<b,c>=If<Equal<b,c>, "hello", "world">;
+type s=ttt<1,2>;
+//type s = "world"
+```
+**Use control flow with caution and do not use it instead of extends statements in the definition of recursive types**
+
+## Logical operations
+logical operations including, with or without, different or same as or, implicit, equivalence (biconditional), theoretically can be used to implement propositional logic systems, in the future may add quantifiers to support predicate logic operations
+**Note that EQ and XNOR are defined differently; XNOR is defined based on the XOR operation and EQ is defined based on the INFER operation, and the following code proves that it is constant**
+```ts
+type a<b,c>=EQ<EQ<b,c>,XNOR<b,c>>;
+type tt=[a<[false],[false]>,a<[true],[false]>,a<[false],[true]>,a<[true],[true]>];
+//tt=[[true],[true],[true],[true]]
+// It follows that a is a perpetual truth, i.e., EQ is always equal to XNOR
+//((a->b) and (b->a))<->(not(a^b))
+```
+
+# Plan description
+This package is a metaprogramming package, and will include various related packages in the future, the next step is to include typescript-tuple.
+
+
 # 说明
 **typescript元编程使用的包**
 
