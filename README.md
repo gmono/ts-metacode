@@ -55,18 +55,17 @@ type a=MapElement<[1,2,3,4], [[4,1],[1,2],[2,3],[3,4]]>;
 ## Recursive mapping of object types
 ```ts
 type s=MapRecursion<{
-    a:string;
     a:string; b:number;
     test:{
         b:string;
     }
 }, [[string, number],[number, string]]>; 
 /**
- type s = {
-    a: number. b: string; and
-    a: number; b: string. test: {
+type s = {
+    a: number;
+    b: string;
     test: {
-        a: number; b: string; test: {
+        b: number;
         }
 };
 
@@ -84,6 +83,7 @@ type n=If<isok, "hello", "world">>; type n=If<isok, "hello", "world">
 //type n = "hello"
 //In this case, s is a string of 1017 x's.
 ```
+![](res/2020-10-17-08-45-00.png)
 
 ## Typed nested classes based on number crunching
 **currently measured up to 23 layers of nesting, nesting process does not lose type**
@@ -206,7 +206,7 @@ type n=If<isok,"hello","world">
 //type n = "hello"
 //此时s为1017个x组成的字符串
 ```
-
+![](res/2020-10-17-08-45-36.png)
 ## 基于数字计算的有类型嵌套类
 **目前测得可最多嵌套23层,嵌套过程中不丢失类型**
 ```ts

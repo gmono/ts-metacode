@@ -1,6 +1,6 @@
 {
   "name": "ts-metacode",
-  "version": "0.5.5-maintain1",
+  "version": "0.5.5-maintain4",
   "description": "typescript的元编程工具包",
   "main": "index.js",
   "repository": "https://github.com/gmono/ts-metacode.git",
