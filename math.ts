@@ -2,6 +2,7 @@
 // type a=nAnd<[true,false],[false,true]>
 
 import { MapElement, AND, NOT } from ".";
+import { JOIN } from "./string";
 
 //!将01表示的二进制数字的字符串形式 和boolean数组互相转换
 //bin和 logic的互换
@@ -12,17 +13,7 @@ export type LogicToBin<s extends boolean[]>=JOIN<MapElement<s,[[true,"1"],[false
 // type p=TransToLogic<"10010001">;
 // type aaa=TransToString<p>
 
-//!字符串操作
-export type CanBeString=string | number | bigint | boolean | null | undefined;
-export type JOIN<x extends CanBeString[],sep extends CanBeString="">=x extends []? "": x extends [infer s,...infer rest]? s extends CanBeString? rest extends []? `${s}`:(rest extends CanBeString[]? `${s}${sep}${JOIN<rest,sep>}`:never):never:never;
-export type Split<x extends CanBeString,sep extends CanBeString>=x extends ""? []:(
-    x extends `${infer cont}${sep}${infer rest}`?(
-        //还有后面
-        [cont,...Split<rest,sep>]
-    ):[x]
-);
-type a=Split<"aaa","a">
-// type a=JOIN<["aaaa","bbbb"],",">
+
 
 //!!基于字符串序列的自然数体系 构建中
 //重新用字符串定义公理系统 自然数

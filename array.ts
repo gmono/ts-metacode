@@ -21,8 +21,13 @@ export type Head<Raw extends any[]>=Raw extends [infer S,...infer Rest] ?S:never
 export type Tail<Raw extends any[]>=Raw extends [infer Set,...infer Rest]? Rest:never;
 export type Shift<Raw extends any[],Ele>=[Ele,...Raw];
 export type Pop<Raw extends any[]>= Raw extends [...infer P,infer Ele]? P:never;
-
-
+// type a=Push<[1,2],1>;
+// type b=Concat<a,a>;
+// type c=Concat<b,b>;
+// type d=Shift<c,3>;
+// type e=RemoveEnd<d,[1,2,1]>;
+// type f=Tail<e>;
+// type h=MapElement<f,[[1,5],[2,"hello"]]>
 export type RemoveFront<R extends any[],K extends any[]>=R extends [...K,...infer Rest]? Rest:never;
 export type RemoveEnd<R extends any[],K extends any[]>=R extends [...infer Rest,...K]? Rest:never;
 
@@ -50,3 +55,4 @@ export type DeleteSome<art extends any[]>=art extends [infer n,...infer r]?( [[n
 
 // type aaa=Filter<["","a",""],DeleteSome<[""]>>
 
+// type a=MapElement<[1,2,3,4],[[4,1],[1,2],[2,3],[3,4]]>

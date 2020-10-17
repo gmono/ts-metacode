@@ -41,7 +41,8 @@ export type INFER<a,b>=OR<NOT<a>,b>;
 //! 或可用XNOR代替 理论上XNOR与EQ等价 这里EQ不能工作 而XNOR和Equal可以 情况奇特 可能是And的直接求值导致的
 export type EQ<a,b>=AND<INFER<a,b>,INFER<b,a>>;
 
-
+type a<b,c>=EQ<EQ<b,c>,XNOR<b,c>>;
+type tt=[a<[false],[false]>,a<[true],[false]>,a<[false],[true]>,a<[true],[true]>]
 //这里竟然是永真式 md
 //? 看似是因为extends 运算的自己的特性，而使用映射表实现Not操作可有效避免这种问题
 // type aa<a,b>=INFER<INFER<a,b>,INFER<b,a>>

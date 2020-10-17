@@ -1,6 +1,6 @@
 {
   "name": "ts-metacode",
-  "version": "0.5.1",
+  "version": "0.5.4",
   "description": "typescript的元编程工具包",
   "main": "index.js",
   "repository": "https://github.com/gmono/ts-metacode.git",
@@ -15,6 +15,7 @@
     "template",
     "api",
     "typemapping",
-    "string","math","array","object","logic"
+    "string","math","array","object","logic",
+    "元编程","模板元编程","泛型编程"
   ]
 }

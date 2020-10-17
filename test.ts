@@ -1,5 +1,6 @@
 import type {LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec} from "."
 // import { BinTransToLogic, sMul, sEqual, Zero, sDec } from './math';
+import { Equal } from './logic';
 
 
 type a=BinToSNum<"1110001">
@@ -21,3 +22,6 @@ class test<A extends string,H=(sEqual<A,Zero> extends [false]? test<sDec<A>>:voi
 //23重类型 似乎嵌套只能嵌套23层
 let a=new test<BinToSNum<"10111">>()
 a.test.test.test.test.test.test.test.test.test.test.hello();
+
+type ttt<b,c>=If<Equal<b,c>,"hello","world">;
+type s=ttt<1,2>;

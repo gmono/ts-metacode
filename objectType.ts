@@ -60,3 +60,4 @@ export type MapRecursion<T extends any,M extends MapUnit<any,any>[],JudgeType=ob
 //         b:string;
 //     }
 // },[[string,number],[number,string]]>; 
+// type a=s["test"]
