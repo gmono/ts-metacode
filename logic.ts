@@ -51,3 +51,15 @@ type tt=[a<[false],[false]>,a<[true],[false]>,a<[false],[true]>,a<[true],[true]>
 // XNOR应该可以和双条件等价 ，并可分解为 (a->b) and (b->a)
 // type k=EQ<true,false> extends XNOR<true,false>? true:false;
 export type OR<a,b>=NOT<AND<NOT<a>,NOT<b>>>;
+
+
+//量词 由于无法支持通用泛型 无法支持谓词逻辑 只能由此替代
+//返回never表示出错 空的返回true
+export type ALL<s extends boolean[]>=s extends [infer x,...infer rest]?(
+    x extends false? [false]:(rest extends boolean[]? ALL<rest>:never)
+):[true];
+export type ANY<s extends boolean[]>=NOT<ALL<NOT<s>>>;
+
+
+// type a=ANY<[true,false,false]>;
+// type b=ALL<[true,false,false]>;

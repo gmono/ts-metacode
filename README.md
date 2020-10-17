@@ -112,7 +112,7 @@ type s=ttt<1,2>;
 **Use control flow with caution and do not use it instead of extends statements in the definition of recursive types**
 
 ## Logical operations
-logical operations including, with or without, different or same as or, implicit, equivalence (biconditional), theoretically can be used to implement propositional logic systems, in the future may add quantifiers to support predicate logic operations
+Logical operations including, with or without, different or same as or, implicit, equivalence (biconditional), theoretically can be used to implement the propositional logic system, due to the lack of support for generic directly as type variables passed, **currently can not support the predicate logic**, can only use a limited number of **ALL**,**ANY** operations instead.
 **Note that EQ and XNOR are defined differently; XNOR is defined based on the XOR operation and EQ is defined based on the INFER operation, and the following code proves that it is constant**
 ```ts
 type a<b,c>=EQ<EQ<b,c>,XNOR<b,c>>;
@@ -120,6 +120,9 @@ type tt=[a<[false],[false]>,a<[true],[false]>,a<[false],[true]>,a<[true],[true]>
 //tt=[[true],[true],[true],[true]]
 // It follows that a is a perpetual truth, i.e., EQ is always equal to XNOR
 //((a->b) and (b->a))<->(not(a^b))
+type a=ANY<[true,false,false]>;
+type b=ALL<[true,false,false]>;
+//a=[true[ b=[false]
 ```
 
 # Plan description
@@ -234,7 +237,7 @@ type s=ttt<1,2>;
 **请谨慎使用控制流，切勿在递归类型的定义中使用控制流代替extends语句**
 
 ## 逻辑运算
-**逻辑运算包括，与或非，异或同或，蕴含式，等价式（双条件式），理论上可用于实现命题逻辑系统，未来可能添加量词支持谓词逻辑运算**
+**逻辑运算包括，与或非，异或同或，蕴含式，等价式（双条件式），理论上可用于实现命题逻辑系统，由于不支持泛型直接作为类型变量传递，目前无法支持谓词逻辑，只能使用有限的ALL,ANY运算代替**
 **注意，EQ和XNOR的定义不同，XNOR基于XOR运算定义，EQ基于INFER运算定义，以下代码证明其恒定**
 ```ts
 type a<b,c>=EQ<EQ<b,c>,XNOR<b,c>>;
@@ -242,6 +245,9 @@ type tt=[a<[false],[false]>,a<[true],[false]>,a<[false],[true]>,a<[true],[true]>
 //tt=[[true],[true],[true],[true]]
 //由此可知，a为永真式，即EQ恒等于XNOR
 //((a->b) and (b->a))<->(not(a^b))
+type a=ANY<[true,false,false]>;
+type b=ALL<[true,false,false]>;
+//a=[true[ b=[false]
 ```
 
 # 计划说明
