@@ -84,7 +84,13 @@ type n=If<isok, "hello", "world">>; type n=If<isok, "hello", "world">
 //In this case, s is a string of 1017 x's.
 ```
 ![](res/2020-10-17-08-45-00.png)
-
+## Base conversion
+```ts
+type a=OCT<"176">
+type b=BinToSNum<a>
+```
+![](res/2020-10-18-01-59-44.png)
+![](res/2020-10-18-02-00-34.png)
 ## Typed nested classes based on number crunching
 **currently measured up to 23 layers of nesting, nesting process does not lose type**
 ```ts
@@ -210,6 +216,14 @@ type n=If<isok,"hello","world">
 //此时s为1017个x组成的字符串
 ```
 ![](res/2020-10-17-08-45-36.png)
+
+## 进制转换
+```ts
+type a=OCT<"176">
+type b=BinToSNum<a>
+```
+![](res/2020-10-18-01-59-44.png)
+![](res/2020-10-18-02-00-34.png)
 ## 基于数字计算的有类型嵌套类
 **目前测得可最多嵌套23层,嵌套过程中不丢失类型**
 ```ts

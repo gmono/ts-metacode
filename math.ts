@@ -1,8 +1,11 @@
+import { MapType } from '.';
 
 // type a=nAnd<[true,false],[false,true]>
 
 import { MapElement, AND, NOT } from ".";
-import { JOIN } from "./string";
+import { JOIN, CanBeString, Split } from './string';
+import { MapUnit } from './common';
+import { Concat } from './array';
 
 //!将01表示的二进制数字的字符串形式 和boolean数组互相转换
 //bin和 logic的互换
@@ -73,3 +76,62 @@ export type BinToSNum<s extends string>=LogicToSNum<BinToLogic<s>>;
 //!从snum转换回到bin和logic 目前没有实现 数字运算和比较在snum状态 并不需要转换回去
 
 
+//可用于支持 1 2 4 8 16 等2 的幂次进制
+//非幂次可自行发挥想象力。。
+type MapFourBaseToBin=[
+  ["0","00"],
+  ["1","01"],
+  ["2","10"],
+  ["3","11"]
+];
+type MapOCTToBin=
+[
+  ["0","000"],
+  ["1","001"],
+  ["2","010"],
+  ["3","011"],
+  ["4","100"],
+  ["5","101"],
+  ["6","110"],
+  ["7","111"]
+]
+// type MapHEXToBin=
+// [
+//   ["0","0000"],
+//   ["1","0001"],
+//   ["2","0010"],
+//   ["3","0011"],
+//   ["4","0100"],
+//   ["5","0101"],
+//   ["6","0110"],
+//   ["7","0111"],
+//   ["8","1000"],
+//   ["9","1001"],
+//   ["A","1010"],
+//   ["B","1011"],
+//   ["C","1100"],
+//   ["D","1101"],
+//   ["E","1110"],
+//   ["F","1111"],
+//   ["a","1010"],
+//   ["b","1011"],
+//   ["c","1100"],
+//   ["d","1101"],
+//   ["e","1110"],
+//   ["f","1111"]
+// ]
+//进制映射器 可用于自定义进制
+export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMap<Split<s,"">,mt>;
+export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
+  MapType<a,mt> extends CanBeString?
+  b extends CanBeString[]?
+   `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
+):Zero;
+
+export type OCT<s extends CanBeString>=BaseMap<s,MapOCTToBin>;
+// export type HEX<s extends CanBeString[]>=BaseMap<s,MapHEXToBin>;
+
+// type a=HEX<>
+
+// type a=OCT<"176">
+// type b=BinToSNum<a>
