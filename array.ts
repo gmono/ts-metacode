@@ -28,6 +28,7 @@ export type Head<Raw extends any[]>=Raw extends [infer S,...infer Rest] ?S:never
 //与ts tuple定义重合
 //取最后面 即去掉前面后的部分
 export type Tail<Raw extends any[]>=Raw extends [infer Set,...infer Rest]? Rest:never;
+// type a=Tail<[""]>
 //从前面添加一个
 export type Shift<Raw extends any[],Ele>=[Ele,...Raw];
 //得到最左边一个 也就是取第一个

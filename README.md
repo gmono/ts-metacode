@@ -135,6 +135,51 @@ type b=ALL<[true,false,false]>;
 This package is a metaprogramming package, and will include various related packages in the future, the next step is to include typescript-tuple.
 
 
+# 1.0-alpha-Re1 version update content
+**Attention, this version has destructive content, please be mentally prepared before upgrading**
+1. **Increase**: Incorporates the beneficial content of typescript-tuple and typescript-logic packages
+2. **Increase**:
+   1. The DEC function has been added, and the hexadecimal conversion based on multiplication instead of string splicing has been tried. **The upper limit of the OCT function has not been solved, but the DEC function is basically available, and there is basically no upper limit problem**
+   2. The Num function has been added, which can convert SNum into a normal number, but due to the recursion depth limit of the Split function, there are great limitations. Only small numbers are supported, and the maximum can only reach a dozen.
+3. **Increase**:
+   1. The array part adds a string operation part and a search part, including replacement and removal, and new functions:
+      1. IndexOf search function, you can get the substring position
+      2. Add Replace series functions
+      3. Add functions to remove content in the middle, RemoveSame and RemoveAllSame
+   2. Add Skip function to the set operation section
+4. **Modification**: Some functions have been added to the array operation section, and the names of some functions have been modified. **Please upgrade carefully here**
+5. **Modification**: The meaning of the OCT function has been changed. Now all the hexadecimal conversion functions directly output SNum, which can be used directly
+## 1.x version update plan
+1. Improve the math part
+   1. Support the conversion from SNum to Bin and Logic, mainly to convert to Logic and then to Bin
+   2. Support decimal system, through the conversion from SNum to Bin, the conversion from decimal to binary is realized through calculation, and SNum can be defined by decimal
+   3. Support hexadecimal, solve the bug that can only support up to 12 digits, and solve the hidden dangers of the MapType system
+2. The depth limitation problem of MapType, that is, the limitation of the number of items in the mapping table. Consider solving the depth problem through binary matching. This may rely on the improvement of the Array system, including the Get Slice Concat and Insert functions, which will be implemented with the support of the mathematical system
+3. Add the actual implementation of the Merge function to implement the Merge type fusion strategy, instead of the general assign function
+4. Implement a type guard system integrated with the type system, such as arr obj num str many date, etc., you can directly use the object definition to define the type, and get the final actual type through the type mapping function, and you can use the type verification tool. Perform type check and detection according to the defined type guard object, materialize the type of typescript and fully support editor prompts
+5. Replace some operations with the content in the typescript-tuple package
+6. **Apply all the functions of array manipulation to the string module through JOIN and Split functions**
+7. Array operation part, based on SNum system to implement various position-based operations, including Get Slice Insert, etc.
+8. Use dichotomy to implement the sDiv function instead of counting
+9. Increase instead of function, for sNum, introduce array operation capability
+10. Continue to absorb the content and useful parts of similar packages
+## 2.x version pre-plan
+1. Add a new module to solve various problems caused by the inability to support predicate logic, that is, it is impossible to directly pass a parameter-free generic, that is, the problem of a generic function as a first-class citizen. Generics, use generic reference tables, and implement addressing through string
+2. Improve the foundation of SNum, from string implementation to more optimized other ways
+3. Realize various extraction and judgment packaging operations for Promise Iterator Iterable AsyncIterable and other systems that come with generic types
+4. Consider supporting recursive types, based on mathematical systems
+5. (To be determined) Add new modules to implement a complete AST system, support direct code analysis to obtain AST, prepare to support high-level languages
+6. (To be determined) Add an assembly instruction support system, support assembly instructions, and prepare for future support of high-level languages
+7. (To be determined) Add new functions based on assembly instructions and high-level languages, including many functions that could not be achieved before
+8. (To be determined) Before supporting assembly, consider first supporting a lisp-like language
+9. (To be determined) Support the realization of various data structures in the type system
+10. (To be determined) Use KMP algorithm to implement string search, etc., may be based on high-level language support, and implement some common algorithms with a type system, such as the shortest path and game tree, etc.
+# Compare
+Comparison with common packages:
+1. typescript-logic: unit logic. The implementation principle is similar to the logic part of this package. It can be repackaged to perform element-wise operations on the array to convert to multiple bits, but each operation must be packaged, and it does not define the INFER EQ operation , And is not compatible with the digital computing system of this package
+2. typescript-tuple: absorb the array operation part of it, and absorb the digital control method in it, and establish a new mathematical operation mechanism
+
+
 # 说明
 **typescript元编程使用的包**
 
@@ -271,13 +316,16 @@ type b=ALL<[true,false,false]>;
 **注意，此版本有破坏性内容，升级前请做好心理准备**
 1. **增加**:吸纳了typescript-tuple和typescript-logic包的有益内容
 2. **增加**:
+   1. 增加了DEC函数,尝试了基于乘法而非字符串拼接的进制转换,**OCT函数的上限问题尚未解决,但DEC函数基本可用,基本无上限问题**
+   2. 增加了Num函数,可以把SNum转化为普通number,但由于Split函数的递归深度限制,存在很大的局限性,只支持较小的数字,最高只能到十几
+3. **增加**:
    1. 数组部分增加了串操作部分和搜索部分,包括替换和移除,新增函数:
       1. IndexOf搜索函数，可以得到子串位置
       2. 增加Replace系列函数
       3. 增加中间移除内容的函数,RemoveSame 和RemoveAllSame
    2. 集合操作部分添加Skip函数
-3. **修改**:数组操作部分增加了一些功能，并修改了部分函数的名字,**此处请谨慎升级**
-4. **修改**:更改了OCT函数的含义,现在所有进制转换函数都直接输出SNum,可直接使用
+4. **修改**:数组操作部分增加了一些功能，并修改了部分函数的名字,**此处请谨慎升级**
+5. **修改**:更改了OCT函数的含义,现在所有进制转换函数都直接输出SNum,可直接使用
 ## 1.x 版本更新计划
 1. 改进数学部分
    1. 支持从SNum到Bin和Logic的转换,主要是转化到Logic然后到Bin
@@ -286,22 +334,24 @@ type b=ALL<[true,false,false]>;
 2. MapType的深度限制问题,即映射表Item数量限制问题,考虑通过二分方法匹配解决深度问题,这可能依赖Array系统的改进,包括 Get Slice Concat 和Insert函数,这些函数将在数学系统支持下实现
 3. 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
 4. 实现一个与类型系统整合的type guard 系统,如arr obj num str many date等等,可直接使用对象定义来定义类型,并通过类型映射函数得到最终实际类型,并可通过类型校验工具,根据定义的type guard对象进行类型校验和检测,将typescript的类型实体化并完整支持编辑器提示 
-5. **将数组操作的功能，通过JOIN和Split函数，全部应用到string模块中**
-6. 数组操作部分,基于SNum系统实现各种基于位置的操作,包括Get  Slice Insert 等
-7. 将sDiv函数使用二分法实现,而非使用计数法
-8. 增加而非函数,对sNum,引入数组操作能力
-9. 持续吸纳同类包的内容和有益部分
+5. 将一些操作使用typescript-tuple包中的内容替代
+6. **将数组操作的功能，通过JOIN和Split函数，全部应用到string模块中**
+7. 数组操作部分,基于SNum系统实现各种基于位置的操作,包括Get  Slice Insert 等
+8. 将sDiv函数使用二分法实现,而非使用计数法
+9. 增加而非函数,对sNum,引入数组操作能力
+10. 持续吸纳同类包的内容和有益部分
 ## 2.x 版本预计划
 1. 添加新模块,解决到各种由于无法支持谓词逻辑而导致的问题,即无法直接传递一个无参泛型,也即泛型函数作为一等公民的问题,目前考虑对系统内部的各种泛型,使用泛型引用表,通过string进行寻址实现
-2. 实现对Promise Iterator Iterable AsyncIterable等系统自带泛型类型的各种提取判断包装操作
-3. 考虑对递归类型进行支持,基于数学系统
-4. (待定)添加新模块,实现一个完整的AST系统,支持直接对代码进行解析得到AST,准备支持高级语言
-5. (待定)添加一个汇编指令支持系统,支持汇编指令,为未来支持高级语言做准备
-6. (待定)添加基于汇编指令和高级语言的新功能,包括很多以前无法实现的功能
-7. (待定)在支持汇编前,考虑先对一个类lisp语言进行支持
-8. (待定)支持各种数据结构在类型系统中的实现
-9. (待定)把字符串搜索等使用KMP算法等实现，可能基于高级语言支持,将一些常见算法用类型系统实现,如最短路和博弈树等
+2. 改进SNum的基础,从string实现到更优化的其他方式实现
+3. 实现对Promise Iterator Iterable AsyncIterable等系统自带泛型类型的各种提取判断包装操作
+4. 考虑对递归类型进行支持,基于数学系统
+5. (待定)添加新模块,实现一个完整的AST系统,支持直接对代码进行解析得到AST,准备支持高级语言
+6. (待定)添加一个汇编指令支持系统,支持汇编指令,为未来支持高级语言做准备
+7. (待定)添加基于汇编指令和高级语言的新功能,包括很多以前无法实现的功能
+8. (待定)在支持汇编前,考虑先对一个类lisp语言进行支持
+9. (待定)支持各种数据结构在类型系统中的实现
+10. (待定)把字符串搜索等使用KMP算法等实现，可能基于高级语言支持,将一些常见算法用类型系统实现,如最短路和博弈树等
 # 比较
 与常用包的比较:
 1. typescript-logic :单位逻辑，实现原理与本包logic部分类似，可通过重新包装，对数组进行element-wise操作转换为多位，但每个运算都要包装，且其没有定义INFER EQ操作，同时无法与本包的数字运算体系兼容
-2. typescript-tuple: 
+2. typescript-tuple: 吸纳其中的数组操作部分,并吸取其中的数字控制方法,建立一个新的数学运算机制

@@ -1,11 +1,11 @@
-import { MapType } from '.';
+import { MapType, Push } from '.';
 
 // type a=nAnd<[true,false],[false,true]>
 
 import { MapElement, AND, NOT } from ".";
 import { JOIN, CanBeString, Split } from './string';
 import { MapUnit } from './common';
-import { Concat } from './array';
+import { Concat, Tail } from './array';
 
 //!将01表示的二进制数字的字符串形式 和boolean数组互相转换
 //bin和 logic的互换
@@ -74,9 +74,9 @@ export type BinToSNum<s extends string>=LogicToSNum<BinToLogic<s>>;
 // type num=TransBinToSNum<"11111111">;
 // type num2=TransBinToSNum<"1111">;
 // type sum=sMul<num,num2>;
-//!从snum转换回到bin和logic 目前没有实现 数字运算和比较在snum状态 并不需要转换回去
-
-
+//!从snum转换回到bin和logic 还没实现
+//! 此处为把snum转换为十进制数字的方法
+export type Num<s extends string>=Split<s,"">["length"];
 //可用于支持 1 2 4 8 16 等2 的幂次进制
 //非幂次可自行发挥想象力。。
 type MapFourBaseToBin=[
@@ -122,6 +122,9 @@ type MapOCTToBin=
 //   ["f","1111"]
 // ]
 //进制映射器 可用于自定义进制
+
+//注意 由于使用的Split函数有缺陷 有深度限制
+//所有使用basemap 的进制转换 包括OCT等都存在问题
 export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMap<Split<s,"">,mt>;
 export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
   MapType<a,mt> extends CanBeString?
@@ -129,12 +132,71 @@ export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s ex
    `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
 ):Zero;
 
+//!目前OCT存在上限太低问题,尚未修复
 export type OCT<s extends string>=BinToSNum<BaseMap<s,MapOCTToBin>>;
 export type Bin<s extends string>=BinToSNum<s>;
+
+//此处使用
+ type _Dec<s extends string[]>=s extends [...infer b,infer a]?
+(
+  b extends []?  (a extends string?_MapDEC<a>:never):
+  (
+    //如果b不为空 把a*10 后传递到下一级
+    a extends string? b extends string[]?
+    sAdd<_MapDEC<a>,sMul<_Dec<b>,Ten>>:never:never
+  )
+):Zero;
+export type Dec<s extends string>=_Dec<Split<s,"">>
+// type a=Dec<"10">
+// type s=Num<a>
+// export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
+// (
+//   Num<sMul<Now,"xx">> extends s?sMul<Now,"xx">:
+//   (
+//     //不是正好相等
+//     sLessThan<sMul<Now,"xx">>
+//   )
+// );
+// type a=DEC<5>
 // export type HEX<s extends CanBeString[]>=BaseMap<s,MapHEXToBin>;
 
+//准备把sNum系统改为Num系统 基于数组的数字体系
+//改进num改为使用乘法实现
+//原理为数数数到等于为止 由于无法判断大小
+//如果snum可以变为logic 那么可以使用二分法实现
+type __Num<a extends number,Now extends any[]=[]>=Push<Now,"x">["length"] extends a? Push<Now,"x">:__Num<a,Push<Now,"x">>;
+//这个只能转换0-9
+type _MapDEC<s extends string>=MapType<s,[
+  ["0",""],
+  ["1","x"],
+  ["2","xx"],
+  ["3","xxx"],
+  ["4","xxxx"],
+  ["5","xxxxx"],
+  ["6","xxxxxx"],
+  ["7","xxxxxxx"],
+  ["8","xxxxxxxx"],
+  ["9","xxxxxxxxx"],
+]>
+//10
+type Ten=sMul<"xxxxx","xx">;
 // type a=HEX<>
 
 // type a=OCT<"176">
 // type b=BinToSNum<a>
 
+type a=SplitDec<100>
+type MapSDecToDec=[
+  ["0",0],
+  ["1",1],
+  ["2",2],
+  ["3",3],
+  ["4",4],
+  ["5",5],
+  ["6",6],
+  ["7",7],
+  ["8",8],
+  ["9",9],
+];
+//分割数字，最后是一个number数组
+type SplitDec<a extends number|string>=MapElement<Split<`${a}`,"">,MapSDecToDec>;
