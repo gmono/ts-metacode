@@ -38,3 +38,7 @@ export * from "./objectType"
 export * from "./math"
 export * from "./logic"
 export * from "./string"
+
+//整合typescriopt tuple包 未来将作出包装和改进
+export {IsFinite,} from "typescript-tuple"
+

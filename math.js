@@ -1,17 +1,16 @@
-import { MapType } from '.';
-
-// type a=nAnd<[true,false],[false,true]>
-
-import { MapElement, AND, NOT } from ".";
-import { JOIN, CanBeString, Split } from './string';
-import { MapUnit } from './common';
-import { Concat } from './array';
-
-//!将01表示的二进制数字的字符串形式 和boolean数组互相转换
-//bin和 logic的互换
-export type BinToLogic<s extends string>=s extends "" ?[]:
-                            s extends `0${infer tail}`? [false,...BinToLogic<tail>]:
-                            s extends `1${infer tail}`? [true,...BinToLogic<tail>]:never;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+`0${infer;
+tail;
+`? [false,...BinToLogic<tail>]:
+                            s extends `;
+1;
+$;
+{
+    infer;
+    tail;
+}
+`? [true,...BinToLogic<tail>]:never;
 export type LogicToBin<s extends boolean[]>=JOIN<MapElement<s,[[true,"1"],[false,"0"]]>>
 // type p=TransToLogic<"10010001">;
 // type aaa=TransToString<p>
@@ -29,18 +28,66 @@ export type SNum=string;
 export type Zero="";
 export type One="x"
 //负数 目前不支持负数
-export type Minus<R extends string>=`-${R}`;
+export type Minus<R extends string>=` - $;
+{
+    R;
+}
+`;
 //比较
-export type sMoreThan<P extends  string,R extends string>=P extends `${R}x`? [true]:[false];
+export type sMoreThan<P extends  string,R extends string>=P extends `;
+$;
+{
+    R;
+}
+x `? [true]:[false];
 export type sEqual<P extends  string,R extends string>=P extends R? [true]:[false];
 export type sLessThan<P extends  string,R extends string>=AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
 
-export type sInc<R extends string>=`${R}x`;
-export type sDec<R extends string>=R extends `${infer T}x`? T:Zero;
-export type sAdd<R extends string,P extends string>=`${R}${P}`;
-export type sSub<R extends string,P extends string>=R extends `${P}${infer T}`? T:never;
+export type sInc<R extends string>=`;
+$;
+{
+    R;
+}
+x `;
+export type sDec<R extends string>=R extends `;
+$;
+{
+    infer;
+    T;
+}
+x `? T:Zero;
+export type sAdd<R extends string,P extends string>=`;
+$;
+{
+    R;
+}
+$;
+{
+    P;
+}
+`;
+export type sSub<R extends string,P extends string>=R extends `;
+$;
+{
+    P;
+}
+$;
+{
+    infer;
+    T;
+}
+`? T:never;
 export type sMul<R extends string,P extends string>=P extends  Zero? Zero:(
-  `${R}${sMul<R,sDec<P>>}`
+  `;
+$;
+{
+    R;
+}
+$;
+{
+    sMul();
+}
+`
 )
 //! 注意 关键 ，当计算泛型参数时是一起计算的 而 extends短路 因此用if可能导致递归无限
 //需要处理p大于r的情况
@@ -126,7 +173,16 @@ export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMa
 export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
   MapType<a,mt> extends CanBeString?
   b extends CanBeString[]?
-   `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
+   `;
+$;
+{
+    MapType();
+}
+$;
+{
+    _BaseMap();
+}
+`:never:never
 ):Zero;
 
 export type OCT<s extends string>=BinToSNum<BaseMap<s,MapOCTToBin>>;
@@ -138,3 +194,5 @@ export type Bin<s extends string>=BinToSNum<s>;
 // type a=OCT<"176">
 // type b=BinToSNum<a>
 
+;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWF0aC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm1hdGgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFZc0MsSUFBSSxLQUFNLEFBQUQsQ0FBQTtBQUFDLElBQUksQ0FBQTtBQUFDO3VDQUNkLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQTtJQUFDLEtBQUssQ0FBQTtJQUFDLElBQUksQ0FBQTtDQUFDO0FBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7OztxQ0FrQmhCLEdBQUMsQ0FBQyxDQUFBO0FBQUE7SUFBQyxDQUFDLENBQUE7Q0FBQztBQUFBOztxRUFFMkIsQ0FBQTtBQUFBLENBQUMsQ0FBQTtBQUFBO0lBQUMsQ0FBQyxDQUFBO0NBQUM7QUFBQSxDQUFDLENBQUE7Ozs7b0NBSXRDLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQTtJQUFDLENBQUMsQ0FBQTtDQUFDO0FBQUEsQ0FBQyxDQUFBOzhDQUNLLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQTtJQUFDLEtBQUssQ0FBQTtJQUFDLENBQUMsQ0FBQTtDQUFDO0FBQUEsQ0FBQyxDQUFBO3FEQUNKLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQTtJQUFDLENBQUMsQ0FBQTtDQUFDO0FBQUEsQ0FBQyxDQUFBO0FBQUE7SUFBQyxDQUFDLENBQUE7Q0FBQztBQUFBOytEQUNFLENBQUE7QUFBQSxDQUFDLENBQUE7QUFBQTtJQUFDLENBQUMsQ0FBQTtDQUFDO0FBQUEsQ0FBQyxDQUFBO0FBQUE7SUFBQyxLQUFLLENBQUE7SUFBQyxDQUFDLENBQUE7Q0FBQztBQUFBOztHQUUxRSxDQUFBO0FBQUEsQ0FBQyxDQUFBO0FBQUE7SUFBQyxDQUFDLENBQUE7Q0FBQztBQUFBLENBQUMsQ0FBQTtBQUFBO0lBQUMsSUFBSSxFQUFXLENBQUE7Q0FBQztBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXNGckIsQ0FBQTtBQUFBLENBQUMsQ0FBQTtBQUFBO0lBQUMsT0FBTyxFQUFNLENBQUE7Q0FBQztBQUFBLENBQUMsQ0FBQTtBQUFBO0lBQUMsUUFBUSxFQUFNLENBQUE7Q0FBQztBQUFBOzs7Ozs7Ozs7Ozs7QUFZckMsQ0FBQSJ9
