@@ -5,7 +5,8 @@
 //映射数组和对象
 
 import { MapUnit, MapType } from ".";
-import { Zero, SNum, sEqual, sDec, OCT } from './math';
+import { Zero, SNum, sEqual, sDec, OCT, sInc } from './math';
+import { JOIN } from './string';
 
 //此映射不递归 用于映射数组元素足够 ，对object只能映射第一层
 export type MapElement<T extends any,M extends MapUnit<any,any>[]>=
@@ -48,8 +49,10 @@ type d=Shift<c,3>;
 type e=ReplaceAll<[1,2,3,2,2,3],[2,3],[1,2,3]>;
 //8进制
 type k=Skip<e,OCT<"3">>
+type idx=IndexOf<k,[3]>
 type f=Tail<e>;
 type h=MapElement<f,[[1,5],[2,"hello"]]>
+type cc=JOIN<h,"">
 type aa=Last<[1]>;
 
 
@@ -81,8 +84,15 @@ export type ReplaceAll<R extends any[],A extends any[],B extends any[]>=
 R extends []? []:
 (RemoveFront<R,A> extends never? Shift<ReplaceAll<Tail<R>,A,B>,Head<R>>:[...B,...ReplaceAll<RemoveFront<R,A>,A,B>]);
 
-//搜索部分 数字用snum表示
- export type IndexOf<R extends any[],A extends any[],NowIndx=Zero>;
+//搜索部分 数字用snum表示 没找到返回never
+ export type IndexOf<R extends any[],A extends any[],NowIndx extends SNum=Zero>=
+ R extends []? never:
+ RemoveFront<R,A> extends never?
+ (
+     //没有找到 递归
+     IndexOf<Tail<R>,A,sInc<NowIndx>>
+ )
+ :NowIndx
 //把数组的第一个元素放到最后 一般用于反转 参数列表 把回调函数弄到前面来 方便处理
 export type ReverseToEnd<T extends any[]>=Push<Tail<T>,Head<T>>;
 // export type a=ReverseToEnd<[number,string,string]>;
