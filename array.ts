@@ -5,7 +5,7 @@
 //映射数组和对象
 
 import { MapUnit, MapType } from ".";
-import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin } from './math';
+import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin, sAdd, sMoreThan } from './math';
 import { JOIN } from './string';
 
 //此映射不递归 用于映射数组元素足够 ，对object只能映射第一层
@@ -114,10 +114,14 @@ export type Slice<T extends any[],start extends SNum,end extends SNum>=
 //删除的方式 找到开始位置,删除前面那段,继续找到后面位置,删除后面那段,返回
 RemoveEnd<_Slice<T,start>,_Slice<T,end>>;
 // type one=_Slice<[1,2,3,4,5],Dec<"3">>
-// type kk=Slice<[1,2,3,4,5],Dec<"">,Dec<"3">>
-// type ss=Get<[1,2,3,4,54,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7],Dec<"20">>
-
+type kk=Slice<[1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],Dec<"15">,Dec<"20">>
+// type ss=Get<[1,2,3,4,54,6,7],Dec<"4">>
+export type Insert<T extends any[],idx extends SNum,subAr extends any[]>=
+// 用_Slice把后面切出来  用 remove end 把前面切出来 把前面和中间和后面结合
+[...RemoveEnd<T,_Slice<T,idx>>,...subAr,..._Slice<T,idx>]
 //集合操作部分
+
+// type aaa=Insert<[1,2,3],Dec<"1">,[1,2,4]>
 
 //MapElement算是集合操作的一部分 这里不重复
 //由于不能传递程序而只能传递值，这里直接传递映射模板
@@ -146,3 +150,14 @@ export type Skip<art extends any[],num extends SNum>=sEqual<num,Zero> extends [t
 // type aaa=Filter<["","a",""],DeleteSome<[""]>>
 
 // type a=MapElement<[1,2,3,4],[[4,1],[1,2],[2,3],[3,4]]>
+
+//生成部分
+
+//生成数字序列 SNum表示
+
+//尝试循环方式表示递归 就看ts支不支持尾递归了
+export type Range<start extends SNum,space extends SNum,end extends SNum,Now extends SNum=start,nowar extends string[]=[]>=
+sMoreThan<Now,end> extends [true]? nowar:sEqual<Now,end> extends [true]? nowar:
+Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
+
+// type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>

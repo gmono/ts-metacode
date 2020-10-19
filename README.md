@@ -149,35 +149,56 @@ This package is a metaprogramming package, and will include various related pack
    2. Add Skip function to the set operation section
 4. **Modification**: Some functions have been added to the array operation section, and the names of some functions have been modified. **Please upgrade carefully here**
 5. **Modification**: The meaning of the OCT function has been changed. Now all the hexadecimal conversion functions directly output SNum, which can be used directly
+
+
+## 1.1.0-beta1 update content
+1. Add Slice function, Get function, Insert function, Range function to the array part
+```ts
+
+type aaa=Insert<[1,2,3],Dec<"1">,[1,2,4]>
+type kk=Slice<[1,2,3,4,5],Dec<"1">,Dec<"3">>
+type ss=Get<[1,2,3,4,54,6,7],Dec<"4">>
+//kk=[2,3] ss=54 aaa=[1, 1, 2, 4, 2, 3]
+type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
+```
+2. New in the String section, the Length function, the upper limit is very small, due to the Split function and the limitation of the recursion depth
+
 ## 1.x version update plan
-1. Improve the math part
-   1. Support the conversion from SNum to Bin and Logic, mainly to convert to Logic and then to Bin
-   2. Support decimal system, through the conversion from SNum to Bin, the conversion from decimal to binary is realized through calculation, and SNum can be defined by decimal
-   3. Support hexadecimal, solve the bug that can only support up to 12 digits, and solve the hidden dangers of the MapType system
-2. The depth limitation problem of MapType, that is, the limitation of the number of items in the mapping table. Consider solving the depth problem through binary matching. This may rely on the improvement of the Array system, including the Get Slice Concat and Insert functions, which will be implemented with the support of the mathematical system
-3. Add the actual implementation of the Merge function to implement the Merge type fusion strategy, instead of the general assign function
-4. Implement a type guard system integrated with the type system, such as arr obj num str many date, etc., you can directly use the object definition to define the type, and get the final actual type through the type mapping function, and you can use the type verification tool. Perform type check and detection according to the defined type guard object, materialize the type of typescript and fully support editor prompts
-5. Replace some operations with the content in the typescript-tuple package
-6. **Apply all the functions of array manipulation to the string module through JOIN and Split functions**
-7. Array operation part, based on SNum system to implement various position-based operations, including Get Slice Insert, etc.
-8. Use dichotomy to implement the sDiv function instead of counting
-9. Increase instead of function, for sNum, introduce array operation capability
-10. Continue to absorb the content and useful parts of similar packages
+- [ ] Explore tail recursion problems
+- [ ] Improve the math part
+   - [ ] Support conversion from SNum to Bin and Logic, mainly to Logic and then to Bin
+   - [ ] Support decimal, by converting from SNum to Bin, the conversion from decimal to binary is realized through calculation, and SNum can be defined by decimal
+   - [ ] Support hexadecimal, solve the bug that can only support up to 12 digits, and solve the hidden dangers of the MapType system
+- [ ] Solve the problem of basic sequence processing paradigm, currently using the recursive method of processing one by one, will be improved to dichotomy
+  - [ ] The depth limitation problem of MapType, that is, the limitation of the number of items in the mapping table. Consider solving the depth problem through binary matching. This may rely on the improvement of the Array system, including the Get Slice Concat and Insert functions, which will be supported by the mathematical system achieve
+    - [x] Get
+    - [x] Slice
+    - [x] Concat
+    - [x] Insert
+- [ ] Add the actual implementation of the Merge function to implement the Merge type fusion strategy, instead of the general assign function
+- [ ] To implement a type guard system integrated with the type system, such as arr obj num str many date, etc., you can directly use the object definition to define the type, and get the final actual type through the type mapping function, and use the type verification tool , Perform type check and detection according to the defined type guard object, materialize the type of typescript and fully support editor prompts
+- [ ] Replace some operations with the content in the typescript-tuple package
+- [ ] **All the functions of array operations are applied to the string module through JOIN and Split functions**
+- [ ] Array operation part, based on SNum system to realize various position-based operations, including Get Slice Insert, etc.
+- [ ] Implement the sDiv function using dichotomy instead of counting
+- [ ] Added instead of function, for sNum, introduced array operation capability
+- [ ] Continue to absorb the content and useful parts of similar packages
 ## 2.x version pre-plan
-1. Add a new module to solve various problems caused by the inability to support predicate logic, that is, it is impossible to directly pass a parameter-free generic, that is, the problem of a generic function as a first-class citizen. Generics, use generic reference tables, and implement addressing through string
-2. Improve the foundation of SNum, from string implementation to more optimized other ways
-3. Realize various extraction and judgment packaging operations for Promise Iterator Iterable AsyncIterable and other systems that come with generic types
+1. Add a new module to solve various problems caused by the inability to support predicate logic, that is, it is impossible to directly pass a parameter-free generic, that is, the problem of a generic function as a first-class citizen. Generics, use generic reference tables, and implement addressing through strings
+2. Improve the foundation of SNum, from string implementation to more optimized other methods
+3. Realize various extraction, judgment and packaging operations for systems such as Promise Iterator Iterable AsyncIterable that come with generic types
 4. Consider supporting recursive types, based on mathematical systems
-5. (To be determined) Add new modules to implement a complete AST system, support direct code analysis to obtain AST, prepare to support high-level languages
+5. (To be determined) Add new modules to implement a complete AST system, support direct code analysis to obtain AST, and prepare to support high-level languages
 6. (To be determined) Add an assembly instruction support system, support assembly instructions, and prepare for future support of high-level languages
-7. (To be determined) Add new functions based on assembly instructions and high-level languages, including many functions that could not be achieved before
+7. (To be determined) Add new functions based on assembly instructions and high-level languages, including many functions that were not possible before
 8. (To be determined) Before supporting assembly, consider first supporting a lisp-like language
-9. (To be determined) Support the realization of various data structures in the type system
-10. (To be determined) Use KMP algorithm to implement string search, etc., may be based on high-level language support, and implement some common algorithms with a type system, such as the shortest path and game tree, etc.
+9. (TBD) Support the realization of various data structures in the type system
+10. (To be determined) Use KMP algorithm to implement string search, etc., may be based on high-level language support, and implement some common algorithms with type systems, such as shortest path and game tree, etc.
 # Compare
 Comparison with common packages:
-1. typescript-logic: unit logic. The implementation principle is similar to the logic part of this package. It can be repackaged to perform element-wise operations on the array to convert to multiple bits, but each operation must be packaged, and it does not define the INFER EQ operation , And is not compatible with the digital computing system of this package
+1. typescript-logic: unit logic. The implementation principle is similar to the logic part of this package. It can be repackaged to perform element-wise operations on the array to convert to multiple bits, but each operation must be packaged, and it does not define the INFER EQ operation , And cannot be compatible with the digital computing system of this package
 2. typescript-tuple: absorb the array operation part of it, and absorb the digital control method in it, and establish a new mathematical operation mechanism
+
 
 
 # 说明
@@ -327,10 +348,17 @@ type b=ALL<[true,false,false]>;
 4. **修改**:数组操作部分增加了一些功能，并修改了部分函数的名字,**此处请谨慎升级**
 5. **修改**:更改了OCT函数的含义,现在所有进制转换函数都直接输出SNum,可直接使用
 
-## 1.0.1更新内容
-1. 数组部分添加Slice函数,Get函数
+## 1.1.0-beta1更新内容
+1. 数组部分添加Slice函数,Get函数,Insert函数,Range函数
+```ts
 
-
+type aaa=Insert<[1,2,3],Dec<"1">,[1,2,4]>
+type kk=Slice<[1,2,3,4,5],Dec<"1">,Dec<"3">>
+type ss=Get<[1,2,3,4,54,6,7],Dec<"4">>
+//kk=[2,3] ss=54 aaa=[1, 1, 2, 4, 2, 3]
+type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
+```
+2. String部分新增,Length函数,上限很小,由于Split函数以及递归深度限制
 
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
@@ -343,7 +371,7 @@ type b=ALL<[true,false,false]>;
     - [x] Get
     - [x] Slice
     - [x] Concat
-    - [ ] Insert
+    - [x] Insert
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
 - [ ] 实现一个与类型系统整合的type guard 系统,如arr obj num str many date等等,可直接使用对象定义来定义类型,并通过类型映射函数得到最终实际类型,并可通过类型校验工具,根据定义的type guard对象进行类型校验和检测,将typescript的类型实体化并完整支持编辑器提示 
 - [ ] 将一些操作使用typescript-tuple包中的内容替代
