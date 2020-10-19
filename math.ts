@@ -132,11 +132,11 @@ export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s ex
    `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
 ):Zero;
 
-//!目前OCT存在上限太低问题,尚未修复
-export type OCT<s extends string>=BinToSNum<BaseMap<s,MapOCTToBin>>;
+//!目前OCT存在上限太低问题,尚未修复,Bin和Dec没有问题
+// export type OCT<s extends string>=BinToSNum<BaseMap<s,MapOCTToBin>>;
 export type Bin<s extends string>=BinToSNum<s>;
 
-//此处使用
+//!此处使用 乘法实现,递归深度为LogN级
  type _Dec<s extends string[]>=s extends [...infer b,infer a]?
 (
   b extends []?  (a extends string?_MapDEC<a>:never):
@@ -147,7 +147,31 @@ export type Bin<s extends string>=BinToSNum<s>;
   )
 ):Zero;
 export type Dec<s extends string>=_Dec<Split<s,"">>
-// type a=Dec<"10000000">
+//! 基于定义实现的OCT 和HEX 全部为LogN级深度,解决了上限问题
+type _OCT<s extends string[]>=s extends [...infer b,infer a]?
+(
+  b extends []?  (a extends string?_MapOCT<a>:never):
+  (
+    //如果b不为空 把a*10 后传递到下一级
+    a extends string? b extends string[]?
+    sAdd<_MapOCT<a>,sMul<_OCT<b>,Eight>>:never:never
+  )
+):Zero;
+export type OCT<s extends string>=_OCT<Split<s,"">>
+type a=OCT<"10">
+//16进制
+type _HEX<s extends string[]>=s extends [...infer b,infer a]?
+(
+  b extends []?  (a extends string?_MapHEX<a>:never):
+  (
+    //如果b不为空 把a*10 后传递到下一级
+    a extends string? b extends string[]?
+    sAdd<_MapHEX<a>,sMul<_HEX<b>,Sixteen>>:never:never
+  )
+):Zero;
+export type HEX<s extends string>=_HEX<Split<s,"">>
+//无法超过C 由于MAPTYPE限制
+type a=HEX<"aa">
 // type t=Num<a>
 // type s=Num<a>
 // export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
@@ -179,8 +203,44 @@ type _MapDEC<s extends string>=MapType<s,[
   ["8","xxxxxxxx"],
   ["9","xxxxxxxxx"],
 ]>
+type _MapOCT<s extends string>=MapType<s,[
+  ["0",""],
+  ["1","x"],
+  ["2","xx"],
+  ["3","xxx"],
+  ["4","xxxx"],
+  ["5","xxxxx"],
+  ["6","xxxxxx"],
+  ["7","xxxxxxx"]
+]>;
+type _MapHEX<s extends string>=MapType<s,[
+  ["0",""],
+  ["1","x"],
+  ["2","xx"],
+  ["3","xxx"],
+  ["4","xxxx"],
+  ["5","xxxxx"],
+  ["6","xxxxxx"],
+  ["7","xxxxxxx"],
+  ["8","xxxxxxxx"],
+  ["9","xxxxxxxxx"],
+  ["a","xxxxxxxxxx"],
+  ["b","xxxxxxxxxxx"],
+  ["c","xxxxxxxxxxxx"],
+  ["d","xxxxxxxxxxxxx"],
+  ["e","xxxxxxxxxxxxxx"],
+  ["f","xxxxxxxxxxxxxxx"],
+  ["A","xxxxxxxxxx"],
+  ["B","xxxxxxxxxxx"],
+  ["C","xxxxxxxxxxxx"],
+  ["D","xxxxxxxxxxxxx"],
+  ["E","xxxxxxxxxxxxxx"],
+  ["F","xxxxxxxxxxxxxxx"],
+]>
 //10
 type Ten=sMul<"xxxxx","xx">;
+type Eight=sMul<"xxxx","xx">;
+type Sixteen=sMul<Eight,"xx">;
 // type a=HEX<>
 
 // type a=OCT<"176">
