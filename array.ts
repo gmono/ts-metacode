@@ -161,3 +161,7 @@ sMoreThan<Now,end> extends [true]? nowar:sEqual<Now,end> extends [true]? nowar:
 Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 
 // type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
+
+
+
+

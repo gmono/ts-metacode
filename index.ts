@@ -39,7 +39,7 @@ export * from "./objectType"
 export * from "./math"
 export * from "./logic"
 export * from "./string"
-
+export * from "./tree"
 //整合typescriopt tuple包 未来将作出包装和改进
 export {IsFinite,Reverse,Repeat,ConcatMultiple,Drop,SliceStartQuantity,FillTuple,CompareLength,SortTwoTuple,ShortestTuple,LongestTuple,FilterTuple as FilterType} from "typescript-tuple"
 

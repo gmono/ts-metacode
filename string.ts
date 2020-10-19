@@ -26,3 +26,14 @@ type SplitM<x extends CanBeString,sep extends CanBeString>=x extends ""? []:(
         [cont,...Split<rest,sep>]
     ):[x]
 );
+//split 范式 使用多重包装,也即一次检测2个元素,如果失败,就把这2个元素结合成一个字符串
+//放入原始split中处理,如果失败就直接返回,这时候最多只有一个元素 
+//如果成功,并且后面还有内容,递归处理
+
+//! 注意 合成法:即使用合成方法,首先通过sep和cont合成一个二分分隔符 然后进行分割
+//! 关键是如何直接实现二分
+
+
+type a="1234" extends `${infer a}2${infer T}`? [a,T]:never;;
+
+
