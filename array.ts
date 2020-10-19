@@ -5,7 +5,7 @@
 //映射数组和对象
 
 import { MapUnit, MapType } from ".";
-import { Zero, SNum, sEqual, sDec, OCT, sInc } from './math';
+import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin } from './math';
 import { JOIN } from './string';
 
 //此映射不递归 用于映射数组元素足够 ，对object只能映射第一层
@@ -98,6 +98,24 @@ R extends []? []:
 export type ReverseToEnd<T extends any[]>=Push<Tail<T>,Head<T>>;
 // export type a=ReverseToEnd<[number,string,string]>;
 
+//Insert Get Slice等数字相关函数
+export type Get<T extends any[],idx extends SNum>=
+idx extends Zero? T[0]:
+//递归
+Get<Tail<T>,sDec<idx>>;
+
+//删除前面的
+type _Slice<T extends any[],start extends SNum>=
+start extends Zero? T:
+//递归
+_Slice<Tail<T>,sDec<start>>;
+
+export type Slice<T extends any[],start extends SNum,end extends SNum>=
+//删除的方式 找到开始位置,删除前面那段,继续找到后面位置,删除后面那段,返回
+RemoveEnd<_Slice<T,start>,_Slice<T,end>>;
+// type one=_Slice<[1,2,3,4,5],Dec<"3">>
+// type kk=Slice<[1,2,3,4,5],Dec<"">,Dec<"3">>
+// type ss=Get<[1,2,3,4,54,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,7,7,7],Dec<"20">>
 
 //集合操作部分
 

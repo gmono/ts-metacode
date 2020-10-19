@@ -147,7 +147,8 @@ export type Bin<s extends string>=BinToSNum<s>;
   )
 ):Zero;
 export type Dec<s extends string>=_Dec<Split<s,"">>
-// type a=Dec<"10">
+// type a=Dec<"10000000">
+// type t=Num<a>
 // type s=Num<a>
 // export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
 // (

@@ -9,3 +9,12 @@ export type Split<x extends CanBeString,sep extends CanBeString>=x extends ""? [
 );
 type a=Split<"aaa,bbb",",">
 // type a=JOIN<["aaaa","bbbb"],",">
+
+//二分法
+//基于数字系统和Slice函数
+// type SplitM<x extends CanBeString,sep extends CanBeString>=x extends ""? []:(
+//     x extends `${infer cont}${sep}${infer rest}`?(
+//         //还有后面
+//         [cont,...Split<rest,sep>]
+//     ):[x]
+// );
