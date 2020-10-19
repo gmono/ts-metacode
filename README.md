@@ -330,7 +330,7 @@ type a=ANY<[true,false,false]>;
 type b=ALL<[true,false,false]>;
 //a=[true[ b=[false]
 ```
-
+**逻辑运算可用于命题逻辑证明,或一切可以转化为命题逻辑证明的问题求解**
 # 计划说明
 本包为元编程支持包，未来会吸纳各种相关包到其中，下一步将会把typescript-tuple包括进来
 
@@ -366,6 +366,8 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 ### 1.1.2 更新内容
 增加了Tree函数,用于把数组转化为树形结构,准备用于替换所有递归处理函数
 * maintain1: 添加了Flatten函数,并修复了Tree的bug,Flatten函数提供了处理Tree数据的典型模式
+* maintain2:更改了MapType的实现,现在HEX函数可以支持到小写的f,已经基本具备16进制支持,但Maptype的能力并没有太大改观,下一步考虑采用 除法+slice操作实现直接二分
+* maintain3: 让Dec HEX OCT函数都支持了number string bigint等可作为字符串的值作为输入
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
 - [ ] 改进数学部分

@@ -1,3 +1,4 @@
+import { Tree } from './tree';
 //这个可以使用元组代替 [A,B]
 //普通固定映射器
 //由于无法传递通用泛型 只能单个如 a,gen<a> b,gen<b> any,gen<any>
@@ -13,6 +14,41 @@ export type None={};
 //如果里面有一个不是mapunit 那么返回never  如果匹配结束还没匹配到 返回T
 //这里对所有的特殊符号进行特殊处理 此处只有Pack 主要对B进行判断 如果负责进行特殊操作
 //这里的A可以起到使用table表示程序的作用，即真值表。。
-export type MapType<T,A extends any[]>=A extends [infer Now,...infer S]?
+
+/**
+ * never表示出错
+ * 类型不变表示没找到(也可能是存在恒等映射)
+ * ! 日后将区分找不到和恒等映射的情况
+ */
+type _MapType<T,A extends any[]>=A extends [infer Now,...infer S]?
                          Now extends MapUnit<infer From,infer To,infer Args>?
                          T extends From? To:MapType<T,S>:never:T;
+
+
+
+                        
+//? 基于此二分映射方法 是否可以用生成代码方式生成整个四则运算表?
+//? 这个最多可以支持多少?理论上认为可以支持到2^12次方 也即 4096个元素的映射表
+type MapTypeTree<T,A extends any[]>=A extends [infer left,infer right]?
+(
+    left extends any[]?
+    right extends any[]?
+    (
+        //! 这里会导致如果left存在恒等映射的话,会返回后面的,也即自动忽略恒等映射
+        //! 全局自动忽略恒等映射
+        MapTypeTree<T,left> extends T?MapTypeTree<T,right>:
+        MapTypeTree<T,left>
+    ):_MapType<T,[A]>:_MapType<T,[A]>
+    //如果不是数组表示已经到底 包装一下map
+):_MapType<T,[A]>;
+
+/**
+ * never表示出错
+ * 类型不变表示没找到(也可能是存在恒等映射)
+ * ! 日后将区分找不到和恒等映射的情况
+ * 
+ * ! 这是MapType的二叉树实现,即二分实现,原始的MapType
+ */
+export type MapType<T,A extends any[]>=MapTypeTree<T,Tree<A>>;
+type a=MapType<string,[[number,string],[string,number],[object,"hhhhh"]]>
+//maptype现在支持长度为15个了 以前为12个 稍有进步

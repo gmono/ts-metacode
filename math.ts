@@ -1,3 +1,4 @@
+
 import { MapType, Push } from '.';
 
 // type a=nAnd<[true,false],[false,true]>
@@ -44,6 +45,7 @@ export type sMul<R extends string,P extends string>=P extends  Zero? Zero:(
 )
 //! 注意 关键 ，当计算泛型参数时是一起计算的 而 extends短路 因此用if可能导致递归无限
 //需要处理p大于r的情况
+//!应当改为使用二分法做除法 即倍乘直到大于,然后再回溯,回溯可通过带当前状态变量来实现,但可能深度过高
 export type sDiv<R extends string,P extends string,NowTry extends string=One>=
 P extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
   //逆运算
@@ -134,7 +136,7 @@ export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s ex
 
 //!目前OCT存在上限太低问题,尚未修复,Bin和Dec没有问题
 // export type OCT<s extends string>=BinToSNum<BaseMap<s,MapOCTToBin>>;
-export type Bin<s extends string>=BinToSNum<s>;
+export type Bin<s extends CanBeString>=BinToSNum<`${s}`>;
 
 //!此处使用 乘法实现,递归深度为LogN级
  type _Dec<s extends string[]>=s extends [...infer b,infer a]?
@@ -146,7 +148,7 @@ export type Bin<s extends string>=BinToSNum<s>;
     sAdd<_MapDEC<a>,sMul<_Dec<b>,Ten>>:never:never
   )
 ):Zero;
-export type Dec<s extends string>=_Dec<Split<s,"">>
+export type Dec<s extends CanBeString>=_Dec<Split<`${s}`,"">>
 //! 基于定义实现的OCT 和HEX 全部为LogN级深度,解决了上限问题
 type _OCT<s extends string[]>=s extends [...infer b,infer a]?
 (
@@ -157,7 +159,7 @@ type _OCT<s extends string[]>=s extends [...infer b,infer a]?
     sAdd<_MapOCT<a>,sMul<_OCT<b>,Eight>>:never:never
   )
 ):Zero;
-export type OCT<s extends string>=_OCT<Split<s,"">>
+export type OCT<s extends CanBeString>=_OCT<Split<`${s}`,"">>
 type a=OCT<"10">
 //16进制
 type _HEX<s extends string[]>=s extends [...infer b,infer a]?
@@ -169,9 +171,9 @@ type _HEX<s extends string[]>=s extends [...infer b,infer a]?
     sAdd<_MapHEX<a>,sMul<_HEX<b>,Sixteen>>:never:never
   )
 ):Zero;
-export type HEX<s extends string>=_HEX<Split<s,"">>
+export type HEX<s extends CanBeString>=_HEX<Split<`${s}`,"">>
 //无法超过C 由于MAPTYPE限制
-type a=HEX<"aa">
+type a=Dec<10>;
 // type t=Num<a>
 // type s=Num<a>
 // export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
@@ -230,13 +232,14 @@ type _MapHEX<s extends string>=MapType<s,[
   ["d","xxxxxxxxxxxxx"],
   ["e","xxxxxxxxxxxxxx"],
   ["f","xxxxxxxxxxxxxxx"],
-  ["A","xxxxxxxxxx"],
+  ["k","xxxxxxxxxx"],
   ["B","xxxxxxxxxxx"],
   ["C","xxxxxxxxxxxx"],
   ["D","xxxxxxxxxxxxx"],
   ["E","xxxxxxxxxxxxxx"],
   ["F","xxxxxxxxxxxxxxx"],
 ]>
+// type s=_MapHEX<"f">
 //10
 type Ten=sMul<"xxxxx","xx">;
 type Eight=sMul<"xxxx","xx">;

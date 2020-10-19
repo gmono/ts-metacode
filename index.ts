@@ -43,3 +43,10 @@ export * from "./tree"
 //整合typescriopt tuple包 未来将作出包装和改进
 export {IsFinite,Reverse,Repeat,ConcatMultiple,Drop,SliceStartQuantity,FillTuple,CompareLength,SortTwoTuple,ShortestTuple,LongestTuple,FilterTuple as FilterType} from "typescript-tuple"
 
+//Drop=RemoveFront
+//SliceStartQuantity 从某个位置开始切多少个  可以直接用slice实现
+//Fill可以用MapElement any->"r" 实现
+//!数组长度比较可以用 length函数+数学实现  也可以用匹配方式实现,即通过映射所有
+//!元素到同一个值,然后用extends 运算进行匹配,可以比较数组的长短
+//Sort 不过是比长短上衍生的 sortest longest 也一样
+//Filter不过是我的Filter的廉价版,等于我的Filter<a,[[a|b|c,false]]>

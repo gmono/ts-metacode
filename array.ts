@@ -160,7 +160,8 @@ export type Range<start extends SNum,space extends SNum,end extends SNum,Now ext
 sMoreThan<Now,end> extends [true]? nowar:sEqual<Now,end> extends [true]? nowar:
 Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 
-// type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
+//如果是尾递归的话 似乎可以达到47层左右
+type a=Range<Dec<"1">,Dec<"1">,Dec<"47">>
 
 
 

@@ -8,6 +8,7 @@
 //! 构建二叉树
 
 //? 此处查明: 数量不够 直接失败    rest若没有 为[] 
+//! 由于double函数是顺序处理的 因此还是会存在长度瓶颈
 type ToDouble<s extends any[]>=
 s extends []? []:
 s extends [infer a]?[[a]]:
@@ -39,5 +40,4 @@ a extends [infer left,infer right]?
     left extends any[]? right extends any[]?
     [...Flatten<left>,...Flatten<right>]:[left,right]:[left,right]
 ):never;
-type t=Tree<[1,2,3,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4]>
-type s=Flatten<t>;
+type t=Tree<[4,4,4,4,4,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]>
