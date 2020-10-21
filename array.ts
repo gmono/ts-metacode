@@ -110,10 +110,11 @@ start extends Zero? T:
 //递归
 _Slice<Tail<T>,sDec<start>>;
 
+// type a=1 extends Uncapitalize<`${infer t}`>? t:never;
 export type Slice<T extends any[],start extends SNum,end extends SNum>=
 //删除的方式 找到开始位置,删除前面那段,继续找到后面位置,删除后面那段,返回
 RemoveEnd<_Slice<T,start>,_Slice<T,end>>;
-// type one=_Slice<[1,2,3,4,5],Dec<"3">>
+type one=_Slice<Range<Dec<0>,Dec<1>,Dec<40>>,Dec<40>>
 type kk=Slice<[1,2,3,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],Dec<"15">,Dec<"20">>
 // type ss=Get<[1,2,3,4,54,6,7],Dec<"4">>
 export type Insert<T extends any[],idx extends SNum,subAr extends any[]>=
@@ -156,6 +157,7 @@ export type Skip<art extends any[],num extends SNum>=sEqual<num,Zero> extends [t
 //生成数字序列 SNum表示
 
 //尝试循环方式表示递归 就看ts支不支持尾递归了
+//! 准备把Range改成二分生成
 export type Range<start extends SNum,space extends SNum,end extends SNum,Now extends SNum=start,nowar extends string[]=[]>=
 sMoreThan<Now,end> extends [true]? nowar:sEqual<Now,end> extends [true]? nowar:
 Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
@@ -164,5 +166,5 @@ Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 type a=Range<Dec<"1">,Dec<"1">,Dec<"47">>
 
 
-
-
+export type Length<a extends any[]>=Dec<a["length"]>;
+type s=Length<"1,2,32">

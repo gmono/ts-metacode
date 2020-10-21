@@ -164,6 +164,16 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 ```
 2. New in the String section, the Length function, the upper limit is very small, due to the Split function and the limitation of the recursion depth
 
+
+### 1.1.1 Update content
+1. Added HEX function but only supports C
+2. Use new principles to implement OCT function, now as perfect as DEC
+### 1.1.2 Update content
+Added the Tree function to convert the array into a tree structure, ready to replace all recursive processing functions
+* maintain1: Added the Flatten function and fixed the tree bug. The Flatten function provides a typical mode for processing Tree data
+* maintain2: Changed the implementation of MapType. Now the HEX function can support lowercase f, which basically has hexadecimal support, but the ability of Maptype has not changed much. The next step is to consider the use of division + slice operation to achieve direct dichotomy
+* maintain3: Let Dec HEX OCT functions support number string bigint and other values that can be used as strings as input
+
 ## 1.x version update plan
 - [ ] Explore tail recursion problems
 - [ ] Improve the math part
@@ -203,7 +213,7 @@ Comparison with common packages:
 
 
 # 说明
-**typescript元编程使用的包**
+**typescript元编程使用的包,其中数学部分和字符串部分必须在typescript4.1及以上版本运行,其余模块自行测试**
 
 功能有几大部分:
 1. **逻辑**，包括If Equal 等通用比较模板和完整的基于与非运算的数理逻辑系统
@@ -371,23 +381,31 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
 - [ ] 改进数学部分
-   - [ ] 支持从SNum到Bin和Logic的转换,主要是转化到Logic然后到Bin
-   - [ ] 支持十进制,借由从SNum到Bin的转化,通过计算实现10进制到2进制的转化,并可通过十进制定义SNum
-   - [ ] 支持16进制,解决最高只能支持到12位数字的Bug,解决MapType系统的隐患
+   - [ ] 支持从SNum到Bin和Logic的转换
+   - [x] 支持十进制
+   - [x] 支持16进制,解决最高只能支持到12位数字的Bug
+   - [ ] 解决MapType系统的隐患
 - [ ] 解决基本序列处理范式问题,目前使用逐个处理的递归方式,将改进到二分法
-  - [ ] MapType的深度限制问题,即映射表Item数量限制问题,考虑通过二分方法匹配解决深度问题,这可能依赖Array系统的改进,包括 Get Slice Concat 和Insert函数,这些函数将在数学系统支持下实现
-    - [x] Get
-    - [x] Slice
-    - [x] Concat
-    - [x] Insert
+  - [ ] MapType的深度限制问题
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
 - [ ] 实现一个与类型系统整合的type guard 系统,如arr obj num str many date等等,可直接使用对象定义来定义类型,并通过类型映射函数得到最终实际类型,并可通过类型校验工具,根据定义的type guard对象进行类型校验和检测,将typescript的类型实体化并完整支持编辑器提示 
 - [ ] 将一些操作使用typescript-tuple包中的内容替代
 - [ ] **将数组操作的功能，通过JOIN和Split函数，全部应用到string模块中**
 - [ ] 数组操作部分,基于SNum系统实现各种基于位置的操作,包括Get  Slice Insert 等
+    - [x] Get
+    - [x] Slice
+    - [x] Concat
+    - [x] Insert
+    - [x] Range
+    - [ ] Splite
+    - [ ] Sort
+    - [x] Length
+      - [ ] 长度限制问题
 - [ ] 将sDiv函数使用二分法实现,而非使用计数法
 - [ ] 增加而非函数,对sNum,引入数组操作能力
 - [ ] 持续吸纳同类包的内容和有益部分
+  - [x] typescript-tuple
+  - [x] typescript-logic
 ## 2.x 版本预计划
 1. 添加新模块,解决到各种由于无法支持谓词逻辑而导致的问题,即无法直接传递一个无参泛型,也即泛型函数作为一等公民的问题,目前考虑对系统内部的各种泛型,使用泛型引用表,通过string进行寻址实现
 2. 改进SNum的基础,从string实现到更优化的其他方式实现

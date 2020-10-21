@@ -14,8 +14,8 @@ export type Split<x extends CanBeString,sep extends CanBeString>=x extends ""? [
 //由于Split的上限问题导致这个函数存在局限性
 // export type Length<x extends string>=Dec<`${Split<x,"">["length"]}`>
 //双重infer 得到第一个元素
-export type Length<x extends string>=x extends `${infer _a}${infer b}`? b extends ""? "x":sAdd<Length<b>,"x">:"";
-type a=Length<"1111111111111111">
+// export type StrLength<x extends string>=Split<>x["length"]:never;
+// type a=StrLength<"1111111111111111">
 // type a=JOIN<["aaaa","bbbb"],",">
 
 //二分法
