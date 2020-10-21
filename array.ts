@@ -4,8 +4,8 @@
 //可映射 对象和数组 用过循环方式 优于递归方式实现
 //映射数组和对象
 
-import { MapUnit, MapType } from ".";
-import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin, sAdd, sMoreThan } from './math';
+import { MapUnit, MapType, If } from ".";
+import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin, sAdd, sMoreThan, sMoreOrEqual, sDiv, sSub } from './math';
 import { JOIN } from './string';
 
 //此映射不递归 用于映射数组元素足够 ，对object只能映射第一层
@@ -162,9 +162,18 @@ export type Range<start extends SNum,space extends SNum,end extends SNum,Now ext
 sMoreThan<Now,end> extends [true]? nowar:sEqual<Now,end> extends [true]? nowar:
 Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 
+// export type __Mid<start extends string,end extends string>=sDiv<sAdd<end,start>,Dec<2>>;
+// export type Range<start extends SNum,space extends SNum,end extends SNum>=
+// sMoreThan<start,end> extends [true]? []:
+// sLessThan<sAdd<start,space>,end> extends [true]? [start]:
+// sEqual<sAdd<start,space>,end> extends [true]? [start,end]:
+// [...Range<start,space,__Mid<start,end>>,...Range<__Mid<start,end>,space,end>];
+
+// type a=sDiv<Dec<1>,Dec<2>>
 //如果是尾递归的话 似乎可以达到47层左右
-type a=Range<Dec<"1">,Dec<"1">,Dec<"47">>
+// type a=Range<Dec<"1">,Dec<"3">,Dec<"4">>
+// type b=__Mid<Dec<1>,Dec<2>>
 
 
 export type Length<a extends any[]>=Dec<a["length"]>;
-type s=Length<"1,2,32">
+// type s=Length<"1,2,32">

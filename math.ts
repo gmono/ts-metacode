@@ -7,6 +7,7 @@ import { MapElement, AND, NOT } from ".";
 import { JOIN, CanBeString, Split } from './string';
 import { MapUnit } from './common';
 import { Concat, Tail } from './array';
+import { OR } from './logic';
 
 //!将01表示的二进制数字的字符串形式 和boolean数组互相转换
 //bin和 logic的互换
@@ -30,7 +31,9 @@ export type SNum=string;
 export type Zero="";
 export type One="x"
 //负数 目前不支持负数
-export type Minus<R extends string>=`-${R}`;
+// export type Minus<R extends string>=`-${R}`;
+export type sMoreOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sMoreThan<P,R>>;
+export type sLessOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sLessThan<P,R>>;
 //比较
 export type sMoreThan<P extends  string,R extends string>=P extends `${R}x`? [true]:[false];
 export type sEqual<P extends  string,R extends string>=P extends R? [true]:[false];
@@ -40,6 +43,7 @@ export type sInc<R extends string>=`${R}x`;
 export type sDec<R extends string>=R extends `${infer T}x`? T:Zero;
 export type sAdd<R extends string,P extends string>=`${R}${P}`;
 export type sSub<R extends string,P extends string>=R extends `${P}${infer T}`? T:never;
+//这个还是逐步增加的 需要改为二分
 export type sMul<R extends string,P extends string>=P extends  Zero? Zero:(
   `${R}${sMul<R,sDec<P>>}`
 )

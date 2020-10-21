@@ -378,6 +378,12 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 * maintain1: 添加了Flatten函数,并修复了Tree的bug,Flatten函数提供了处理Tree数据的典型模式
 * maintain2:更改了MapType的实现,现在HEX函数可以支持到小写的f,已经基本具备16进制支持,但Maptype的能力并没有太大改观,下一步考虑采用 除法+slice操作实现直接二分
 * maintain3: 让Dec HEX OCT函数都支持了number string bigint等可作为字符串的值作为输入
+### 1.1.3 更新内容
+增加函数:
+* sMoreOrEqual 大于等于
+* sLessOrEqual 小于等于
+* Length 求数组的长度,无上限
+* 原始的 string的Length改名为StrLength ,上限为13,超过13的无法求得
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
 - [ ] 改进数学部分
