@@ -177,7 +177,7 @@ type _HEX<s extends string[]>=s extends [...infer b,infer a]?
 ):Zero;
 export type HEX<s extends CanBeString>=_HEX<Split<`${s}`,"">>
 //无法超过C 由于MAPTYPE限制
-type a=Dec<10>;
+// type a=Dec<10>;
 // type t=Num<a>
 // type s=Num<a>
 // export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
@@ -253,7 +253,7 @@ type Sixteen=sMul<Eight,"xx">;
 // type a=OCT<"176">
 // type b=BinToSNum<a>
 
-type a=SplitDec<100>
+// type a=SplitDec<100>
 type MapSDecToDec=[
   ["0",0],
   ["1",1],

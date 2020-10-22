@@ -172,42 +172,84 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 Added the Tree function to convert the array into a tree structure, ready to replace all recursive processing functions
 * maintain1: Added the Flatten function and fixed the tree bug. The Flatten function provides a typical mode for processing Tree data
 * maintain2: Changed the implementation of MapType. Now the HEX function can support lowercase f, which basically has hexadecimal support, but the ability of Maptype has not changed much. The next step is to consider the use of division + slice operation to achieve direct dichotomy
-* maintain3: Let Dec HEX OCT functions support number string bigint and other values that can be used as strings as input
+* maintain3: **Let Dec HEX OCT functions support number string bigint and other values that can be used as strings as input**, you can do the following substitutions:
+    ```ts
+    type a=Dec<1>
+    type b=Dec<"1">
+    //Here a and b are equal
+    ```
+### 1.1.3 Update content
+Increase function:
+* sMoreOrEqual is greater than or equal to
+* sLessOrEqual is less than or equal to
+* Length Find the length of the array, no upper limit
+* **The original function named "Length" is renamed StrLength, the upper limit is 13, and it cannot be obtained if it exceeds 13,The current Length function represents the length of the array**
 
+### 1.2.0 Update content
+Fix bug
+* **Urgently fix the invalid sMoreThan function in Math**
+
+Increase function
+- CutEnd:cuts off the following equal length strings, even if they do not match
+- CutFront:cuts off the previous equal length string, even if it does not match
+- MergeArrayEnd:replaces the back part of a long array with a short array
+- MergeArrayFront:replaces the front part of a long array with a short array
+- **SNumToLogic** :converts the internal representation of SNum, which is a number, to Logic binary array representation
+- **SNumToBin** :converts the internal representation of SNum, which is a number, into a binary string representation
+The demo code for this version is as follows:
+```ts
+type s=MergeArrayEnd<[1,2,3,8],[4,5]>
+//type s = [1, 2, 4, 5]
+type b=SNumToLogic<"xxxxxxxx">
+//type b = [true, false, false, false]
+type c=LogicToBin<b>
+type d=BinToSNum<c>;
+type t=sEqual<d,"xxxxxxxx">
+//type t=[true]
+type k=SNumToBin<"xxxxxxxxxx">
+//type k = "1010"
+```
+Other functions can be tested by themselves
 ## 1.x version update plan
 - [ ] Explore tail recursion problems
-- [ ] Improve the math part
-   - [ ] Support conversion from SNum to Bin and Logic, mainly to Logic and then to Bin
-   - [ ] Support decimal, by converting from SNum to Bin, the conversion from decimal to binary is realized through calculation, and SNum can be defined by decimal
-   - [ ] Support hexadecimal, solve the bug that can only support up to 12 digits, and solve the hidden dangers of the MapType system
+- [x] Improve the math part
+   - [x] Support conversion from SNum to Bin and Logic
+   - [x] Support decimal
+   - [x] Support hexadecimal, solve the bug that can only support up to 12 digits
 - [ ] Solve the problem of basic sequence processing paradigm, currently using the recursive method of processing one by one, will be improved to dichotomy
-  - [ ] The depth limitation problem of MapType, that is, the limitation of the number of items in the mapping table. Consider solving the depth problem through binary matching. This may rely on the improvement of the Array system, including the Get Slice Concat and Insert functions, which will be supported by the mathematical system achieve
+  - [ ] The depth limit of MapType
+- [ ] Add the actual implementation of the Merge function to realize the Merge type fusion strategy, instead of the general assign function
+- [ ] Implement a type guard system integrated with the type system, such as arr obj num str many date, etc., you can directly use the object definition to define the type, and get the final actual type through the type mapping function, and use the type verification tool , Perform type checksum detection according to the defined type guard object, materialize the type of typescript and fully support editor prompts
+- [ ] Replace some operations with the content in the typescript-tuple package
+- [ ] **Apply all the functions of array operations to the string module through JOIN and Split functions**
+- [ ] Array operation part, based on SNum system to realize various position-based operations, including Get Slice Insert, etc.
     - [x] Get
     - [x] Slice
     - [x] Concat
     - [x] Insert
-- [ ] Add the actual implementation of the Merge function to implement the Merge type fusion strategy, instead of the general assign function
-- [ ] To implement a type guard system integrated with the type system, such as arr obj num str many date, etc., you can directly use the object definition to define the type, and get the final actual type through the type mapping function, and use the type verification tool , Perform type check and detection according to the defined type guard object, materialize the type of typescript and fully support editor prompts
-- [ ] Replace some operations with the content in the typescript-tuple package
-- [ ] **All the functions of array operations are applied to the string module through JOIN and Split functions**
-- [ ] Array operation part, based on SNum system to realize various position-based operations, including Get Slice Insert, etc.
-- [ ] Implement the sDiv function using dichotomy instead of counting
-- [ ] Added instead of function, for sNum, introduced array operation capability
-- [ ] Continue to absorb the content and useful parts of similar packages
+    - [x] Range
+    - [ ] Splite
+    - [ ] Sort
+    - [x] Length (SNum is returned)
+      - [x] Length limitation issue
+- [ ] Use dichotomy to implement the sDiv function instead of counting
+- [x] Continue to absorb the content and useful parts of similar packages
+  - [x] typescript-tuple
+  - [x] typescript-logic
 ## 2.x version pre-plan
-1. Add a new module to solve various problems caused by the inability to support predicate logic, that is, it is impossible to directly pass a parameter-free generic, that is, the problem of a generic function as a first-class citizen. Generics, use generic reference tables, and implement addressing through strings
-2. Improve the foundation of SNum, from string implementation to more optimized other methods
-3. Realize various extraction, judgment and packaging operations for systems such as Promise Iterator Iterable AsyncIterable that come with generic types
+1. Add a new module to solve various problems caused by the inability to support predicate logic, that is, it is impossible to directly pass a parameter-free generic, that is, the problem of a generic function as a first-class citizen. Generics, use generic reference tables, and implement addressing through string
+2. Improve the foundation of SNum, from string implementation to more optimized other ways
+3. Realize various extraction, judgment and packaging operations for Promise Iterator Iterable AsyncIterable and other systems that come with generic types
 4. Consider supporting recursive types, based on mathematical systems
-5. (To be determined) Add new modules to implement a complete AST system, support direct code analysis to obtain AST, and prepare to support high-level languages
+5. (To be determined) Add new modules to implement a complete AST system, support direct code analysis to obtain AST, prepare to support high-level languages
 6. (To be determined) Add an assembly instruction support system, support assembly instructions, and prepare for future support of high-level languages
-7. (To be determined) Add new functions based on assembly instructions and high-level languages, including many functions that were not possible before
+7. (To be determined) Add new functions based on assembly instructions and high-level languages, including many functions that could not be achieved before
 8. (To be determined) Before supporting assembly, consider first supporting a lisp-like language
 9. (TBD) Support the realization of various data structures in the type system
-10. (To be determined) Use KMP algorithm to implement string search, etc., may be based on high-level language support, and implement some common algorithms with type systems, such as shortest path and game tree, etc.
+10. (To be determined) Use KMP algorithm to implement string search, etc., may be based on high-level language support, and implement some common algorithms with type systems, such as the shortest path and game tree, etc.
 # Compare
 Comparison with common packages:
-1. typescript-logic: unit logic. The implementation principle is similar to the logic part of this package. It can be repackaged to perform element-wise operations on the array to convert to multiple bits, but each operation must be packaged, and it does not define the INFER EQ operation , And cannot be compatible with the digital computing system of this package
+1. typescript-logic: unit logic. The implementation principle is similar to the logic part of this package. It can be repackaged to perform element-wise operations on the array to convert to multiple bits, but each operation must be packaged, and it does not define the INFER EQ operation , And is not compatible with the digital computing system of this package
 2. typescript-tuple: absorb the array operation part of it, and absorb the digital control method in it, and establish a new mathematical operation mechanism
 
 
@@ -377,7 +419,15 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 增加了Tree函数,用于把数组转化为树形结构,准备用于替换所有递归处理函数
 * maintain1: 添加了Flatten函数,并修复了Tree的bug,Flatten函数提供了处理Tree数据的典型模式
 * maintain2:更改了MapType的实现,现在HEX函数可以支持到小写的f,已经基本具备16进制支持,但Maptype的能力并没有太大改观,下一步考虑采用 除法+slice操作实现直接二分
-* maintain3: 让Dec HEX OCT函数都支持了number string bigint等可作为字符串的值作为输入
+* maintain3: **让Dec HEX OCT函数都支持了number string bigint等可作为字符串的值作为输入**,可做如下替换:
+```ts
+type a=Dec<1>
+type b=Dec<"1">
+//此处a和b相等
+```
+
+
+
 ### 1.1.3 更新内容
 增加函数:
 * sMoreOrEqual 大于等于
@@ -387,7 +437,8 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 
 ### 1.2.0 更新内容
 修复Bug
-* 紧急修复Math部分sMoreThan函数无效问题
+* **紧急修复Math部分sMoreThan函数无效问题**
+
 增加函数
 - CutEnd 切断后面的等长串,即使不匹配
 - CutFront 切断前面的等长串,即使不匹配
