@@ -384,13 +384,37 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
 * sLessOrEqual 小于等于
 * Length 求数组的长度,无上限
 * 原始的 string的Length改名为StrLength ,上限为13,超过13的无法求得
+
+### 1.2.0 更新内容
+修复Bug
+* 紧急修复Math部分sMoreThan函数无效问题
+增加函数
+- CutEnd 切断后面的等长串,即使不匹配
+- CutFront 切断前面的等长串,即使不匹配
+- MergeArrayEnd 用一个短数组替换一个长数组的后面部分
+- MergeArrayFront 用一个短数组替换一个长数组的前面部分
+- **SNumToLogic** 将SNum即数字的内部表示形式转换为Logic二进制数组表示
+- **SNumToBin** 将SNum即数字的内部表示形式转换为二进制字符串表示
+本版本的演示代码如下:
+```ts
+type s=MergeArrayEnd<[1,2,3,8],[4,5]>
+//type s = [1, 2, 4, 5]
+type b=SNumToLogic<"xxxxxxxx">
+//type b = [true, false, false, false]
+type c=LogicToBin<b>
+type d=BinToSNum<c>;
+type t=sEqual<d,"xxxxxxxx">
+//type t=[true]
+type k=SNumToBin<"xxxxxxxxxx">
+//type k = "1010"
+```
+其他函数可自行测试
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
-- [ ] 改进数学部分
-   - [ ] 支持从SNum到Bin和Logic的转换
+- [x] 改进数学部分
+   - [x] 支持从SNum到Bin和Logic的转换
    - [x] 支持十进制
    - [x] 支持16进制,解决最高只能支持到12位数字的Bug
-   - [ ] 解决MapType系统的隐患
 - [ ] 解决基本序列处理范式问题,目前使用逐个处理的递归方式,将改进到二分法
   - [ ] MapType的深度限制问题
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
@@ -405,11 +429,10 @@ type a=Range<Dec<"1">,Dec<"1">,Dec<"40">>
     - [x] Range
     - [ ] Splite
     - [ ] Sort
-    - [x] Length
-      - [ ] 长度限制问题
+    - [x] Length (返回的是SNum)
+      - [x] 长度限制问题
 - [ ] 将sDiv函数使用二分法实现,而非使用计数法
-- [ ] 增加而非函数,对sNum,引入数组操作能力
-- [ ] 持续吸纳同类包的内容和有益部分
+- [x] 持续吸纳同类包的内容和有益部分
   - [x] typescript-tuple
   - [x] typescript-logic
 ## 2.x 版本预计划

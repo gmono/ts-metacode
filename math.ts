@@ -6,7 +6,7 @@ import { MapType, Push } from '.';
 import { MapElement, AND, NOT } from ".";
 import { JOIN, CanBeString, Split } from './string';
 import { MapUnit } from './common';
-import { Concat, Tail } from './array';
+import { Concat, Tail, MergeArrayEnd } from './array';
 import { OR } from './logic';
 
 //!将01表示的二进制数字的字符串形式 和boolean数组互相转换
@@ -34,8 +34,8 @@ export type One="x"
 // export type Minus<R extends string>=`-${R}`;
 export type sMoreOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sMoreThan<P,R>>;
 export type sLessOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sLessThan<P,R>>;
-//比较
-export type sMoreThan<P extends  string,R extends string>=P extends `${R}x`? [true]:[false];
+//比较 主要基于 大于等于定义所有比较
+export type sMoreThan<P extends  string,R extends string>=P extends `${R}${infer ANY}x`? [true]:[false];
 export type sEqual<P extends  string,R extends string>=P extends R? [true]:[false];
 export type sLessThan<P extends  string,R extends string>=AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
 
@@ -268,3 +268,53 @@ type MapSDecToDec=[
 ];
 //分割数字，最后是一个number数组
 type SplitDec<a extends number|string>=MapElement<Split<`${a}`,"">,MapSDecToDec>;
+
+
+//从snum到logic
+
+//纯粹移位 得到的是下界
+//! 这里得到的只是2的幂次 如果超过则不取 
+type _SNumToLogic<T extends SNum,Now extends boolean[]=[],NowSum extends SNum=Zero>=
+//移位匹配 移位=x2 
+T extends Zero? [false]:
+T extends One? [true]:
+//移位 左移
+//这里返回NowSum也即可SNum表示的数字,但此处直接返回true false数组 
+//! 若此处返回NowSum则上面的false和true也应该改变为Zero和One
+//! 此转换机制可改成多进制形式
+Now extends [true,...infer S]? (
+  sMoreThan<sMul<NowSum,Dec<2>>,T> extends [true]? Now:
+  _SNumToLogic<T,[...Now,false],sMul<NowSum,Dec<2>>>
+):_SNumToLogic<T,[true],Dec<1>>;
+/**
+ * 从snum转到Logic表示 即位串表示
+ */
+type SNumToLogic<T extends SNum>=
+//得到2的幂次  得到对应的SNum 把T减去已经得到的值后剩余的作为Rest
+//如果Rest是Zero 那么直接返回 否则把Rest当做T再次求取Logic并合并数组到之前的
+//把剩余转换来的值合并到后面 
+sSub<T,LogicToSNum<_SNumToLogic<T>>> extends Zero?_SNumToLogic<T>:
+MergeArrayEnd<_SNumToLogic<T>,SNumToLogic<sSub<T,LogicToSNum<_SNumToLogic<T>>>>>;
+
+//! 基于位串表示实现从snUM到Bin的转化
+type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
+// type s=sMoreThan<"xxxx","xx">
+
+type b=SNumToLogic<"xxxxxxxx">
+type c=LogicToBin<b>
+type d=BinToSNum<c>;
+type t=sEqual<d,"xxxxxxxx">
+//type t=[true]
+type k=SNumToBin<"xxxxxxxxxx">
+//type k = "1010"
+//? 此处已经有 SNum到二进制的转化 而从SNum到10进制的转化尚未实现
+//? 到10进制或其他的转化到底是直接从SNum开始还是要从Logic或Bin表示开始?
+//? 数学运算由于只支持SNum 如果使用数学运算来从二进制数开始转化,得到的会是SNum表示的数
+//? 而非一般十进制数,理论上如果把SNum的实现转为数组实现,则可以方便从length属性得到其值
+//? 但可能失去字符串匹配的一些功能 从logic或bin开始转化可以建立映射表,但只能对2幂次
+//? 进制进行转化,而十进制不行 ,从SNum开始,截取字符串 ,采用数数的方式进行处理
+//? 此方法也可把Snum转为任意进制的数的字符串形式,或模拟上述二分匹配
+//? 可使用10分匹配, 即一次乘10,如果不行再乘10,若超过则返回当前, 另一个type把剩余的拿去再次转化
+//? 将之前转化的与现在转化的尾部对接,可将数组对接改为字符串对接 或数组对接后Join
+//! 若使用复制上述的方式,则应该把递归结束部分,0 1 改为0到9  可用MapType实现
+// type a=LogicToSNum<[false]>

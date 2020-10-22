@@ -111,7 +111,8 @@ start extends Zero? T:
 _Slice<Tail<T>,sDec<start>>;
 
 // type a=1 extends Uncapitalize<`${infer t}`>? t:never;
-export type Slice<T extends any[],start extends SNum,end extends SNum>=
+//默认参数可实现 removefront和removeend 按数值截取的功能
+export type Slice<T extends any[],start extends SNum=Zero,end extends SNum=Length<T>>=
 //删除的方式 找到开始位置,删除前面那段,继续找到后面位置,删除后面那段,返回
 RemoveEnd<_Slice<T,start>,_Slice<T,end>>;
 type one=_Slice<Range<Dec<0>,Dec<1>,Dec<40>>,Dec<40>>
@@ -124,6 +125,24 @@ export type Insert<T extends any[],idx extends SNum,subAr extends any[]>=
 
 // type aaa=Insert<[1,2,3],Dec<"1">,[1,2,4]>
 
+//移除最后的等长串
+//切断函数
+/**
+ * 切断最后面的等长串
+ */
+export type CutEnd<R extends any[],K extends any[]>=Slice<R,Dec<0>,sSub<Length<R>,Length<K>>>;
+/**
+ * 切断前面的等长串
+ */
+export type CutFront<R extends any[],K extends any[]>=Slice<R,Length<K>>;
+/**
+ * 融合 到最前面或最后面 即切断再连接的过程 等于切断再插入
+ */
+export type MergeArrayEnd<R extends any[],K extends any[]>=Concat<CutEnd<R,K>,K>;
+export type MergeArrayFront<R extends any[],K extends any[]>=Concat<K,CutFront<R,K>>;
+//
+type s=MergeArrayEnd<[1,2,3,8],[4,5]>
+//type s = [1, 2, 4, 5]
 //MapElement算是集合操作的一部分 这里不重复
 //由于不能传递程序而只能传递值，这里直接传递映射模板
 //即 传递一个可用于maptype的数组 如果一个element 映射为false 则过滤掉
