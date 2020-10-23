@@ -3,10 +3,11 @@
 
 **锚点链接可能无法工作，中文说明在下方**
 **本项目在小版本更新时不添加英文说明**
-
+> **platform: typescript 4.1**
 
 # Description
-**Packages for typescript metaprogramming**
+**Package used by typescript metaprogramming, where the math part and string part must be run on typescript 4.1 and above**
+
 
 The functionality has several major components:
 1. **Logic**, including generic comparison templates such as If Equal and a complete mathematical logic system based on and non-operational
@@ -460,6 +461,14 @@ type k=SNumToBin<"xxxxxxxxxx">
 //type k = "1010"
 ```
 其他函数可自行测试
+
+### 1.2.1 更新内容
+* StrLength函数上限达到23,还是很低
+* 增加MapTypeLong函数，用于映射长映射串，能力提升10倍，但不能取代原有的MapType（依赖原因）,理论上可将映射数组长度提升到100左右,之后编写其他功能都优先使用此函数，未来其他使用原始MapType函数的地方也会陆续替换为本函数
+* 公开 Flatten 函数
+* 通过MapTypeLong函数，HEX函数已经支持全部大小写的16进制数
+* 发现使用JOIN很Split函数的功能会产生处理长度瓶颈,发现了两个从SNum回转的函数的限制
+
 ## 1.x 版本更新计划
 - [ ] 探索尾递归问题
 - [x] 改进数学部分

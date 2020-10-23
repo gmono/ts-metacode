@@ -31,7 +31,7 @@ Tree<ToDouble<s>>;
 /**
  * 二叉树专用
  */
-type Flatten<a extends any[]>=
+export type Flatten<a extends any[]>=
 a extends []? []:
 a extends [infer a]? a extends any[]?Flatten<a>:[a]:
 a extends [infer left,infer right]? 
@@ -40,4 +40,3 @@ a extends [infer left,infer right]?
     left extends any[]? right extends any[]?
     [...Flatten<left>,...Flatten<right>]:[left,right]:[left,right]
 ):never;
-type t=Tree<[4,4,4,4,4,4,4,4,4,4,4,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]>

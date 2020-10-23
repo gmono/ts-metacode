@@ -5,7 +5,7 @@ import { MapType, Push } from '.';
 
 import { MapElement, AND, NOT } from ".";
 import { JOIN, CanBeString, Split } from './string';
-import { MapUnit } from './common';
+import { MapUnit, MapTypeLong } from './common';
 import { Concat, Tail, MergeArrayEnd } from './array';
 import { OR } from './logic';
 
@@ -14,6 +14,7 @@ import { OR } from './logic';
 export type BinToLogic<s extends string>=s extends "" ?[]:
                             s extends `0${infer tail}`? [false,...BinToLogic<tail>]:
                             s extends `1${infer tail}`? [true,...BinToLogic<tail>]:never;
+//此处使用了JOIN函数会成为长度瓶颈
 export type LogicToBin<s extends boolean[]>=JOIN<MapElement<s,[[true,"1"],[false,"0"]]>>
 // type p=TransToLogic<"10010001">;
 // type aaa=TransToString<p>
@@ -164,7 +165,7 @@ type _OCT<s extends string[]>=s extends [...infer b,infer a]?
   )
 ):Zero;
 export type OCT<s extends CanBeString>=_OCT<Split<`${s}`,"">>
-type a=OCT<"10">
+// type a=OCT<"10">
 //16进制
 type _HEX<s extends string[]>=s extends [...infer b,infer a]?
 (
@@ -177,7 +178,8 @@ type _HEX<s extends string[]>=s extends [...infer b,infer a]?
 ):Zero;
 export type HEX<s extends CanBeString>=_HEX<Split<`${s}`,"">>
 //无法超过C 由于MAPTYPE限制
-// type a=Dec<10>;
+type a=HEX<"FF">;
+type bbb=sSub<HEX<"100">,a>
 // type t=Num<a>
 // type s=Num<a>
 // export type DEC<s extends number,Now extends string=One>=s extends 0? Zero:
@@ -219,7 +221,7 @@ type _MapOCT<s extends string>=MapType<s,[
   ["6","xxxxxx"],
   ["7","xxxxxxx"]
 ]>;
-type _MapHEX<s extends string>=MapType<s,[
+type _MapHEX<s extends string>=MapTypeLong<s,[
   ["0",""],
   ["1","x"],
   ["2","xx"],
@@ -236,14 +238,14 @@ type _MapHEX<s extends string>=MapType<s,[
   ["d","xxxxxxxxxxxxx"],
   ["e","xxxxxxxxxxxxxx"],
   ["f","xxxxxxxxxxxxxxx"],
-  ["k","xxxxxxxxxx"],
+  ["A","xxxxxxxxxx"],
   ["B","xxxxxxxxxxx"],
   ["C","xxxxxxxxxxxx"],
   ["D","xxxxxxxxxxxxx"],
   ["E","xxxxxxxxxxxxxx"],
   ["F","xxxxxxxxxxxxxxx"],
 ]>
-// type s=_MapHEX<"f">
+type s=_MapHEX<"F">
 //10
 type Ten=sMul<"xxxxx","xx">;
 type Eight=sMul<"xxxx","xx">;
@@ -300,12 +302,12 @@ MergeArrayEnd<_SNumToLogic<T>,SNumToLogic<sSub<T,LogicToSNum<_SNumToLogic<T>>>>>
 type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
 // type s=sMoreThan<"xxxx","xx">
 
-type b=SNumToLogic<"xxxxxxxx">
-type c=LogicToBin<b>
-type d=BinToSNum<c>;
-type t=sEqual<d,"xxxxxxxx">
-//type t=[true]
-type k=SNumToBin<"xxxxxxxxxx">
+// type b=SNumToLogic<"xxxxxxxx">
+// type c=LogicToBin<b>
+// type d=BinToSNum<c>;
+// type t=sEqual<d,"xxxxxxxx">
+// //type t=[true]
+// type k=SNumToBin<"xxxxxxxxxx">
 //type k = "1010"
 //? 此处已经有 SNum到二进制的转化 而从SNum到10进制的转化尚未实现
 //? 到10进制或其他的转化到底是直接从SNum开始还是要从Logic或Bin表示开始?

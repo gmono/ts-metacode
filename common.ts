@@ -1,4 +1,6 @@
 import { Tree } from './tree';
+import { Length, Slice } from './array';
+import { Dec, sMoreThan } from '.';
 //这个可以使用元组代替 [A,B]
 //普通固定映射器
 //由于无法传递通用泛型 只能单个如 a,gen<a> b,gen<b> any,gen<any>
@@ -22,10 +24,50 @@ export type None={};
  */
 type _MapType<T,A extends any[]>=A extends [infer Now,...infer S]?
                          Now extends MapUnit<infer From,infer To,infer Args>?
-                         T extends From? To:MapType<T,S>:never:T;
+                         T extends From? To:_MapType<T,S>:never:T;
+
+/**
+ * 用于映射更长的串
+ * ! 由于某些原因可能是math模块对Maptype的依赖导致的
+ * ! 目前使用MapeTypeLong已经可以实现更多特性
+ */
+export type MapTypeLong<T,A extends any[],seg extends number=10>=
+//一次找不到
+_MapType<T,Slice<A,Dec<0>,Dec<seg>>> extends T?(
+sMoreThan<Length<A>,Dec<seg>> extends [true]?
+MapTypeLong<T,Slice<A,Dec<seg>>,seg>:
+_MapType<T,A>):_MapType<T,Slice<A,Dec<0>,Dec<seg>>>;
 
 
 
+//! 一个简单粗暴的实现
+
+
+type _MapHEX<s extends string>=MapTypeLong<s,[
+    ["0",""],
+    ["1","x"],
+    ["2","xx"],
+    ["3","xxx"],
+    ["4","xxxx"],
+    ["5","xxxxx"],
+    ["6","xxxxxx"],
+    ["7","xxxxxxx"],
+    ["8","xxxxxxxx"],
+    ["9","xxxxxxxxx"],
+    ["a","xxxxxxxxxx"],
+    ["b","xxxxxxxxxxx"],
+    ["c","xxxxxxxxxxxx"],
+    ["d","xxxxxxxxxxxxx"],
+    ["e","xxxxxxxxxxxxxx"],
+    ["f","xxxxxxxxxxxxxxx"],
+    ["A","xxxxxxxxxx"],
+    ["B","xxxxxxxxxxx"],
+    ["C","xxxxxxxxxxxx"],
+    ["D","xxxxxxxxxxxxx"],
+    ["E","xxxxxxxxxxxxxx"],
+    ["F","xxxxxxxxxxxxxxx"],
+  ]>
+type ss=_MapHEX<"F">
                         
 //? 基于此二分映射方法 是否可以用生成代码方式生成整个四则运算表?
 //? 这个最多可以支持多少?理论上认为可以支持到2^12次方 也即 4096个元素的映射表
@@ -50,5 +92,5 @@ type MapTypeTree<T,A extends any[]>=A extends [infer left,infer right]?
  * ! 这是MapType的二叉树实现,即二分实现,原始的MapType
  */
 export type MapType<T,A extends any[]>=MapTypeTree<T,Tree<A>>;
-type a=MapType<string,[[number,string],[string,number],[object,"hhhhh"]]>
+
 //maptype现在支持长度为15个了 以前为12个 稍有进步
