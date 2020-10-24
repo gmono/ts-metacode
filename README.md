@@ -475,8 +475,8 @@ type k=SNumToBin<"xxxxxxxxxx">
    - [x] 支持从SNum到Bin和Logic的转换
    - [x] 支持十进制
    - [x] 支持16进制,解决最高只能支持到12位数字的Bug
-- [ ] 解决基本序列处理范式问题,目前使用逐个处理的递归方式,将改进到二分法
-  - [ ] MapType的深度限制问题
+- [x] 解决基本序列处理范式问题,目前使用逐个处理的递归方式,将改进到二分法
+  - [x] MapType的深度限制问题
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
 - [ ] 实现一个与类型系统整合的type guard 系统,如arr obj num str many date等等,可直接使用对象定义来定义类型,并通过类型映射函数得到最终实际类型,并可通过类型校验工具,根据定义的type guard对象进行类型校验和检测,将typescript的类型实体化并完整支持编辑器提示 
 - [ ] 将一些操作使用typescript-tuple包中的内容替代
