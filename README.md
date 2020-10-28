@@ -475,6 +475,7 @@ type k=SNumToBin<"xxxxxxxxxx">
    - [x] 支持从SNum到Bin和Logic的转换
    - [x] 支持十进制
    - [x] 支持16进制,解决最高只能支持到12位数字的Bug
+   - [ ] 原生支持SNum和number的自动转换和交叉使用
 - [ ] 解决基本序列处理范式问题,目前使用逐个处理的递归方式,将改进到二分法
   - [ ] MapType的深度限制问题
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
