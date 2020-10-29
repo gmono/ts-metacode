@@ -1,5 +1,5 @@
-import type {LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec} from "."
-// import { BinTransToLogic, sMul, sEqual, Zero, sDec } from './math';
+import type {LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec, sDiv, LogicToSNum} from "."
+// import { BinTransToLogic, sMul, sEqual, Zero, sDec, LogicToSNum } from './math';
 import { Equal } from './logic';
 
 
@@ -8,8 +8,12 @@ type b=BinToSNum<"1001">
 type s=sMul<a,b>
 type isok=sEqual<s,BinToSNum<"1111111001">>;
 type n=If<isok,"hello","world">
+type sss=BinToLogic<"111111100">
+type sssss=LogicToSNum<sss>;
 //此处
 
+type ss=sDiv<5,2>
+type sts=sEqual<ss,2>
 class test<A extends string,H=(sEqual<A,Zero> extends [false]? test<sDec<A>>:void)>{
     get test():H{
         return null as unknown as  H;

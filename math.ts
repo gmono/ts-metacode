@@ -31,37 +31,62 @@ export type LogicToBin<s extends boolean[]>=JOIN<MapElement<s,[[true,"1"],[false
 export type SNum=string;
 export type Zero="";
 export type One="x"
+//把数字和Snum统一处理成SNum
+//模板位置使用此函数转换
+export type Num<T extends number|SNum>=T extends number? Dec<T>:T;
 //负数 目前不支持负数
 // export type Minus<R extends string>=`-${R}`;
-export type sMoreOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sMoreThan<P,R>>;
-export type sLessOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sLessThan<P,R>>;
-//比较 主要基于 大于等于定义所有比较
-export type sMoreThan<P extends  string,R extends string>=P extends `${R}${infer ANY}x`? [true]:[false];
-export type sEqual<P extends  string,R extends string>=P extends R? [true]:[false];
-export type sLessThan<P extends  string,R extends string>=AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
+//! 前置的转换语句和最后的返回语句
+export type sMoreOrEqual<P extends  SNum|number,R extends SNum|number>=
+OR<sEqual<P,R>,sMoreThan<P,R>>;
 
-export type sInc<R extends string>=`${R}x`;
-export type sDec<R extends string>=R extends `${infer T}x`? T:Zero;
-export type sAdd<R extends string,P extends string>=`${R}${P}`;
-export type sSub<R extends string,P extends string>=R extends `${P}${infer T}`? T:never;
+export type sLessOrEqual<P extends  SNum|number,R extends SNum|number>=
+OR<sEqual<P,R>,sLessThan<P,R>>;
+//比较 主要基于 大于等于定义所有比较
+export type sMoreThan<P extends  SNum|number,R extends SNum|number>=
+Num<P> extends `${Num<R>}${infer ANY}x`? [true]:[false];
+
+export type sEqual<P extends  SNum|number,R extends SNum|number>=
+Num<P> extends Num<R>? [true]:[false];
+
+export type sLessThan<P extends  SNum|number,R extends SNum|number>=
+AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
+
+export type sInc<R extends SNum|number>=
+`${Num<R>}x`;
+export type sDec<R extends SNum|number>=
+Num<R> extends `${infer T}x`? T:Zero;
+
+export type sAdd<R extends SNum|number,P extends SNum|number>=
+`${Num<R>}${Num<P>}`;
+export type sSub<R extends SNum|number,P extends SNum|number>=
+Num<R> extends `${Num<P>}${infer T}`? T:never;
 //这个还是逐步增加的 需要改为二分
-export type sMul<R extends string,P extends string>=P extends  Zero? Zero:(
-  `${R}${sMul<R,sDec<P>>}`
+export type sMul<R extends SNum|number,P extends SNum|number>=
+Num<P> extends  Zero? Zero:(
+  `${Num<R>}${sMul<R,sDec<P>>}`
 )
 //! 注意 关键 ，当计算泛型参数时是一起计算的 而 extends短路 因此用if可能导致递归无限
 //需要处理p大于r的情况
 //!应当改为使用二分法做除法 即倍乘直到大于,然后再回溯,回溯可通过带当前状态变量来实现,但可能深度过高
-export type sDiv<R extends string,P extends string,NowTry extends string=One>=
-P extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
+export type sDiv<R extends SNum|number,P extends SNum|number,NowTry extends SNum=One>=
+Num<P> extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
   //逆运算
   //可能无限循环 如果不能整除
   //要检测 如果大于 则直接返回
-  sMul<P,NowTry> extends R? NowTry:(
+  sMul<P,NowTry> extends Num<R>? NowTry:(
     sMoreThan<sMul<P,sInc<NowTry>>,R> extends [true]? NowTry:
       sDiv<R,P,sInc<NowTry>>
       )
 );
 // type test=sDiv<"xxx","xxxx">
+
+
+
+
+
+//!!! 基本计算函数完成
+
 
 //没有把snum转回去的办法 目前没有开发
 //!! 转换部分 可将 SNum 转化为 Bin 和 Logic 结合上面的Bin和Login的互相转换 
@@ -83,7 +108,7 @@ export type BinToSNum<s extends string>=LogicToSNum<BinToLogic<s>>;
 // type sum=sMul<num,num2>;
 //!从snum转换回到bin和logic 还没实现
 //! 此处为把snum转换为十进制数字的方法
-export type Num<s extends string>=Split<s,"">["length"];
+// export type Num<s extends string>=Split<s,"">["length"];
 //可用于支持 1 2 4 8 16 等2 的幂次进制
 //非幂次可自行发挥想象力。。
 type MapFourBaseToBin=[

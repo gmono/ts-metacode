@@ -36,3 +36,38 @@ sEqual<Length<ar>,One> extends [true]?(
 //数组文本化
 export type StringifyArray<ar extends any[]>=`[${_StringifyArray<ar>}]`
 type s=StringifyArray<[1,number,string,{}]>
+
+//对象文本化
+type StringifyObject<obj>=
+{[idx in keyof obj]: idx extends CanBeString? obj[idx] extends infer S? S extends TypeList? `${idx}:${TypeMap<S>}`:never:never:never};
+// type Stringify<obj extends {[idx:string]:string},stack extends string[]=[]>=
+
+
+// union to intersection of functions
+type UnionToIoF<U> =
+    (U extends any ? (k: (x: U) => void) => void : never) extends
+    ((k: infer I) => void) ? I : never
+
+// return last element from Union
+type UnionPop<U> = UnionToIoF<U> extends { (a: infer A): void; } ? A : never;
+
+// prepend an element to a tuple.
+type Prepend<U, T extends any[]> =
+    ((a: U, ...r: T) => void) extends (...r: infer R) => void ? R : never;
+
+type UnionToTupleRecursively<Union, Result extends any[]> = {
+    1: Result;
+    0: UnionToTupleRecursively_<Union, UnionPop<Union>, Result>;
+    // 0: UnionToTupleRecursively<Exclude<Union, UnionPop<Union>>, Prepend<UnionPop<Union>, Result>>
+}[[Union] extends [never] ? 1 : 0];
+
+type UnionToTupleRecursively_<Union, Element, Result extends any[]> =
+    UnionToTupleRecursively<Exclude<Union, Element>, Prepend<Element, Result>>;
+
+type UnionToTuple<U> = UnionToTupleRecursively<U, []>;
+
+//! 借鉴别人的工作
+
+type ToStrList<obj> =obj extends infer S? UnionToTuple<StringifyObject<S>[keyof S]>:never;
+
+type ssss=ToStrList<{a:1;b:2}>
