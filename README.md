@@ -473,6 +473,14 @@ type k=SNumToBin<"xxxxxxxxxx">
 * 添加types模块,准备构建类型-文本转换体系,以便于自定义类型检查器的错误提示工作
 * 增加StringifyArray函数 用于数组文本化
 
+### 1.4.1-alpha1 更新内容
+* Math模块全面支持数字运算,后续陆续将接受SNum的工具函数改为可接收数字,Math模块在直接支持数字运算后,某些函数性能出现下降,幅度不等
+* String模块的FillWithChar 函数,8倍字符串填充函数,可对最高长度150左右的字符串进行替换
+* StrLength函数改进,使用FillWithChar函数实现,大大增加了计数上限,扩展为8倍
+bug修复:
+1. export了此前更新漏掉的**SNumToLogic**和**SNumToBin**函数,经测试正常可用
+
+
 ## 1.x 版本更新计划
 - [x] 探索尾递归问题(结果:没什么区别,递归深度最高50层)
 - [x] 改进数学部分
@@ -484,7 +492,7 @@ type k=SNumToBin<"xxxxxxxxxx">
 - [ ] 添加Merge函数的实际实现,实现Merge类型的融合策略,代替一般的assign函数
 - [ ] 实现一个与类型系统整合的type guard 系统,如arr obj num str many date等等,可直接使用对象定义来定义类型,并通过类型映射函数得到最终实际类型,并可通过类型校验工具,根据定义的type guard对象进行类型校验和检测,将typescript的类型实体化并完整支持编辑器提示 
 - [ ] 将一些操作使用typescript-tuple包中的内容替代
-- [ ] **将数组操作的功能，通过JOIN和Split函数，全部应用到string模块中**
+- [ ] ~~将数组操作的功能，通过JOIN和Split函数，全部应用到string模块中~~  **无法通过split函数转移,目前考虑直接复写或通过对split作倍率实现支持此功能**
 - [ ] 数组操作部分,基于SNum系统实现各种基于位置的操作,包括Get  Slice Insert 等
     - [x] Get
     - [x] Slice
@@ -510,6 +518,13 @@ type k=SNumToBin<"xxxxxxxxxx">
 8. (待定)在支持汇编前,考虑先对一个类lisp语言进行支持
 9. (待定)支持各种数据结构在类型系统中的实现
 10. (待定)把字符串搜索等使用KMP算法等实现，可能基于高级语言支持,将一些常见算法用类型系统实现,如最短路和博弈树等
+11. 尝试转移SNum实现到tuple上
+12. array模块尝试支持
+    ```ts
+    [1,2,...number[]]
+    ``` 
+    这样的元组
+13. 增加types模块,其中对各种类型和类型到字符串的映射进行了包装
 # 比较
 与常用包的比较:
 1. typescript-logic :单位逻辑，实现原理与本包logic部分类似，可通过重新包装，对数组进行element-wise操作转换为多位，但每个运算都要包装，且其没有定义INFER EQ操作，同时无法与本包的数字运算体系兼容

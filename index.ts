@@ -1,4 +1,5 @@
-import { Push } from './array';
+import { Push, RemoveFront, Slice } from './array';
+import { Dec, sAdd } from './math';
 
 /**
  * 功能说明： 
@@ -40,10 +41,18 @@ export * from "./math"
 export * from "./logic"
 export * from "./string"
 export * from "./tree"
-export * from "./types"
+//暂时不导出此模块
+// export * from "./types"
 //整合typescriopt tuple包 未来将作出包装和改进
 export {IsFinite,Reverse,Repeat,ConcatMultiple,Drop,SliceStartQuantity,FillTuple,CompareLength,SortTwoTuple,ShortestTuple,LongestTuple,FilterTuple as FilterType} from "typescript-tuple"
 
+//准备替代
+type Drop<A extends any[],B extends number>=Slice<A,Dec<B>>
+
+type ss=Drop<[1,2,3,4,5],2>
+type SliceStartQuantity<A extends any[],B extends number,C extends number>=
+Slice<A,Dec<B>,sAdd<B,C>>;
+type sss=SliceStartQuantity<[1,2,3,4,5,6],1,4>
 //Drop=RemoveFront
 //SliceStartQuantity 从某个位置开始切多少个  可以直接用slice实现
 //Fill可以用MapElement any->"r" 实现

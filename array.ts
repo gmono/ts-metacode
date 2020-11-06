@@ -196,3 +196,6 @@ Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 
 export type Length<a extends any[]>=Dec<a["length"]>;
 // type s=Length<"1,2,32">
+
+
+//! 准备实现split函数 实现数组分割

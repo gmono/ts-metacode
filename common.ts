@@ -30,6 +30,8 @@ type _MapType<T,A extends any[]>=A extends [infer Now,...infer S]?
  * 用于映射更长的串
  * ! 由于某些原因可能是math模块对Maptype的依赖导致的
  * ! 目前使用MapeTypeLong已经可以实现更多特性
+ * 此函数通过分段操作 即每次截取seg的长度执行映射 重复 并得到结果
+ * 映射失败返回原始类型
  */
 export type MapTypeLong<T,A extends any[],seg extends number=10>=
 //一次找不到

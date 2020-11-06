@@ -75,6 +75,7 @@ Num<P> extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
   //可能无限循环 如果不能整除
   //要检测 如果大于 则直接返回
   sMul<P,NowTry> extends Num<R>? NowTry:(
+    // @ts-ignore
     sMoreThan<sMul<P,sInc<NowTry>>,R> extends [true]? NowTry:
       sDiv<R,P,sInc<NowTry>>
       )
@@ -161,6 +162,8 @@ export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMa
 export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
   MapType<a,mt> extends CanBeString?
   b extends CanBeString[]?
+  //忽略错误
+  // @ts-ignore
    `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
 ):Zero;
 
@@ -316,7 +319,7 @@ Now extends [true,...infer S]? (
 /**
  * 从snum转到Logic表示 即位串表示
  */
-type SNumToLogic<T extends SNum>=
+export type SNumToLogic<T extends SNum>=
 //得到2的幂次  得到对应的SNum 把T减去已经得到的值后剩余的作为Rest
 //如果Rest是Zero 那么直接返回 否则把Rest当做T再次求取Logic并合并数组到之前的
 //把剩余转换来的值合并到后面 
@@ -324,7 +327,7 @@ sSub<T,LogicToSNum<_SNumToLogic<T>>> extends Zero?_SNumToLogic<T>:
 MergeArrayEnd<_SNumToLogic<T>,SNumToLogic<sSub<T,LogicToSNum<_SNumToLogic<T>>>>>;
 
 //! 基于位串表示实现从snUM到Bin的转化
-type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
+export type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
 // type s=sMoreThan<"xxxx","xx">
 
 // type b=SNumToLogic<"xxxxxxxx">
@@ -332,8 +335,10 @@ type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNum
 // type d=BinToSNum<c>;
 // type t=sEqual<d,"xxxxxxxx">
 // //type t=[true]
-// type k=SNumToBin<"xxxxxxxxxx">
-//type k = "1010"
+type k=SNumToBin<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
+//把所有字符用某个字符代替
+
+//type k = "101010"
 //? 此处已经有 SNum到二进制的转化 而从SNum到10进制的转化尚未实现
 //? 到10进制或其他的转化到底是直接从SNum开始还是要从Logic或Bin表示开始?
 //? 数学运算由于只支持SNum 如果使用数学运算来从二进制数开始转化,得到的会是SNum表示的数

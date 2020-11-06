@@ -1,10 +1,21 @@
 import { sEqual, Zero, One, Dec } from './math';
 import { Head, Length, Slice, Tail } from './array';
 import { CanBeString } from './string';
-export type  TypeNameList= RawTypeNameList| "object" | "function";
+/**
+ * 类型名列表
+ */
+export type TypeNameList= RawTypeNameList| "object" | "function";
 export type RawTypeNameList="string" | "number" | "bigint" | "boolean" | "symbol" | "undefined";
+
+/**
+ * 类型列表和原生类型列表
+ */ 
 export type RawTypeList=string | number | bigint | boolean | symbol | undefined;
 export type  TypeList= RawTypeList| object | Function;
+
+/**
+ * 映射类型到类型名
+ */
 export type TypeMap<tp extends TypeList>=tp extends string? "string":
                     tp extends number? "number":
                     tp extends bigint? "bigint":
@@ -13,6 +24,9 @@ export type TypeMap<tp extends TypeList>=tp extends string? "string":
                     tp extends Function? "function":
                     tp extends undefined? "undefined":
                     tp extends object? "object":never;
+/**
+ * 映射类型名到类型
+ */
 export type TypeNameMap<name extends TypeNameList>=name extends "string"? string:
                     name extends "number"? number:
                     name extends "bigint"? bigint:
@@ -21,6 +35,10 @@ export type TypeNameMap<name extends TypeNameList>=name extends "string"? string
                     name extends "function"? Function:
                     name extends "undefined"? undefined:
                     name extends "object"? object:never;
+/**
+ * 表示一个Class的类型 任何class 的类型 typeof class 都可用
+ * 此类型表示
+ */
 export type ClassType=new(...args:any[])=>any;
 
 //数组字符串化
@@ -33,9 +51,12 @@ sEqual<Length<ar>,One> extends [true]?(
 ):
 `${_StringifyArray<Slice<ar,Dec<0>,One>>},${_StringifyArray<Tail<ar>>}`
 
-//数组文本化
-export type StringifyArray<ar extends any[]>=`[${_StringifyArray<ar>}]`
-type s=StringifyArray<[1,number,string,{}]>
+//数组文本化 目前不支持具体的值类型
+/**
+ * 只支持基本类型
+ */
+export type StringifyTuple<ar extends any[]>=`[${_StringifyArray<ar>}]`
+type s=StringifyTuple<[1,number,string,{}]>
 
 //对象文本化
 type StringifyObject<obj>=
