@@ -33,48 +33,51 @@ export type Zero="";
 export type One="x"
 //把数字和Snum统一处理成SNum
 //模板位置使用此函数转换
-export type Num<T extends number|SNum>=T extends number? Dec<T>:T;
+export type Num<T extends SNum|number>=T extends number? Dec<T>:T;
+export type __ToNum<T extends SNum>=T;
+// type __ReceiveType=SNum|number;
+// type __ToNum<T extends __ReceiveType>=Num<T>;
 //负数 目前不支持负数
 // export type Minus<R extends string>=`-${R}`;
 //! 前置的转换语句和最后的返回语句
-export type sMoreOrEqual<P extends  SNum|number,R extends SNum|number>=
+export type sMoreOrEqual<P extends  SNum,R extends SNum>=
 OR<sEqual<P,R>,sMoreThan<P,R>>;
 
-export type sLessOrEqual<P extends  SNum|number,R extends SNum|number>=
+export type sLessOrEqual<P extends  SNum,R extends SNum>=
 OR<sEqual<P,R>,sLessThan<P,R>>;
 //比较 主要基于 大于等于定义所有比较
-export type sMoreThan<P extends  SNum|number,R extends SNum|number>=
-Num<P> extends `${Num<R>}${infer ANY}x`? [true]:[false];
+export type sMoreThan<P extends  SNum,R extends SNum>=
+__ToNum<P> extends `${__ToNum<R>}${infer ANY}x`? [true]:[false];
 
-export type sEqual<P extends  SNum|number,R extends SNum|number>=
-Num<P> extends Num<R>? [true]:[false];
+export type sEqual<P extends  SNum,R extends SNum>=
+__ToNum<P> extends __ToNum<R>? [true]:[false];
 
-export type sLessThan<P extends  SNum|number,R extends SNum|number>=
+export type sLessThan<P extends  SNum,R extends SNum>=
 AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
 
-export type sInc<R extends SNum|number>=
-`${Num<R>}x`;
-export type sDec<R extends SNum|number>=
-Num<R> extends `${infer T}x`? T:Zero;
+export type sInc<R extends SNum>=
+`${__ToNum<R>}x`;
+export type sDec<R extends SNum>=
+__ToNum<R> extends `${infer T}x`? T:Zero;
 
-export type sAdd<R extends SNum|number,P extends SNum|number>=
-`${Num<R>}${Num<P>}`;
-export type sSub<R extends SNum|number,P extends SNum|number>=
-Num<R> extends `${Num<P>}${infer T}`? T:never;
+export type sAdd<R extends SNum,P extends SNum>=
+`${__ToNum<R>}${__ToNum<P>}`;
+export type sSub<R extends SNum,P extends SNum>=
+__ToNum<R> extends `${__ToNum<P>}${infer T}`? T:never;
 //这个还是逐步增加的 需要改为二分
-export type sMul<R extends SNum|number,P extends SNum|number>=
-Num<P> extends  Zero? Zero:(
-  `${Num<R>}${sMul<R,sDec<P>>}`
+export type sMul<R extends SNum,P extends SNum>=
+__ToNum<P> extends  Zero? Zero:(
+  `${__ToNum<R>}${sMul<R,sDec<P>>}`
 )
 //! 注意 关键 ，当计算泛型参数时是一起计算的 而 extends短路 因此用if可能导致递归无限
 //需要处理p大于r的情况
 //!应当改为使用二分法做除法 即倍乘直到大于,然后再回溯,回溯可通过带当前状态变量来实现,但可能深度过高
-export type sDiv<R extends SNum|number,P extends SNum|number,NowTry extends SNum=One>=
-Num<P> extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
+export type sDiv<R extends SNum,P extends SNum,NowTry extends SNum=One>=
+__ToNum<P> extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
   //逆运算
   //可能无限循环 如果不能整除
   //要检测 如果大于 则直接返回
-  sMul<P,NowTry> extends Num<R>? NowTry:(
+  sMul<P,NowTry> extends __ToNum<R>? NowTry:(
     // @ts-ignore
     sMoreThan<sMul<P,sInc<NowTry>>,R> extends [true]? NowTry:
       sDiv<R,P,sInc<NowTry>>
@@ -206,7 +209,7 @@ type _HEX<s extends string[]>=s extends [...infer b,infer a]?
 ):Zero;
 export type HEX<s extends CanBeString>=_HEX<Split<`${s}`,"">>
 //无法超过C 由于MAPTYPE限制
-type a=HEX<"FF">;
+type a=HEX<"F">;
 type bbb=sSub<HEX<"100">,a>
 // type t=Num<a>
 // type s=Num<a>
@@ -227,7 +230,7 @@ type bbb=sSub<HEX<"100">,a>
 //如果snum可以变为logic 那么可以使用二分法实现
 type __Num<a extends number,Now extends any[]=[]>=Push<Now,"x">["length"] extends a? Push<Now,"x">:__Num<a,Push<Now,"x">>;
 //这个只能转换0-9
-type _MapDEC<s extends string>=MapType<s,[
+type _MapDEC<s extends string>=MapTypeLong<s,[
   ["0",""],
   ["1","x"],
   ["2","xx"],
@@ -238,7 +241,7 @@ type _MapDEC<s extends string>=MapType<s,[
   ["7","xxxxxxx"],
   ["8","xxxxxxxx"],
   ["9","xxxxxxxxx"],
-]>
+]>;
 type _MapOCT<s extends string>=MapType<s,[
   ["0",""],
   ["1","x"],
@@ -273,11 +276,11 @@ type _MapHEX<s extends string>=MapTypeLong<s,[
   ["E","xxxxxxxxxxxxxx"],
   ["F","xxxxxxxxxxxxxxx"],
 ]>
-type s=_MapHEX<"F">
+type s=_MapDEC<"9">
 //10
-type Ten=sMul<"xxxxx","xx">;
-type Eight=sMul<"xxxx","xx">;
-type Sixteen=sMul<Eight,"xx">;
+export type Ten=sMul<"xxxxx","xx">;
+export type Eight=sMul<"xxxx","xx">;
+export type Sixteen=sMul<Eight,"xx">;
 // type a=HEX<>
 
 // type a=OCT<"176">

@@ -140,6 +140,10 @@ export type CutFront<R extends any[],K extends any[]>=Slice<R,Length<K>>;
  */
 export type MergeArrayEnd<R extends any[],K extends any[]>=Concat<CutEnd<R,K>,K>;
 export type MergeArrayFront<R extends any[],K extends any[]>=Concat<K,CutFront<R,K>>;
+//别名
+export type RewriteEnd<R extends any[],K extends any[]>=MergeArrayEnd<R,K>;
+export type RewriteFront<R extends any[],K extends any[]>=MergeArrayFront<R,K>;
+
 //
 type s=MergeArrayEnd<[1,2,3,8],[4,5]>
 //type s = [1, 2, 4, 5]
@@ -195,7 +199,31 @@ Range<start,space,end,sAdd<Now,space>,[...nowar,Now]>;
 
 
 export type Length<a extends any[]>=Dec<a["length"]>;
-// type s=Length<"1,2,32">
+// type s=Length<[1,2,3,2,2,3,3,2,3]>
+// type a=Dec<"2">
 
 
 //! 准备实现split函数 实现数组分割
+
+/**
+ * 一次分割
+ */
+type _Split<a extends any[],b extends any[]>=
+IndexOf<a,b> extends never? [a]:
+[Slice<a,Zero,IndexOf<a,b>>,
+Slice<a,sInc<IndexOf<a,b>>,Length<a>>];
+
+
+type SplitArray<a extends any[],b extends any[]>=
+IndexOf<a,b> extends never? [a]:
+[_Split<a,b>[0],...SplitArray<_Split<a,b>[1],b>];
+
+//! 此处有问题
+type sss=SplitArray<[1,2,3,2,2,2,3,3,4],[3,4]>;
+
+type JoinArray<a extends any[],b extends any[]>=
+Tail<a> extends []?
+[...a[0]]: 
+[...a[0],...b,...JoinArray<Tail<a>,b>];
+
+type sssss=JoinArray<sss,[3]>

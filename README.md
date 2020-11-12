@@ -480,6 +480,12 @@ type k=SNumToBin<"xxxxxxxxxx">
 bug修复:
 1. export了此前更新漏掉的**SNumToLogic**和**SNumToBin**函数,经测试正常可用
 
+### 1.4.2 更新内容
+* 添加了MergeArray系列函数的别名 Rewrite系列函数,**即RewriteFront和RewriteEnd**
+#### 紧急修复Bug
+Dec函数出现重大Bug, 8 9两个数字无法转换成功,经查为MapTypeLong等函数引用Dec函数造成Dec函数无法使用MapTypeLong,而Dec函数原来使用MapType函数能力太弱导致  
+本Bug目前以修复,DEC函数目前正常使用,支持数字大小已经可达10万
+
 
 ## 1.x 版本更新计划
 - [x] 探索尾递归问题(结果:没什么区别,递归深度最高50层)

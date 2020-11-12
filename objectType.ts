@@ -70,7 +70,7 @@ MergeArr<A,B> extends never? (
     ):MergeItr<A,B>
 ):MergeArr<A,B>;
 
-type ssss=MergeType<string,number>
+type ssss=MergeType<{a:string},{b:number[],a:string[]}>
 
 
 
