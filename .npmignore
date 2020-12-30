@@ -2,6 +2,5 @@
 .fake
 .ionide
 问题.md
-*.js
-*.d.ts
-dist
+src
+res
