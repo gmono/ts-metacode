@@ -31,37 +31,66 @@ export type LogicToBin<s extends boolean[]>=JOIN<MapElement<s,[[true,"1"],[false
 export type SNum=string;
 export type Zero="";
 export type One="x"
+//把数字和Snum统一处理成SNum
+//模板位置使用此函数转换
+export type Num<T extends SNum|number>=T extends number? Dec<T>:T;
+export type __ToNum<T extends SNum>=T;
+// type __ReceiveType=SNum|number;
+// type __ToNum<T extends __ReceiveType>=Num<T>;
 //负数 目前不支持负数
 // export type Minus<R extends string>=`-${R}`;
-export type sMoreOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sMoreThan<P,R>>;
-export type sLessOrEqual<P extends  string,R extends string>=OR<sEqual<P,R>,sLessThan<P,R>>;
-//比较 主要基于 大于等于定义所有比较
-export type sMoreThan<P extends  string,R extends string>=P extends `${R}${infer ANY}x`? [true]:[false];
-export type sEqual<P extends  string,R extends string>=P extends R? [true]:[false];
-export type sLessThan<P extends  string,R extends string>=AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
+//! 前置的转换语句和最后的返回语句
+export type sMoreOrEqual<P extends  SNum,R extends SNum>=
+OR<sEqual<P,R>,sMoreThan<P,R>>;
 
-export type sInc<R extends string>=`${R}x`;
-export type sDec<R extends string>=R extends `${infer T}x`? T:Zero;
-export type sAdd<R extends string,P extends string>=`${R}${P}`;
-export type sSub<R extends string,P extends string>=R extends `${P}${infer T}`? T:never;
+export type sLessOrEqual<P extends  SNum,R extends SNum>=
+OR<sEqual<P,R>,sLessThan<P,R>>;
+//比较 主要基于 大于等于定义所有比较
+export type sMoreThan<P extends  SNum,R extends SNum>=
+__ToNum<P> extends `${__ToNum<R>}${infer ANY}x`? [true]:[false];
+
+export type sEqual<P extends  SNum,R extends SNum>=
+__ToNum<P> extends __ToNum<R>? [true]:[false];
+
+export type sLessThan<P extends  SNum,R extends SNum>=
+AND<NOT<sMoreThan<P,R>>,NOT<sEqual<P,R>>>;
+
+export type sInc<R extends SNum>=
+`${__ToNum<R>}x`;
+export type sDec<R extends SNum>=
+__ToNum<R> extends `${infer T}x`? T:Zero;
+
+export type sAdd<R extends SNum,P extends SNum>=
+`${__ToNum<R>}${__ToNum<P>}`;
+export type sSub<R extends SNum,P extends SNum>=
+__ToNum<R> extends `${__ToNum<P>}${infer T}`? T:never;
 //这个还是逐步增加的 需要改为二分
-export type sMul<R extends string,P extends string>=P extends  Zero? Zero:(
-  `${R}${sMul<R,sDec<P>>}`
+export type sMul<R extends SNum,P extends SNum>=
+__ToNum<P> extends  Zero? Zero:(
+  `${__ToNum<R>}${sMul<R,sDec<P>>}`
 )
 //! 注意 关键 ，当计算泛型参数时是一起计算的 而 extends短路 因此用if可能导致递归无限
 //需要处理p大于r的情况
 //!应当改为使用二分法做除法 即倍乘直到大于,然后再回溯,回溯可通过带当前状态变量来实现,但可能深度过高
-export type sDiv<R extends string,P extends string,NowTry extends string=One>=
-P extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
+export type sDiv<R extends SNum,P extends SNum,NowTry extends SNum=One>=
+__ToNum<P> extends  Zero? never:sMoreThan<P,R> extends [true]? Zero:(
   //逆运算
   //可能无限循环 如果不能整除
   //要检测 如果大于 则直接返回
-  sMul<P,NowTry> extends R? NowTry:(
+  sMul<P,NowTry> extends __ToNum<R>? NowTry:(
+    // @ts-ignore
     sMoreThan<sMul<P,sInc<NowTry>>,R> extends [true]? NowTry:
       sDiv<R,P,sInc<NowTry>>
       )
 );
 // type test=sDiv<"xxx","xxxx">
+
+
+
+
+
+//!!! 基本计算函数完成
+
 
 //没有把snum转回去的办法 目前没有开发
 //!! 转换部分 可将 SNum 转化为 Bin 和 Logic 结合上面的Bin和Login的互相转换 
@@ -83,7 +112,7 @@ export type BinToSNum<s extends string>=LogicToSNum<BinToLogic<s>>;
 // type sum=sMul<num,num2>;
 //!从snum转换回到bin和logic 还没实现
 //! 此处为把snum转换为十进制数字的方法
-export type Num<s extends string>=Split<s,"">["length"];
+// export type Num<s extends string>=Split<s,"">["length"];
 //可用于支持 1 2 4 8 16 等2 的幂次进制
 //非幂次可自行发挥想象力。。
 type MapFourBaseToBin=[
@@ -136,6 +165,8 @@ export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMa
 export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
   MapType<a,mt> extends CanBeString?
   b extends CanBeString[]?
+  //忽略错误
+  // @ts-ignore
    `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
 ):Zero;
 
@@ -178,7 +209,7 @@ type _HEX<s extends string[]>=s extends [...infer b,infer a]?
 ):Zero;
 export type HEX<s extends CanBeString>=_HEX<Split<`${s}`,"">>
 //无法超过C 由于MAPTYPE限制
-type a=HEX<"FF">;
+type a=HEX<"F">;
 type bbb=sSub<HEX<"100">,a>
 // type t=Num<a>
 // type s=Num<a>
@@ -199,7 +230,7 @@ type bbb=sSub<HEX<"100">,a>
 //如果snum可以变为logic 那么可以使用二分法实现
 type __Num<a extends number,Now extends any[]=[]>=Push<Now,"x">["length"] extends a? Push<Now,"x">:__Num<a,Push<Now,"x">>;
 //这个只能转换0-9
-type _MapDEC<s extends string>=MapType<s,[
+type _MapDEC<s extends string>=MapTypeLong<s,[
   ["0",""],
   ["1","x"],
   ["2","xx"],
@@ -210,7 +241,7 @@ type _MapDEC<s extends string>=MapType<s,[
   ["7","xxxxxxx"],
   ["8","xxxxxxxx"],
   ["9","xxxxxxxxx"],
-]>
+]>;
 type _MapOCT<s extends string>=MapType<s,[
   ["0",""],
   ["1","x"],
@@ -245,11 +276,11 @@ type _MapHEX<s extends string>=MapTypeLong<s,[
   ["E","xxxxxxxxxxxxxx"],
   ["F","xxxxxxxxxxxxxxx"],
 ]>
-type s=_MapHEX<"F">
+type s=_MapDEC<"9">
 //10
-type Ten=sMul<"xxxxx","xx">;
-type Eight=sMul<"xxxx","xx">;
-type Sixteen=sMul<Eight,"xx">;
+export type Ten=sMul<"xxxxx","xx">;
+export type Eight=sMul<"xxxx","xx">;
+export type Sixteen=sMul<Eight,"xx">;
 // type a=HEX<>
 
 // type a=OCT<"176">
@@ -291,7 +322,7 @@ Now extends [true,...infer S]? (
 /**
  * 从snum转到Logic表示 即位串表示
  */
-type SNumToLogic<T extends SNum>=
+export type SNumToLogic<T extends SNum>=
 //得到2的幂次  得到对应的SNum 把T减去已经得到的值后剩余的作为Rest
 //如果Rest是Zero 那么直接返回 否则把Rest当做T再次求取Logic并合并数组到之前的
 //把剩余转换来的值合并到后面 
@@ -299,7 +330,7 @@ sSub<T,LogicToSNum<_SNumToLogic<T>>> extends Zero?_SNumToLogic<T>:
 MergeArrayEnd<_SNumToLogic<T>,SNumToLogic<sSub<T,LogicToSNum<_SNumToLogic<T>>>>>;
 
 //! 基于位串表示实现从snUM到Bin的转化
-type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
+export type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNumToLogic<T>>:never;
 // type s=sMoreThan<"xxxx","xx">
 
 // type b=SNumToLogic<"xxxxxxxx">
@@ -307,8 +338,10 @@ type SNumToBin<T extends SNum>=SNumToLogic<T> extends boolean[]? LogicToBin<SNum
 // type d=BinToSNum<c>;
 // type t=sEqual<d,"xxxxxxxx">
 // //type t=[true]
-// type k=SNumToBin<"xxxxxxxxxx">
-//type k = "1010"
+type k=SNumToBin<"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
+//把所有字符用某个字符代替
+
+//type k = "101010"
 //? 此处已经有 SNum到二进制的转化 而从SNum到10进制的转化尚未实现
 //? 到10进制或其他的转化到底是直接从SNum开始还是要从Logic或Bin表示开始?
 //? 数学运算由于只支持SNum 如果使用数学运算来从二进制数开始转化,得到的会是SNum表示的数

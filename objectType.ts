@@ -5,6 +5,7 @@
 
 import { MapUnit, MapElement, MapType } from ".";
 
+//!注意可能出现无限循环 如果同时存在并且不满足 
 //!合并类型用于JSON对象类型的合并中 需要函数按照对应合并策略进行合并
 export type MergeObject<A,B>={[idx in (keyof A|keyof B)]:
     idx extends keyof A?
@@ -33,9 +34,61 @@ export type MergeObject<A,B>={[idx in (keyof A|keyof B)]:
 //! 这里做如下假设： 迭代器合并是进行混合或拼接concat，而非取舍
 //! 一切对象类型都进行合并
 //! 原始类型进行或操作
-export type MergeType<A,B>=A extends B? A:
-                    
-                    A extends Array<infer AT>?B extends Array<infer BT>? Array<AT|BT>:MergeObject<A,B>:MergeObject<A,B>;
+type MergeRaw<A,B>=A|B;
+type MergeArr<A,B>=
+A extends Array<infer AT>?
+(
+    //有一个不是就直接当原生类型
+    B extends Array<infer BT>? Array<AT|BT>:never
+):never;
+type MergeItr<A,B>=
+A extends Iterable<infer AT>?
+(
+    //有一个不是就直接当原生类型
+    B extends Iterable<infer BT>? Iterable<AT|BT>:never
+):never;
+type MergeAsyncItr<A,B>=
+A extends AsyncIterable<infer AT>?
+(
+    //有一个不是就直接当原生类型
+    B extends  AsyncIterable<infer BT>?  AsyncIterable<AT|BT>:never
+):never;
+
+//主要是用这个函数的
+//! 此函数和mergeobject互用 mergeobject是此函数的特化
+export type MergeType<A,B>=
+//如果有继承关系 则选择大的
+//标准范式 正向
+
+MergeArr<A,B> extends never? (
+    MergeItr<A,B> extends never?(
+        MergeAsyncItr<A,B> extends never? (
+            A extends B? A:B extends A? B:
+            A extends object? B extends object? MergeObject<A,B>:
+            MergeRaw<A,B>:MergeRaw<A,B>
+        ):MergeAsyncItr<A,B>
+    ):MergeItr<A,B>
+):MergeArr<A,B>;
+
+type ssss=MergeType<{a:string},{b:number[],a:string[]}>
+
+
+
+//! 开始 对mergetype的样板实现
+// function merge<A extends object,B extends object>(a:A,b:B):MergeType<A,B>{
+//     let ta=a as any,tb=b as any;
+//     let ret={} as any;
+//     for(let k in ta){
+//         if(k in tb){
+//             //同时存在 如果是对象
+//             if(typeof ta[k]=="object"&&typeof tb[k as string]=="object"){
+//                 ret[k]=merge(ta[k],tb[k]);
+//             }else{
+//                 //属性冲突 无法合并
+//             }
+//         }else ret[k]=copy(ta[k]);
+//     }
+// }
 
 
 //!融合部分结束 开始映射部分

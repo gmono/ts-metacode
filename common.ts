@@ -1,6 +1,7 @@
 import { Tree } from './tree';
 import { Length, Slice } from './array';
-import { Dec, sMoreThan } from '.';
+import { Dec, sMoreThan, Ten, Zero } from '.';
+import { SNum } from './math';
 //这个可以使用元组代替 [A,B]
 //普通固定映射器
 //由于无法传递通用泛型 只能单个如 a,gen<a> b,gen<b> any,gen<any>
@@ -30,13 +31,15 @@ type _MapType<T,A extends any[]>=A extends [infer Now,...infer S]?
  * 用于映射更长的串
  * ! 由于某些原因可能是math模块对Maptype的依赖导致的
  * ! 目前使用MapeTypeLong已经可以实现更多特性
+ * 此函数通过分段操作 即每次截取seg的长度执行映射 重复 并得到结果
+ * 映射失败返回原始类型
  */
-export type MapTypeLong<T,A extends any[],seg extends number=10>=
+export type MapTypeLong<T,A extends any[],seg extends SNum=Ten>=
 //一次找不到
-_MapType<T,Slice<A,Dec<0>,Dec<seg>>> extends T?(
-sMoreThan<Length<A>,Dec<seg>> extends [true]?
-MapTypeLong<T,Slice<A,Dec<seg>>,seg>:
-_MapType<T,A>):_MapType<T,Slice<A,Dec<0>,Dec<seg>>>;
+_MapType<T,Slice<A,Zero,seg>> extends T?(
+sMoreThan<Length<A>,seg> extends [true]?
+MapTypeLong<T,Slice<A,seg>,seg>:
+_MapType<T,A>):_MapType<T,Slice<A,Zero,seg>>;
 
 
 

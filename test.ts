@@ -1,15 +1,20 @@
-import type {LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec} from "."
-// import { BinTransToLogic, sMul, sEqual, Zero, sDec } from './math';
+import type {SNumToBin,LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec, sDiv, LogicToSNum, Dec} from "."
+// import { BinTransToLogic, sMul, sEqual, Zero, sDec, LogicToSNum } from './math';
 import { Equal } from './logic';
 
 
 type a=BinToSNum<"1110001">
 type b=BinToSNum<"1001">
-type s=sMul<a,b>
-type isok=sEqual<s,BinToSNum<"1111111001">>;
+type ssssss=sMul<a,b>
+type isok=sEqual<s,BinToSNum<"111111100">>;
 type n=If<isok,"hello","world">
-//此处
+type sss=BinToLogic<"11111101">
+type sssss=LogicToSNum<sss>;
+//此处1
 
+type ss=SNumToBin<sDiv<1256,122>>
+type sts=sEqual<ss,2>
+type ssskk=Dec<7777>
 class test<A extends string,H=(sEqual<A,Zero> extends [false]? test<sDec<A>>:void)>{
     get test():H{
         return null as unknown as  H;

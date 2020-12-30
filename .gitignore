@@ -1,1 +1,5 @@
 **/node_modules
+.fake
+.ionide
+问题.md
+*.js
