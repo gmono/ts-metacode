@@ -47,12 +47,12 @@ export * from "./tree"
 export {IsFinite,Reverse,Repeat,ConcatMultiple,Drop,SliceStartQuantity,FillTuple,CompareLength,SortTwoTuple,ShortestTuple,LongestTuple,FilterTuple as FilterType} from "typescript-tuple"
 
 //准备替代
-type Drop<A extends any[],B extends number>=Slice<A,Dec<B>>
+// type Drop<A extends any[],B extends number>=Slice<A,Dec<B>>
 
-type ss=Drop<[1,2,3,4,5],2>
-type SliceStartQuantity<A extends any[],B extends number,C extends number>=
-Slice<A,Dec<B>,sAdd<B,C>>;
-type sss=SliceStartQuantity<[1,2,3,4,5,6],1,4>
+// type ss=Drop<[1,2,3,4,5],2>
+// type SliceStartQuantity<A extends any[],B extends number,C extends number>=
+// Slice<A,Dec<B>,sAdd<B,C>>;
+// type sss=SliceStartQuantity<[1,2,3,4,5,6],1,4>
 //Drop=RemoveFront
 //SliceStartQuantity 从某个位置开始切多少个  可以直接用slice实现
 //Fill可以用MapElement any->"r" 实现
