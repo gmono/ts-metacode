@@ -482,9 +482,14 @@ bug修复:
 
 ### 1.4.2 更新内容
 * 添加了MergeArray系列函数的别名 Rewrite系列函数,**即RewriteFront和RewriteEnd**
-#### 紧急修复Bug
-Dec函数出现重大Bug, 8 9两个数字无法转换成功,经查为MapTypeLong等函数引用Dec函数造成Dec函数无法使用MapTypeLong,而Dec函数原来使用MapType函数能力太弱导致  
-本Bug目前以修复,DEC函数目前正常使用,支持数字大小已经可达10万
+* **重大改动**,Math模块不再支持直接进行数字运算,直接数字运算请使用Dec函数包裹如
+    ```ts
+    sAdd<Dec<1>,Dec<1>>
+    //而非 sAdd<1,1> 此前支持这种写法,但因为复杂度过高和递归回路过大和曲折导致各种bug故取消
+    ```
+    #### 紧急修复Bug
+    Dec函数出现重大Bug, 8 9两个数字无法转换成功,经查为MapTypeLong等函数引用Dec函数造成Dec函数无法使用MapTypeLong,而Dec函数原来使用MapType函数能力太弱导致  
+    本Bug目前以修复,DEC函数目前正常使用,支持数字大小已经可达10万
 
 
 ## 1.x 版本更新计划
