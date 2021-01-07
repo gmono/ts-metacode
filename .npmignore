@@ -1,7 +1,8 @@
 **/node_modules
 .fake
 .ionide
-问题.md
+*.md
+README.md
 src
 res
 *.tsbuildinfo

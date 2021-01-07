@@ -6,6 +6,8 @@
 
 ***打包后仅2kb 如果用import type引入，没有打包体积***
 
+**注意MapType存在不可解决的Bug，改用MapTypeLong替代**
+
 > **platform: typescript 4.1**
 
 # Description
@@ -586,6 +588,7 @@ type k=SNumToBin<"xxxxxxxxxx">
 
 * 添加了MergeArray系列函数的别名 Rewrite系列函数,**即RewriteFront和RewriteEnd**
 * **重大改动**,Math模块不再支持直接进行数字运算,直接数字运算请使用Dec函数包裹如
+
   ```ts
   sAdd<Dec<1>,Dec<1>>
   //而非 sAdd<1,1> 此前支持这种写法,但因为复杂度过高和递归回路过大和曲折导致各种bug故取消
@@ -638,6 +641,7 @@ type k=SNumToBin<"xxxxxxxxxx">
 10. (待定)把字符串搜索等使用KMP算法等实现，可能基于高级语言支持,将一些常见算法用类型系统实现,如最短路和博弈树等
 11. 尝试转移SNum实现到tuple上
 12. array模块尝试支持
+
     ```ts
     [1,2,...number[]]
     ```
