@@ -1,5 +1,5 @@
 
-import { MapType, Push } from '.';
+import { Push } from '.';
 
 // type a=nAnd<[true,false],[false,true]>
 
@@ -163,11 +163,11 @@ type MapOCTToBin=
 //所有使用basemap 的进制转换 包括OCT等都存在问题
 export type BaseMap<s extends CanBeString,mt extends MapUnit<any,any>[]>=_BaseMap<Split<s,"">,mt>;
 export type _BaseMap<s extends CanBeString[],mt extends MapUnit<any,any>[]>=s extends [infer a,...infer b]?(
-  MapType<a,mt> extends CanBeString?
+  MapTypeLong<a,mt> extends CanBeString?
   b extends CanBeString[]?
   //忽略错误
   // @ts-ignore
-   `${MapType<a,mt>}${_BaseMap<b,mt>}`:never:never
+   `${MapTypeLong<a,mt>}${_BaseMap<b,mt>}`:never:never
 ):Zero;
 
 //!目前OCT存在上限太低问题,尚未修复,Bin和Dec没有问题
@@ -242,7 +242,7 @@ type _MapDEC<s extends string>=MapTypeLong<s,[
   ["8","xxxxxxxx"],
   ["9","xxxxxxxxx"],
 ]>;
-type _MapOCT<s extends string>=MapType<s,[
+type _MapOCT<s extends string>=MapTypeLong<s,[
   ["0",""],
   ["1","x"],
   ["2","xx"],

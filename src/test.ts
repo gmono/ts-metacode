@@ -1,14 +1,14 @@
 
 
-import type {SNumToBin,LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec, sDiv, LogicToSNum, Dec,sSub} from "."
+import type {SNumToBin,LogicToBin,BinToLogic,BinToSNum,sMul,sEqual,If,Zero,sDec, sDiv, LogicToSNum, Dec,sSub, OCT} from "."
 // import { BinTransToLogic, sMul, sEqual, Zero, sDec, LogicToSNum } from './math';
 import { Equal } from './logic';
 
-
+type aaa=OCT<"7">
 type a=BinToSNum<"1110001">
 type b=BinToSNum<"1001">
 type ssssss=sMul<a,b>
-type isok=sEqual<s,BinToSNum<"111111100">>;
+type isok=sEqual<ssssss,BinToSNum<"111111100">>;
 type n=If<isok,"hello","world">
 type sss=BinToLogic<"11111101">
 type sssss=LogicToSNum<sss>;

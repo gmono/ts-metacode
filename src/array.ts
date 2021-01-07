@@ -4,13 +4,13 @@
 //可映射 对象和数组 用过循环方式 优于递归方式实现
 //映射数组和对象
 
-import { MapUnit, MapType, If } from ".";
+import { MapUnit, MapTypeLong, If } from ".";
 import { Zero, SNum, sEqual, sDec, OCT, sInc, One, Dec, Bin, sAdd, sMoreThan, sMoreOrEqual, sDiv, sSub } from './math';
 import { JOIN } from './string';
 
 //此映射不递归 用于映射数组元素足够 ，对object只能映射第一层
 export type MapElement<T extends any,M extends MapUnit<any,any>[]>=
-                            {[R in keyof T]:MapType<T[R],M> };
+                            {[R in keyof T]:MapTypeLong<T[R],M> };
 //zip
 export type Zip<a,b>=a extends [infer i,...infer q]?b extends [infer ii,...infer qq]?[[i,ii],...Zip<q,qq>]:[]:[];
 
@@ -156,7 +156,7 @@ type s=MergeArrayEnd<[1,2,3,8],[4,5]>
 //! 注意Filter 可用映射表实现复杂筛选，映射表可通过Filter配套筛选器生成
 export type Filter<ar extends any[],ju extends [any,boolean][]>=ar extends [infer t,...infer ttt]?(
     //处理第一个 
-    MapType<t,ju> extends true?(
+    MapTypeLong<t,ju> extends true?(
         //如果判断t是true 则表示加入数组
         [t,...Filter<ttt,ju>]
     ):(

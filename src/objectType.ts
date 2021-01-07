@@ -3,7 +3,7 @@
 //合并类型 如果不存在 直接赋值 如果是同名数组 变成|类型 如果是同名对象
 //递归调用得到新类型
 
-import { MapUnit, MapElement, MapType } from ".";
+import { MapUnit, MapElement, MapTypeLong } from ".";
 
 //!注意可能出现无限循环 如果同时存在并且不满足 
 //!合并类型用于JSON对象类型的合并中 需要函数按照对应合并策略进行合并
@@ -101,7 +101,7 @@ export type MapProp<T extends any,M extends MapUnit<any,any>[]>=MapElement<T,M>;
 //由于extends操作判定主要基于类型签名而非实质，实际使用时可使用包装函数
 //包装原始对象 而将judgeexport type作为纯粹的记号类型使用
 export type MapRecursion<T extends any,M extends MapUnit<any,any>[],JudgeType=object>=
-                        {[R in keyof T]:T[R] extends JudgeType? MapRecursion<T[R],M,JudgeType>:MapType<T[R],M> };
+                        {[R in keyof T]:T[R] extends JudgeType? MapRecursion<T[R],M,JudgeType>:MapTypeLong<T[R],M> };
 
 
 //例如modle设计思路 可使用getarray getobject 来包装复杂成员

@@ -212,7 +212,7 @@
         "affectsGlobalScope": false
       },
       "./src/common.ts": {
-        "version": "1169e19763b20a77808d1274817044f3940aa6f7aa34934e9659f81e7b7351ca",
+        "version": "dc006592c66620302d4bbdda8cd11620c5a636209601d8818c90c60342322a8e",
         "signature": "5e24ab43a2df3bb464d74d61f73e49394fd85343c87daca4ddec08cfdea7df41",
         "affectsGlobalScope": false
       },
@@ -222,13 +222,13 @@
         "affectsGlobalScope": false
       },
       "./src/math.ts": {
-        "version": "fd1ae3b1b42de42794228688552f94fd79fa31e102f2cf57ae35b27c1b2143af",
+        "version": "33fdc53eed9cab01a719b1967495725964fdb9e1343ee31a17f5ae44e927d087",
         "signature": "eaac3c4c10b4a36ce327338c10970d8ab296788494091dd6584d6e806fdb3995",
         "affectsGlobalScope": false
       },
       "./src/objecttype.ts": {
-        "version": "6c3bdcb026a90649dab96cf7aec9e7bb41f7dc8e973fed50fe383e4dffbd064a",
-        "signature": "8cf4dfe4187786f1e2cf892e0861bc6a555f0893c1d2851adde4b8613e450308",
+        "version": "69742297a13287aeb17ee396fa11fa7fa08069a1a4b159525eef5bb63739a26b",
+        "signature": "0f8342c63ce179cef29156fa08468cba21c155876cd3b9eda449dfb9f329b643",
         "affectsGlobalScope": false
       },
       "./node_modules/typescript-tuple/lib/utils.d.ts": {
@@ -252,12 +252,12 @@
         "affectsGlobalScope": false
       },
       "./src/array.ts": {
-        "version": "a083075283b9a9ffbe78ac117a812873a6fa134f5b8dda4521d42a8280f049a3",
-        "signature": "bbb90bcc819cefaf91f7746e16d35ab00fb9a4f8dd8b82cbf46a0d12bfab8653",
+        "version": "e8dd10555d2dc6f8ff2dd7778bf5b1496b433a09dbc7e8f4e8ab13fedcd01ef1",
+        "signature": "236694e5fe1bba60d1342cd8bdb3a2f335bf73c2a9b5d2bae4d961fcf7776c51",
         "affectsGlobalScope": false
       },
       "./src/test.ts": {
-        "version": "dbe6fdb7aa01e348b3c42a87e403ee0fc0904faed6c52b5b7e4ce71f9f631a9e",
+        "version": "511d9be90c7ce0646a2956f1a49905c3f3d2dddc0b637e97ff62a377ab201582",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
@@ -431,7 +431,7 @@
         [
           {
             "file": "./src/array.ts",
-            "start": 158,
+            "start": 162,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'Zero'.",
             "category": 1,
@@ -439,7 +439,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 164,
+            "start": 168,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'SNum'.",
             "category": 1,
@@ -447,7 +447,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 170,
+            "start": 174,
             "length": 6,
             "messageText": "Module '\"./math\"' has no exported member 'sEqual'.",
             "category": 1,
@@ -455,7 +455,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 178,
+            "start": 182,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'sDec'.",
             "category": 1,
@@ -463,7 +463,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 184,
+            "start": 188,
             "length": 3,
             "messageText": "Module '\"./math\"' has no exported member 'OCT'.",
             "category": 1,
@@ -471,7 +471,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 189,
+            "start": 193,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'sInc'.",
             "category": 1,
@@ -479,7 +479,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 195,
+            "start": 199,
             "length": 3,
             "messageText": "Module '\"./math\"' has no exported member 'One'.",
             "category": 1,
@@ -487,7 +487,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 200,
+            "start": 204,
             "length": 3,
             "messageText": "Module '\"./math\"' has no exported member 'Dec'.",
             "category": 1,
@@ -495,7 +495,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 205,
+            "start": 209,
             "length": 3,
             "messageText": "Module '\"./math\"' has no exported member 'Bin'.",
             "category": 1,
@@ -503,7 +503,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 210,
+            "start": 214,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'sAdd'.",
             "category": 1,
@@ -511,7 +511,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 216,
+            "start": 220,
             "length": 9,
             "messageText": "Module '\"./math\"' has no exported member 'sMoreThan'.",
             "category": 1,
@@ -519,7 +519,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 227,
+            "start": 231,
             "length": 12,
             "messageText": "Module '\"./math\"' has no exported member 'sMoreOrEqual'.",
             "category": 1,
@@ -527,7 +527,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 241,
+            "start": 245,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'sDiv'.",
             "category": 1,
@@ -535,7 +535,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 247,
+            "start": 251,
             "length": 4,
             "messageText": "Module '\"./math\"' has no exported member 'sSub'.",
             "category": 1,
@@ -543,7 +543,15 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 495,
+            "start": 460,
+            "length": 19,
+            "messageText": "Type 'MapTypeLong' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 503,
             "length": 3,
             "messageText": "Type alias 'Zip' circularly references itself.",
             "category": 1,
@@ -551,7 +559,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 579,
+            "start": 587,
             "length": 9,
             "messageText": "Type 'Zip' is not generic.",
             "category": 1,
@@ -559,7 +567,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 1540,
+            "start": 1548,
             "length": 39,
             "messageText": "Type 'ReplaceAll' is not generic.",
             "category": 1,
@@ -567,7 +575,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 1596,
+            "start": 1604,
             "length": 16,
             "messageText": "Type 'Skip' is not generic.",
             "category": 1,
@@ -575,7 +583,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 1623,
+            "start": 1631,
             "length": 14,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -583,7 +591,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2205,
+            "start": 2213,
             "length": 10,
             "messageText": "Type alias 'RemoveSame' circularly references itself.",
             "category": 1,
@@ -591,7 +599,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2331,
+            "start": 2339,
             "length": 21,
             "messageText": "Type 'RemoveSame' is not generic.",
             "category": 1,
@@ -599,7 +607,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2461,
+            "start": 2469,
             "length": 13,
             "messageText": "Type alias 'RemoveAllSame' circularly references itself.",
             "category": 1,
@@ -607,7 +615,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2510,
+            "start": 2518,
             "length": 15,
             "messageText": "Type 'RemoveSame' is not generic.",
             "category": 1,
@@ -615,7 +623,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2545,
+            "start": 2553,
             "length": 32,
             "messageText": "Type 'RemoveAllSame' is not generic.",
             "category": 1,
@@ -623,7 +631,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2559,
+            "start": 2567,
             "length": 15,
             "messageText": "Type 'RemoveSame' is not generic.",
             "category": 1,
@@ -631,7 +639,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2611,
+            "start": 2619,
             "length": 10,
             "messageText": "Type alias 'ReplaceOne' circularly references itself.",
             "category": 1,
@@ -639,7 +647,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2731,
+            "start": 2739,
             "length": 23,
             "messageText": "Type 'ReplaceOne' is not generic.",
             "category": 1,
@@ -647,7 +655,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2861,
+            "start": 2869,
             "length": 10,
             "messageText": "Type alias 'ReplaceAll' circularly references itself.",
             "category": 1,
@@ -655,7 +663,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 2981,
+            "start": 2989,
             "length": 23,
             "messageText": "Type 'ReplaceAll' is not generic.",
             "category": 1,
@@ -663,7 +671,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3023,
+            "start": 3031,
             "length": 32,
             "messageText": "Type 'ReplaceAll' is not generic.",
             "category": 1,
@@ -671,7 +679,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3104,
+            "start": 3112,
             "length": 7,
             "messageText": "Type alias 'IndexOf' circularly references itself.",
             "category": 1,
@@ -679,7 +687,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3255,
+            "start": 3263,
             "length": 32,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -687,7 +695,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3512,
+            "start": 3520,
             "length": 3,
             "messageText": "Type alias 'Get' circularly references itself.",
             "category": 1,
@@ -695,7 +703,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3583,
+            "start": 3591,
             "length": 22,
             "messageText": "Type 'Get' is not generic.",
             "category": 1,
@@ -703,7 +711,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3624,
+            "start": 3632,
             "length": 6,
             "messageText": "Type alias '_Slice' circularly references itself.",
             "category": 1,
@@ -711,7 +719,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3699,
+            "start": 3707,
             "length": 27,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -719,7 +727,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3971,
+            "start": 3979,
             "length": 15,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -727,7 +735,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 3987,
+            "start": 3995,
             "length": 13,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -735,7 +743,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 4013,
+            "start": 4021,
             "length": 44,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -743,7 +751,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 4020,
+            "start": 4028,
             "length": 28,
             "messageText": "Type 'Range' is not generic.",
             "category": 1,
@@ -751,7 +759,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 4336,
+            "start": 4344,
             "length": 13,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -759,7 +767,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 4363,
+            "start": 4371,
             "length": 13,
             "messageText": "Type '_Slice' is not generic.",
             "category": 1,
@@ -767,7 +775,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5406,
+            "start": 5414,
             "length": 6,
             "messageText": "Type alias 'Filter' circularly references itself.",
             "category": 1,
@@ -775,7 +783,15 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5587,
+            "start": 5521,
+            "length": 17,
+            "messageText": "Type 'MapTypeLong' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5599,
             "length": 14,
             "messageText": "Type 'Filter' is not generic.",
             "category": 1,
@@ -783,7 +799,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5638,
+            "start": 5650,
             "length": 14,
             "messageText": "Type 'Filter' is not generic.",
             "category": 1,
@@ -791,7 +807,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5698,
+            "start": 5710,
             "length": 17,
             "messageText": "Type alias 'DeleteSameElement' circularly references itself.",
             "category": 1,
@@ -799,7 +815,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5784,
+            "start": 5796,
             "length": 20,
             "messageText": "Type 'DeleteSameElement' is not generic.",
             "category": 1,
@@ -807,7 +823,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 5964,
+            "start": 5976,
             "length": 4,
             "messageText": "Type alias 'Skip' circularly references itself.",
             "category": 1,
@@ -815,7 +831,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 6042,
+            "start": 6054,
             "length": 25,
             "messageText": "Type 'Skip' is not generic.",
             "category": 1,
@@ -823,7 +839,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 6271,
+            "start": 6283,
             "length": 5,
             "messageText": "Type alias 'Range' circularly references itself.",
             "category": 1,
@@ -831,7 +847,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 6465,
+            "start": 6477,
             "length": 53,
             "messageText": "Type 'Range' is not generic.",
             "category": 1,
@@ -839,7 +855,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7296,
+            "start": 7308,
             "length": 12,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -847,7 +863,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7344,
+            "start": 7356,
             "length": 12,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -855,7 +871,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7373,
+            "start": 7385,
             "length": 12,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -863,7 +879,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7410,
+            "start": 7422,
             "length": 10,
             "messageText": "Type alias 'SplitArray' circularly references itself.",
             "category": 1,
@@ -871,7 +887,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7456,
+            "start": 7468,
             "length": 12,
             "messageText": "Type 'IndexOf' is not generic.",
             "category": 1,
@@ -879,7 +895,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7509,
+            "start": 7521,
             "length": 28,
             "messageText": "Type 'SplitArray' is not generic.",
             "category": 1,
@@ -887,7 +903,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7563,
+            "start": 7575,
             "length": 37,
             "messageText": "Type 'SplitArray' is not generic.",
             "category": 1,
@@ -895,7 +911,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7610,
+            "start": 7622,
             "length": 9,
             "messageText": "Type alias 'JoinArray' circularly references itself.",
             "category": 1,
@@ -903,7 +919,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7706,
+            "start": 7718,
             "length": 20,
             "messageText": "Type 'JoinArray' is not generic.",
             "category": 1,
@@ -911,7 +927,7 @@
           },
           {
             "file": "./src/array.ts",
-            "start": 7743,
+            "start": 7755,
             "length": 18,
             "messageText": "Type 'JoinArray' is not generic.",
             "category": 1,
@@ -1094,7 +1110,7 @@
           },
           {
             "file": "./src/common.ts",
-            "start": 2619,
+            "start": 2688,
             "length": 22,
             "messageText": "Type 'MapTypeTree' is not generic.",
             "category": 1,
@@ -1102,8 +1118,16 @@
           },
           {
             "file": "./src/common.ts",
-            "start": 2633,
+            "start": 2702,
             "length": 7,
+            "messageText": "Type 'Tree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2860,
+            "length": 19,
             "messageText": "Type 'Tree' is not generic.",
             "category": 1,
             "code": 2315
@@ -1173,7 +1197,7 @@
         [
           {
             "file": "./src/math.ts",
-            "start": 156,
+            "start": 147,
             "length": 5,
             "messageText": "Module '\"./string\"' has no exported member 'Split'.",
             "category": 1,
@@ -1181,7 +1205,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 477,
+            "start": 468,
             "length": 5,
             "messageText": "Cannot find name 'infer'.",
             "category": 1,
@@ -1189,7 +1213,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 483,
+            "start": 474,
             "length": 4,
             "messageText": "Cannot find name 'tail'.",
             "category": 1,
@@ -1197,7 +1221,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 561,
+            "start": 552,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1205,7 +1229,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 563,
+            "start": 554,
             "length": 5,
             "messageText": "Cannot find name 'infer'.",
             "category": 1,
@@ -1213,7 +1237,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 569,
+            "start": 560,
             "length": 4,
             "messageText": "Cannot find name 'tail'.",
             "category": 1,
@@ -1221,7 +1245,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 574,
+            "start": 565,
             "length": 777,
             "messageText": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
             "category": 1,
@@ -1229,7 +1253,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1352,
+            "start": 1343,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1237,7 +1261,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1354,
+            "start": 1345,
             "length": 1,
             "messageText": "Cannot find name 'R'.",
             "category": 1,
@@ -1245,7 +1269,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1665,
+            "start": 1656,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1253,7 +1277,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1667,
+            "start": 1658,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1261,7 +1285,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1675,
+            "start": 1666,
             "length": 1,
             "messageText": "Cannot find name 'R'.",
             "category": 1,
@@ -1269,7 +1293,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1678,
+            "start": 1669,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1277,7 +1301,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1680,
+            "start": 1671,
             "length": 5,
             "messageText": "Cannot find name 'infer'.",
             "category": 1,
@@ -1285,7 +1309,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1686,
+            "start": 1677,
             "length": 3,
             "messageText": "Cannot find name 'ANY'.",
             "category": 1,
@@ -1293,7 +1317,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1690,
+            "start": 1681,
             "length": 1,
             "messageText": "Cannot find name 'x'.",
             "category": 1,
@@ -1301,7 +1325,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1954,
+            "start": 1945,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1309,7 +1333,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1956,
+            "start": 1947,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1317,7 +1341,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1964,
+            "start": 1955,
             "length": 1,
             "messageText": "Cannot find name 'R'.",
             "category": 1,
@@ -1325,7 +1349,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 1967,
+            "start": 1958,
             "length": 1,
             "messageText": "Cannot find name 'x'.",
             "category": 1,
@@ -1333,7 +1357,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2027,
+            "start": 2018,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1341,7 +1365,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2029,
+            "start": 2020,
             "length": 5,
             "messageText": "Cannot find name 'infer'.",
             "category": 1,
@@ -1349,7 +1373,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2035,
+            "start": 2026,
             "length": 1,
             "messageText": "Cannot find name 'T'.",
             "category": 1,
@@ -1357,7 +1381,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2037,
+            "start": 2028,
             "length": 1,
             "messageText": "Cannot find name 'x'.",
             "category": 1,
@@ -1365,7 +1389,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2103,
+            "start": 2094,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1373,7 +1397,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2105,
+            "start": 2096,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1381,7 +1405,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2113,
+            "start": 2104,
             "length": 1,
             "messageText": "Cannot find name 'R'.",
             "category": 1,
@@ -1389,7 +1413,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2116,
+            "start": 2107,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1397,7 +1421,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2118,
+            "start": 2109,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1405,7 +1429,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2126,
+            "start": 2117,
             "length": 1,
             "messageText": "Cannot find name 'P'.",
             "category": 1,
@@ -1413,7 +1437,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2203,
+            "start": 2194,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1421,7 +1445,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2205,
+            "start": 2196,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1429,7 +1453,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2213,
+            "start": 2204,
             "length": 1,
             "messageText": "Cannot find name 'P'.",
             "category": 1,
@@ -1437,7 +1461,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2216,
+            "start": 2207,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1445,7 +1469,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2218,
+            "start": 2209,
             "length": 5,
             "messageText": "Cannot find name 'infer'.",
             "category": 1,
@@ -1453,7 +1477,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2224,
+            "start": 2215,
             "length": 1,
             "messageText": "Cannot find name 'T'.",
             "category": 1,
@@ -1461,7 +1485,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2346,
+            "start": 2337,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1469,7 +1493,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2348,
+            "start": 2339,
             "length": 7,
             "messageText": "Cannot find name '__ToNum'.",
             "category": 1,
@@ -1477,7 +1501,31 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2356,
+            "start": 2347,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2350,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2352,
+            "length": 4,
+            "messageText": "Cannot find name 'sMul'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2357,
             "length": 1,
             "messageText": "Cannot find name 'R'.",
             "category": 1,
@@ -1486,30 +1534,6 @@
           {
             "file": "./src/math.ts",
             "start": 2359,
-            "length": 1,
-            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
-            "category": 1,
-            "code": 2581
-          },
-          {
-            "file": "./src/math.ts",
-            "start": 2361,
-            "length": 4,
-            "messageText": "Cannot find name 'sMul'.",
-            "category": 1,
-            "code": 2304
-          },
-          {
-            "file": "./src/math.ts",
-            "start": 2366,
-            "length": 1,
-            "messageText": "Cannot find name 'R'.",
-            "category": 1,
-            "code": 2304
-          },
-          {
-            "file": "./src/math.ts",
-            "start": 2368,
             "length": 4,
             "messageText": "Cannot find name 'sDec'.",
             "category": 1,
@@ -1517,7 +1541,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 2373,
+            "start": 2364,
             "length": 1,
             "messageText": "Cannot find name 'P'.",
             "category": 1,
@@ -1525,7 +1549,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4863,
+            "start": 4858,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1533,15 +1557,15 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4865,
-            "length": 7,
-            "messageText": "'MapType' only refers to a type, but is being used as a value here.",
+            "start": 4860,
+            "length": 11,
+            "messageText": "'MapTypeLong' only refers to a type, but is being used as a value here.",
             "category": 1,
             "code": 2693
           },
           {
             "file": "./src/math.ts",
-            "start": 4873,
+            "start": 4872,
             "length": 1,
             "messageText": "Cannot find name 'a'.",
             "category": 1,
@@ -1549,7 +1573,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4875,
+            "start": 4874,
             "length": 2,
             "messageText": "Cannot find name 'mt'.",
             "category": 1,
@@ -1557,7 +1581,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4879,
+            "start": 4878,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1565,7 +1589,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4881,
+            "start": 4880,
             "length": 8,
             "messageText": "Cannot find name '_BaseMap'.",
             "category": 1,
@@ -1573,7 +1597,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4890,
+            "start": 4889,
             "length": 1,
             "messageText": "Cannot find name 'b'.",
             "category": 1,
@@ -1581,7 +1605,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 4892,
+            "start": 4891,
             "length": 2,
             "messageText": "Cannot find name 'mt'.",
             "category": 1,
@@ -1589,7 +1613,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5080,
+            "start": 5079,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1597,7 +1621,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5082,
+            "start": 5081,
             "length": 1,
             "messageText": "Cannot find name 's'.",
             "category": 1,
@@ -1605,7 +1629,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5431,
+            "start": 5430,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1613,7 +1637,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5433,
+            "start": 5432,
             "length": 1,
             "messageText": "Cannot find name 's'.",
             "category": 1,
@@ -1621,7 +1645,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5799,
+            "start": 5798,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1629,7 +1653,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 5801,
+            "start": 5800,
             "length": 1,
             "messageText": "Cannot find name 's'.",
             "category": 1,
@@ -1637,7 +1661,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 6158,
+            "start": 6157,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1645,7 +1669,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 6160,
+            "start": 6159,
             "length": 1,
             "messageText": "Cannot find name 's'.",
             "category": 1,
@@ -1653,7 +1677,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 8212,
+            "start": 8215,
             "length": 1,
             "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
             "category": 1,
@@ -1661,7 +1685,7 @@
           },
           {
             "file": "./src/math.ts",
-            "start": 8214,
+            "start": 8217,
             "length": 1,
             "messageText": "Cannot find name 'a'.",
             "category": 1,
@@ -1669,7 +1693,19 @@
           }
         ]
       ],
-      "./src/objecttype.ts",
+      [
+        "./src/objecttype.ts",
+        [
+          {
+            "file": "./src/objecttype.ts",
+            "start": 2930,
+            "length": 19,
+            "messageText": "Type 'MapTypeLong' is not generic.",
+            "category": 1,
+            "code": 2315
+          }
+        ]
+      ],
       [
         "./src/string.ts",
         [
@@ -3724,7 +3760,15 @@
           },
           {
             "file": "./src/test.ts",
-            "start": 670,
+            "start": 114,
+            "length": 3,
+            "messageText": "Module '\".\"' has no exported member 'OCT'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 697,
             "length": 52,
             "messageText": "Type parameter 'H' has a circular default.",
             "category": 1,
@@ -3732,7 +3776,7 @@
           },
           {
             "file": "./src/test.ts",
-            "start": 961,
+            "start": 988,
             "length": 4,
             "code": 2339,
             "category": 1,

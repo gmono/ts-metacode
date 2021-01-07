@@ -91,9 +91,18 @@ type MapTypeTree<T,A extends any[]>=A extends [infer left,infer right]?
  * never表示出错
  * 类型不变表示没找到(也可能是存在恒等映射)
  * ! 日后将区分找不到和恒等映射的情况
- * 
+ * ! 注意 MapType遇到Object时会不正常，返回never ，建议使用MapTypeLong 替代
  * ! 这是MapType的二叉树实现,即二分实现,原始的MapType
+ * @deprecated
  */
 export type MapType<T,A extends any[]>=MapTypeTree<T,Tree<A>>;
 
+type BaseTypeMap = [
+    
+    [String, string],
+    [Number, number],
+    [Object, object],
+  ]
+type a=MapType<String,BaseTypeMap>
+type s=Tree<[[1,2],[3,4]]>
 //maptype现在支持长度为15个了 以前为12个 稍有进步
