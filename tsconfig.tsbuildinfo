@@ -1,264 +1,269 @@
 {
   "program": {
     "fileInfos": {
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es5.d.ts": {
-        "version": "9622e8bd7cc72a7dab819a8011ecbf81d443638082e5cb99ecf2e75ff56ffc9d",
-        "signature": "9622e8bd7cc72a7dab819a8011ecbf81d443638082e5cb99ecf2e75ff56ffc9d",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "c9a1f03d6ba0fe3c871eb0dd81622e78fbb61ade70878b34d48a341a690c59e9",
+        "signature": "c9a1f03d6ba0fe3c871eb0dd81622e78fbb61ade70878b34d48a341a690c59e9",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.d.ts": {
         "version": "dc47c4fa66b9b9890cf076304de2a9c5201e94b740cffdf09f87296d877d71f6",
         "signature": "dc47c4fa66b9b9890cf076304de2a9c5201e94b740cffdf09f87296d877d71f6",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2016.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2016.d.ts": {
         "version": "7a387c58583dfca701b6c85e0adaf43fb17d590fb16d5b2dc0a2fbd89f35c467",
         "signature": "7a387c58583dfca701b6c85e0adaf43fb17d590fb16d5b2dc0a2fbd89f35c467",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.d.ts": {
         "version": "8a12173c586e95f4433e0c6dc446bc88346be73ffe9ca6eec7aa63c8f3dca7f9",
         "signature": "8a12173c586e95f4433e0c6dc446bc88346be73ffe9ca6eec7aa63c8f3dca7f9",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.d.ts": {
         "version": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
         "signature": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2019.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.d.ts": {
         "version": "e6b724280c694a9f588847f754198fb96c43d805f065c3a5b28bbc9594541c84",
         "signature": "e6b724280c694a9f588847f754198fb96c43d805f065c3a5b28bbc9594541c84",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.d.ts": {
-        "version": "e21c071ca3e1b4a815d5f04a7475adcaeea5d64367e840dd0154096d705c3940",
-        "signature": "e21c071ca3e1b4a815d5f04a7475adcaeea5d64367e840dd0154096d705c3940",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.d.ts": {
+        "version": "666172ccd045546f9b6d099744da9b822357e393c9fe67c34d3f44eabdf15723",
+        "signature": "666172ccd045546f9b6d099744da9b822357e393c9fe67c34d3f44eabdf15723",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.esnext.d.ts": {
-        "version": "fc7a21dd3ee27fd0a9ff1c46534efcd9c3cec51a445b479bb326d871c0aa8302",
-        "signature": "fc7a21dd3ee27fd0a9ff1c46534efcd9c3cec51a445b479bb326d871c0aa8302",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.d.ts": {
+        "version": "2f8f379dedbdbd96a38a1e445cb3919853a1157a950fd977f85808db8d0f8a58",
+        "signature": "2f8f379dedbdbd96a38a1e445cb3919853a1157a950fd977f85808db8d0f8a58",
         "affectsGlobalScope": false
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.core.d.ts": {
         "version": "46ee15e9fefa913333b61eaf6b18885900b139867d89832a515059b62cf16a17",
         "signature": "46ee15e9fefa913333b61eaf6b18885900b139867d89832a515059b62cf16a17",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
         "version": "43fb1d932e4966a39a41b464a12a81899d9ae5f2c829063f5571b6b87e6d2f9c",
         "signature": "43fb1d932e4966a39a41b464a12a81899d9ae5f2c829063f5571b6b87e6d2f9c",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
         "version": "cdccba9a388c2ee3fd6ad4018c640a471a6c060e96f1232062223063b0a5ac6a",
         "signature": "cdccba9a388c2ee3fd6ad4018c640a471a6c060e96f1232062223063b0a5ac6a",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
-        "version": "8b2a5df1ce95f78f6b74f1a555ccdb6baab0486b42d8345e0871dd82811f9b9a",
-        "signature": "8b2a5df1ce95f78f6b74f1a555ccdb6baab0486b42d8345e0871dd82811f9b9a",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "42f5e41e5893da663dbf0394268f54f1da4b43dc0ddd2ea4bf471fe5361d6faf",
+        "signature": "42f5e41e5893da663dbf0394268f54f1da4b43dc0ddd2ea4bf471fe5361d6faf",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
-        "version": "2bb4b3927299434052b37851a47bf5c39764f2ba88a888a107b32262e9292b7c",
-        "signature": "2bb4b3927299434052b37851a47bf5c39764f2ba88a888a107b32262e9292b7c",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "0b7a905675e6cb4211c128f0a3aa47d414b275180a299a9aad5d3ec298abbfc4",
+        "signature": "0b7a905675e6cb4211c128f0a3aa47d414b275180a299a9aad5d3ec298abbfc4",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
-        "version": "7207e317a2cb07a177e7d963ab7b8c0e85dde7f9ddb50351f830239bf597569e",
-        "signature": "7207e317a2cb07a177e7d963ab7b8c0e85dde7f9ddb50351f830239bf597569e",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "dfff68b3c34338f6b307a25d4566de15eed7973b0dc5d69f9fde2bcac1c25315",
+        "signature": "dfff68b3c34338f6b307a25d4566de15eed7973b0dc5d69f9fde2bcac1c25315",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
         "version": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
         "signature": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
         "version": "3013574108c36fd3aaca79764002b3717da09725a36a6fc02eac386593110f93",
         "signature": "3013574108c36fd3aaca79764002b3717da09725a36a6fc02eac386593110f93",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
-        "version": "9d122b7e8c1a5c72506eea50c0973cba55b92b5532d5cafa8a6ce2c547d57551",
-        "signature": "9d122b7e8c1a5c72506eea50c0973cba55b92b5532d5cafa8a6ce2c547d57551",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "4670208dd7da9d6c774ab1b75c1527a810388c7989c4905de6aaea8561cb9dce",
+        "signature": "4670208dd7da9d6c774ab1b75c1527a810388c7989c4905de6aaea8561cb9dce",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
         "version": "3be5a1453daa63e031d266bf342f3943603873d890ab8b9ada95e22389389006",
         "signature": "3be5a1453daa63e031d266bf342f3943603873d890ab8b9ada95e22389389006",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.object.d.ts": {
         "version": "17bb1fc99591b00515502d264fa55dc8370c45c5298f4a5c2083557dccba5a2a",
         "signature": "17bb1fc99591b00515502d264fa55dc8370c45c5298f4a5c2083557dccba5a2a",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
-        "version": "7ce9f0bde3307ca1f944119f6365f2d776d281a393b576a18a2f2893a2d75c98",
-        "signature": "7ce9f0bde3307ca1f944119f6365f2d776d281a393b576a18a2f2893a2d75c98",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b5e4c2d67aa844ed503b29cd4ca2ede1a229ac7fe874613b2c996fa9c581a25f",
+        "signature": "b5e4c2d67aa844ed503b29cd4ca2ede1a229ac7fe874613b2c996fa9c581a25f",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.string.d.ts": {
         "version": "6a6b173e739a6a99629a8594bfb294cc7329bfb7b227f12e1f7c11bc163b8577",
         "signature": "6a6b173e739a6a99629a8594bfb294cc7329bfb7b227f12e1f7c11bc163b8577",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
         "version": "12a310447c5d23c7d0d5ca2af606e3bd08afda69100166730ab92c62999ebb9d",
         "signature": "12a310447c5d23c7d0d5ca2af606e3bd08afda69100166730ab92c62999ebb9d",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
         "version": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
         "signature": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
         "version": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
         "signature": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
         "version": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
         "signature": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
         "version": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
         "signature": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
         "version": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
         "signature": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
         "version": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
         "signature": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2019.array.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.array.d.ts": {
         "version": "9d57b2b5d15838ed094aa9ff1299eecef40b190722eb619bac4616657a05f951",
         "signature": "9d57b2b5d15838ed094aa9ff1299eecef40b190722eb619bac4616657a05f951",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2019.object.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.object.d.ts": {
         "version": "6c51b5dd26a2c31dbf37f00cfc32b2aa6a92e19c995aefb5b97a3a64f1ac99de",
         "signature": "6c51b5dd26a2c31dbf37f00cfc32b2aa6a92e19c995aefb5b97a3a64f1ac99de",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2019.string.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.string.d.ts": {
         "version": "93544ca2f26a48716c1b6c5091842cad63129daac422dfa4bc52460465f22bb1",
         "signature": "93544ca2f26a48716c1b6c5091842cad63129daac422dfa4bc52460465f22bb1",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
         "version": "2ad234885a4240522efccd77de6c7d99eecf9b4de0914adb9a35c0c22433f993",
         "signature": "2ad234885a4240522efccd77de6c7d99eecf9b4de0914adb9a35c0c22433f993",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.bigint.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.bigint.d.ts": {
         "version": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
         "signature": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.promise.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.promise.d.ts": {
         "version": "7435b75fdf3509622e79622dbe5091cf4b09688410ee2034e4fc17d0c99d0862",
         "signature": "7435b75fdf3509622e79622dbe5091cf4b09688410ee2034e4fc17d0c99d0862",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts": {
-        "version": "e7e8e1d368290e9295ef18ca23f405cf40d5456fa9f20db6373a61ca45f75f40",
-        "signature": "e7e8e1d368290e9295ef18ca23f405cf40d5456fa9f20db6373a61ca45f75f40",
-        "affectsGlobalScope": true
-      },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.string.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.string.d.ts": {
         "version": "faf0221ae0465363c842ce6aa8a0cbda5d9296940a8e26c86e04cc4081eea21e",
         "signature": "faf0221ae0465363c842ce6aa8a0cbda5d9296940a8e26c86e04cc4081eea21e",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts": {
         "version": "936d7d2e8851af9ccfa5333b15e877a824417d352b1d7fd06388639dc69ef80a",
         "signature": "936d7d2e8851af9ccfa5333b15e877a824417d352b1d7fd06388639dc69ef80a",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.es2020.intl.d.ts": {
-        "version": "31e8df2398e328077079c17ea4f1664bad0a34adf8b0608837e504e310e329a1",
-        "signature": "31e8df2398e328077079c17ea4f1664bad0a34adf8b0608837e504e310e329a1",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.intl.d.ts": {
+        "version": "905b020308ed3bd9cd2457f5a4def1844620d48020cec405cafb4e86b3194af1",
+        "signature": "905b020308ed3bd9cd2457f5a4def1844620d48020cec405cafb4e86b3194af1",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
         "version": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.esnext.string.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.string.d.ts": {
         "version": "fb4416144c1bf0323ccbc9afb0ab289c07312214e8820ad17d709498c865a3fe",
         "signature": "fb4416144c1bf0323ccbc9afb0ab289c07312214e8820ad17d709498c865a3fe",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.esnext.promise.d.ts": {
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.promise.d.ts": {
         "version": "cd6efb9467a8b6338ece2e2855e37765700f2cd061ca54b01b33878cf5c7677e",
         "signature": "cd6efb9467a8b6338ece2e2855e37765700f2cd061ca54b01b33878cf5c7677e",
         "affectsGlobalScope": true
       },
-      "c:/programdata/nvm/v14.14.0/node_modules/typescript/lib/lib.esnext.weakref.d.ts": {
-        "version": "1e61418f41d404e744b6536af9f8c6f6674dd4d54c12335cd0c4f7eded69cf3f",
-        "signature": "1e61418f41d404e744b6536af9f8c6f6674dd4d54c12335cd0c4f7eded69cf3f",
-        "affectsGlobalScope": true
-      },
-      "./string.ts": {
+      "./src/string.ts": {
         "version": "1866723224f0fdac55decaef32494c254f9b47a30391699e852311dabad2fcda",
-        "signature": "19d2de9a7578f8afc10c7bf40639e728b5b7d1f58eb5629ca787e929f7bc4dc7",
+        "signature": "c3f972309f0ee93db65437ad171668ec4a7dd12f2d980357ad619ec4fd2eb616",
         "affectsGlobalScope": false
       },
-      "./tree.ts": {
+      "./src/tree.ts": {
         "version": "2d7296d4f322af60fc02ab57051f7d6b7f6301f3379deabe900171ee033a25eb",
         "signature": "cf64823269bd0bada7debcace1c875b4369d7acf3bb7dbc15f82e6a44738edc9",
         "affectsGlobalScope": false
       },
-      "./common.ts": {
+      "./src/common.ts": {
         "version": "1169e19763b20a77808d1274817044f3940aa6f7aa34934e9659f81e7b7351ca",
         "signature": "5e24ab43a2df3bb464d74d61f73e49394fd85343c87daca4ddec08cfdea7df41",
         "affectsGlobalScope": false
       },
-      "./logic.ts": {
+      "./src/logic.ts": {
         "version": "5e9dd07164b294130f2d4d8a1edb0ef27a7dd463d45085b8e8ed5476ed577b18",
         "signature": "710def516cea9df595d039e1af9ca444495275de02fb07117f56212c4ea3f1dc",
         "affectsGlobalScope": false
       },
-      "./math.ts": {
+      "./src/math.ts": {
         "version": "fd1ae3b1b42de42794228688552f94fd79fa31e102f2cf57ae35b27c1b2143af",
-        "signature": "df1e1ad2e108604d1d5562cb089a783a045e94ce08d5287956f41396de21cd0b",
+        "signature": "eaac3c4c10b4a36ce327338c10970d8ab296788494091dd6584d6e806fdb3995",
         "affectsGlobalScope": false
       },
-      "./objecttype.ts": {
+      "./src/objecttype.ts": {
         "version": "6c3bdcb026a90649dab96cf7aec9e7bb41f7dc8e973fed50fe383e4dffbd064a",
         "signature": "8cf4dfe4187786f1e2cf892e0861bc6a555f0893c1d2851adde4b8613e450308",
         "affectsGlobalScope": false
       },
-      "./index.ts": {
+      "./node_modules/typescript-tuple/lib/utils.d.ts": {
+        "version": "a3f06b53a26b1933320e9be096eb7a7afe52b8ad6062337a96139141b166fc3d",
+        "signature": "a3f06b53a26b1933320e9be096eb7a7afe52b8ad6062337a96139141b166fc3d",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/typescript-tuple/lib/index.d.ts": {
+        "version": "3e443741d4825adf1252712f8a072aa7f25480c6484a5bf5b4b31dda39804b4a",
+        "signature": "3e443741d4825adf1252712f8a072aa7f25480c6484a5bf5b4b31dda39804b4a",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/typescript-tuple/index.d.ts": {
+        "version": "6f308b141358ac799edc3e83e887441852205dc1348310d30b62c69438b93ca0",
+        "signature": "6f308b141358ac799edc3e83e887441852205dc1348310d30b62c69438b93ca0",
+        "affectsGlobalScope": false
+      },
+      "./src/index.ts": {
         "version": "16e6c1532e25dc185a8c839100daf472256859fbe816fd6df62444c6d9b80e4b",
         "signature": "19817b948766d9d3c8752c2e8a3ba1973b412270c38ccab5719fb8c74af49274",
         "affectsGlobalScope": false
       },
-      "./array.ts": {
+      "./src/array.ts": {
         "version": "a083075283b9a9ffbe78ac117a812873a6fa134f5b8dda4521d42a8280f049a3",
         "signature": "bbb90bcc819cefaf91f7746e16d35ab00fb9a4f8dd8b82cbf46a0d12bfab8653",
         "affectsGlobalScope": false
       },
-      "./test.ts": {
-        "version": "0450c715dd5cf1b42e15d397f0f60788fd2312a45af10434d9c0b662fdea8b31",
+      "./src/test.ts": {
+        "version": "dbe6fdb7aa01e348b3c42a87e403ee0fc0904faed6c52b5b7e4ce71f9f631a9e",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       },
-      "./types.ts": {
+      "./src/types.ts": {
         "version": "70e3a994e260c7673fe0504379be6f0c43aa13154fbe3aa8689eb8d01f467b2e",
-        "signature": "afbe46696554f61792fdbca5712e1a940a64cf0e421625fdb4f629113537e91e",
+        "signature": "26bdb2782a935932306c36f372cb10802bbdfb8891782f2716ec1e709d10ff22",
         "affectsGlobalScope": false
       }
     },
@@ -281,97 +286,3772 @@
       "emitDecoratorMetadata": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
+      "pretty": false,
+      "noEmit": true,
       "watch": true,
+      "listFiles": true,
+      "project": "./tsconfig.json",
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
-      "./array.ts": [
-        "./index.ts",
-        "./math.ts",
-        "./string.ts"
+      "./node_modules/typescript-tuple/index.d.ts": [
+        "./node_modules/typescript-tuple/lib/index.d.ts"
       ],
-      "./common.ts": [
-        "./array.ts",
-        "./index.ts",
-        "./math.ts",
-        "./tree.ts"
+      "./node_modules/typescript-tuple/lib/index.d.ts": [
+        "./node_modules/typescript-tuple/lib/utils.d.ts"
       ],
-      "./index.ts": [
-        "./array.ts",
-        "./common.ts",
-        "./logic.ts",
-        "./math.ts",
-        "./objecttype.ts",
-        "./string.ts",
-        "./tree.ts"
+      "./src/array.ts": [
+        "./src/index.ts",
+        "./src/math.ts",
+        "./src/string.ts"
       ],
-      "./logic.ts": [
-        "./index.ts"
+      "./src/common.ts": [
+        "./src/array.ts",
+        "./src/index.ts",
+        "./src/math.ts",
+        "./src/tree.ts"
       ],
-      "./math.ts": [
-        "./array.ts",
-        "./common.ts",
-        "./index.ts",
-        "./logic.ts",
-        "./string.ts"
+      "./src/index.ts": [
+        "./node_modules/typescript-tuple/index.d.ts",
+        "./src/array.ts",
+        "./src/common.ts",
+        "./src/logic.ts",
+        "./src/math.ts",
+        "./src/objecttype.ts",
+        "./src/string.ts",
+        "./src/tree.ts"
       ],
-      "./objecttype.ts": [
-        "./index.ts"
+      "./src/logic.ts": [
+        "./src/index.ts"
       ],
-      "./string.ts": [
-        "./array.ts",
-        "./math.ts"
+      "./src/math.ts": [
+        "./src/array.ts",
+        "./src/common.ts",
+        "./src/index.ts",
+        "./src/logic.ts",
+        "./src/string.ts"
       ],
-      "./test.ts": [
-        "./index.ts",
-        "./logic.ts"
+      "./src/objecttype.ts": [
+        "./src/index.ts"
       ],
-      "./types.ts": [
-        "./array.ts",
-        "./math.ts",
-        "./string.ts"
+      "./src/string.ts": [
+        "./src/array.ts",
+        "./src/math.ts"
+      ],
+      "./src/test.ts": [
+        "./src/index.ts",
+        "./src/logic.ts"
+      ],
+      "./src/types.ts": [
+        "./src/array.ts",
+        "./src/math.ts",
+        "./src/string.ts"
       ]
     },
     "exportedModulesMap": {
-      "./array.ts": [
-        "./index.ts",
-        "./math.ts"
+      "./node_modules/typescript-tuple/index.d.ts": [
+        "./node_modules/typescript-tuple/lib/index.d.ts"
       ],
-      "./common.ts": [
-        "./array.ts",
-        "./index.ts",
-        "./math.ts",
-        "./tree.ts"
+      "./node_modules/typescript-tuple/lib/index.d.ts": [
+        "./node_modules/typescript-tuple/lib/utils.d.ts"
       ],
-      "./index.ts": [
-        "./array.ts",
-        "./common.ts",
-        "./logic.ts",
-        "./math.ts",
-        "./objecttype.ts",
-        "./string.ts",
-        "./tree.ts"
+      "./src/array.ts": [
+        "./src/index.ts",
+        "./src/math.ts"
       ],
-      "./logic.ts": [
-        "./index.ts"
+      "./src/common.ts": [
+        "./src/array.ts",
+        "./src/index.ts",
+        "./src/math.ts",
+        "./src/tree.ts"
       ],
-      "./math.ts": [
-        "./array.ts",
-        "./common.ts",
-        "./index.ts",
-        "./logic.ts",
-        "./string.ts"
+      "./src/index.ts": [
+        "./node_modules/typescript-tuple/index.d.ts",
+        "./src/array.ts",
+        "./src/common.ts",
+        "./src/logic.ts",
+        "./src/math.ts",
+        "./src/objecttype.ts",
+        "./src/string.ts",
+        "./src/tree.ts"
       ],
-      "./objecttype.ts": [
-        "./index.ts"
+      "./src/logic.ts": [
+        "./src/index.ts"
       ],
-      "./types.ts": [
-        "./array.ts",
-        "./math.ts",
-        "./string.ts"
+      "./src/objecttype.ts": [
+        "./src/index.ts"
       ]
     },
-    "semanticDiagnosticsPerFile": []
+    "semanticDiagnosticsPerFile": [
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2016.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.intl.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.promise.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.string.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es5.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.promise.d.ts",
+      "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.string.d.ts",
+      "./node_modules/typescript-tuple/index.d.ts",
+      "./node_modules/typescript-tuple/lib/index.d.ts",
+      "./node_modules/typescript-tuple/lib/utils.d.ts",
+      [
+        "./src/array.ts",
+        [
+          {
+            "file": "./src/array.ts",
+            "start": 158,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'Zero'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 164,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'SNum'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 170,
+            "length": 6,
+            "messageText": "Module '\"./math\"' has no exported member 'sEqual'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 178,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sDec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 184,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'OCT'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 189,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sInc'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 195,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'One'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 200,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'Dec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 205,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'Bin'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 210,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sAdd'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 216,
+            "length": 9,
+            "messageText": "Module '\"./math\"' has no exported member 'sMoreThan'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 227,
+            "length": 12,
+            "messageText": "Module '\"./math\"' has no exported member 'sMoreOrEqual'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 241,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sDiv'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 247,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sSub'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 495,
+            "length": 3,
+            "messageText": "Type alias 'Zip' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 579,
+            "length": 9,
+            "messageText": "Type 'Zip' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 1540,
+            "length": 39,
+            "messageText": "Type 'ReplaceAll' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 1596,
+            "length": 16,
+            "messageText": "Type 'Skip' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 1623,
+            "length": 14,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2205,
+            "length": 10,
+            "messageText": "Type alias 'RemoveSame' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2331,
+            "length": 21,
+            "messageText": "Type 'RemoveSame' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2461,
+            "length": 13,
+            "messageText": "Type alias 'RemoveAllSame' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2510,
+            "length": 15,
+            "messageText": "Type 'RemoveSame' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2545,
+            "length": 32,
+            "messageText": "Type 'RemoveAllSame' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2559,
+            "length": 15,
+            "messageText": "Type 'RemoveSame' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2611,
+            "length": 10,
+            "messageText": "Type alias 'ReplaceOne' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2731,
+            "length": 23,
+            "messageText": "Type 'ReplaceOne' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2861,
+            "length": 10,
+            "messageText": "Type alias 'ReplaceAll' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 2981,
+            "length": 23,
+            "messageText": "Type 'ReplaceAll' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3023,
+            "length": 32,
+            "messageText": "Type 'ReplaceAll' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3104,
+            "length": 7,
+            "messageText": "Type alias 'IndexOf' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3255,
+            "length": 32,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3512,
+            "length": 3,
+            "messageText": "Type alias 'Get' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3583,
+            "length": 22,
+            "messageText": "Type 'Get' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3624,
+            "length": 6,
+            "messageText": "Type alias '_Slice' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3699,
+            "length": 27,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3971,
+            "length": 15,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 3987,
+            "length": 13,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 4013,
+            "length": 44,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 4020,
+            "length": 28,
+            "messageText": "Type 'Range' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 4336,
+            "length": 13,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 4363,
+            "length": 13,
+            "messageText": "Type '_Slice' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5406,
+            "length": 6,
+            "messageText": "Type alias 'Filter' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5587,
+            "length": 14,
+            "messageText": "Type 'Filter' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5638,
+            "length": 14,
+            "messageText": "Type 'Filter' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5698,
+            "length": 17,
+            "messageText": "Type alias 'DeleteSameElement' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5784,
+            "length": 20,
+            "messageText": "Type 'DeleteSameElement' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 5964,
+            "length": 4,
+            "messageText": "Type alias 'Skip' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 6042,
+            "length": 25,
+            "messageText": "Type 'Skip' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 6271,
+            "length": 5,
+            "messageText": "Type alias 'Range' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 6465,
+            "length": 53,
+            "messageText": "Type 'Range' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7296,
+            "length": 12,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7344,
+            "length": 12,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7373,
+            "length": 12,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7410,
+            "length": 10,
+            "messageText": "Type alias 'SplitArray' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7456,
+            "length": 12,
+            "messageText": "Type 'IndexOf' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7509,
+            "length": 28,
+            "messageText": "Type 'SplitArray' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7563,
+            "length": 37,
+            "messageText": "Type 'SplitArray' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7610,
+            "length": 9,
+            "messageText": "Type alias 'JoinArray' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7706,
+            "length": 20,
+            "messageText": "Type 'JoinArray' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/array.ts",
+            "start": 7743,
+            "length": 18,
+            "messageText": "Type 'JoinArray' is not generic.",
+            "category": 1,
+            "code": 2315
+          }
+        ]
+      ],
+      [
+        "./src/common.ts",
+        [
+          {
+            "file": "./src/common.ts",
+            "start": 83,
+            "length": 3,
+            "messageText": "Module '\".\"' declares 'Dec' locally, but it is not exported.",
+            "category": 1,
+            "code": 2459,
+            "relatedInformation": [
+              {
+                "file": "./src/index.ts",
+                "start": 62,
+                "length": 3,
+                "messageText": "'Dec' is declared here.",
+                "category": 3,
+                "code": 2728
+              }
+            ]
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 88,
+            "length": 9,
+            "messageText": "Module '\".\"' has no exported member 'sMoreThan'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 99,
+            "length": 3,
+            "messageText": "Module '\".\"' has no exported member 'Ten'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 104,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'Zero'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 131,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'SNum'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 739,
+            "length": 8,
+            "messageText": "Type alias '_MapType' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 925,
+            "length": 13,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1109,
+            "length": 11,
+            "messageText": "Type alias 'MapTypeLong' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1172,
+            "length": 29,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1257,
+            "length": 31,
+            "messageText": "Type 'MapTypeLong' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1291,
+            "length": 13,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1306,
+            "length": 29,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 1394,
+            "length": 546,
+            "messageText": "Type 'MapTypeLong' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2080,
+            "length": 11,
+            "messageText": "Type alias 'MapTypeTree' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2292,
+            "length": 19,
+            "messageText": "Type 'MapTypeTree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2322,
+            "length": 20,
+            "messageText": "Type 'MapTypeTree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2353,
+            "length": 19,
+            "messageText": "Type 'MapTypeTree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2380,
+            "length": 15,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2396,
+            "length": 15,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2443,
+            "length": 15,
+            "messageText": "Type '_MapType' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2619,
+            "length": 22,
+            "messageText": "Type 'MapTypeTree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/common.ts",
+            "start": 2633,
+            "length": 7,
+            "messageText": "Type 'Tree' is not generic.",
+            "category": 1,
+            "code": 2315
+          }
+        ]
+      ],
+      [
+        "./src/index.ts",
+        [
+          {
+            "file": "./src/index.ts",
+            "start": 62,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'Dec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/index.ts",
+            "start": 67,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sAdd'.",
+            "category": 1,
+            "code": 2305
+          }
+        ]
+      ],
+      [
+        "./src/logic.ts",
+        [
+          {
+            "file": "./src/logic.ts",
+            "start": 887,
+            "length": 8,
+            "messageText": "Type 'Zip' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/logic.ts",
+            "start": 1967,
+            "length": 3,
+            "messageText": "Type alias 'ALL' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/logic.ts",
+            "start": 2083,
+            "length": 9,
+            "messageText": "Type 'ALL' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/logic.ts",
+            "start": 2153,
+            "length": 11,
+            "messageText": "Type 'ALL' is not generic.",
+            "category": 1,
+            "code": 2315
+          }
+        ]
+      ],
+      [
+        "./src/math.ts",
+        [
+          {
+            "file": "./src/math.ts",
+            "start": 156,
+            "length": 5,
+            "messageText": "Module '\"./string\"' has no exported member 'Split'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 477,
+            "length": 5,
+            "messageText": "Cannot find name 'infer'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 483,
+            "length": 4,
+            "messageText": "Cannot find name 'tail'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 561,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 563,
+            "length": 5,
+            "messageText": "Cannot find name 'infer'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 569,
+            "length": 4,
+            "messageText": "Cannot find name 'tail'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 574,
+            "length": 777,
+            "messageText": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+            "category": 1,
+            "code": 2362
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1352,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1354,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1665,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1667,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1675,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1678,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1680,
+            "length": 5,
+            "messageText": "Cannot find name 'infer'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1686,
+            "length": 3,
+            "messageText": "Cannot find name 'ANY'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1690,
+            "length": 1,
+            "messageText": "Cannot find name 'x'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1954,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1956,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1964,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 1967,
+            "length": 1,
+            "messageText": "Cannot find name 'x'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2027,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2029,
+            "length": 5,
+            "messageText": "Cannot find name 'infer'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2035,
+            "length": 1,
+            "messageText": "Cannot find name 'T'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2037,
+            "length": 1,
+            "messageText": "Cannot find name 'x'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2103,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2105,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2113,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2116,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2118,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2126,
+            "length": 1,
+            "messageText": "Cannot find name 'P'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2203,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2205,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2213,
+            "length": 1,
+            "messageText": "Cannot find name 'P'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2216,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2218,
+            "length": 5,
+            "messageText": "Cannot find name 'infer'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2224,
+            "length": 1,
+            "messageText": "Cannot find name 'T'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2346,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2348,
+            "length": 7,
+            "messageText": "Cannot find name '__ToNum'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2356,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2359,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2361,
+            "length": 4,
+            "messageText": "Cannot find name 'sMul'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2366,
+            "length": 1,
+            "messageText": "Cannot find name 'R'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2368,
+            "length": 4,
+            "messageText": "Cannot find name 'sDec'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 2373,
+            "length": 1,
+            "messageText": "Cannot find name 'P'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4863,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4865,
+            "length": 7,
+            "messageText": "'MapType' only refers to a type, but is being used as a value here.",
+            "category": 1,
+            "code": 2693
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4873,
+            "length": 1,
+            "messageText": "Cannot find name 'a'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4875,
+            "length": 2,
+            "messageText": "Cannot find name 'mt'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4879,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4881,
+            "length": 8,
+            "messageText": "Cannot find name '_BaseMap'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4890,
+            "length": 1,
+            "messageText": "Cannot find name 'b'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 4892,
+            "length": 2,
+            "messageText": "Cannot find name 'mt'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5080,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5082,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5431,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5433,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5799,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 5801,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 6158,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 6160,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 8212,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/math.ts",
+            "start": 8214,
+            "length": 1,
+            "messageText": "Cannot find name 'a'.",
+            "category": 1,
+            "code": 2304
+          }
+        ]
+      ],
+      "./src/objecttype.ts",
+      [
+        "./src/string.ts",
+        [
+          {
+            "file": "./src/string.ts",
+            "start": 9,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'One'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 14,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'Dec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 19,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sAdd'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 25,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'sInc'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 336,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 341,
+            "length": 4,
+            "messageText": "Cannot find name 'rest'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 354,
+            "length": 11,
+            "messageText": "'CanBeString' only refers to a type, but is being used as a value here.",
+            "category": 1,
+            "code": 2693
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 372,
+            "length": 1,
+            "messageText": "Cannot find name 's'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 376,
+            "length": 3,
+            "messageText": "Cannot find name 'sep'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 382,
+            "length": 4,
+            "messageText": "'JOIN' only refers to a type, but is being used as a value here.",
+            "category": 1,
+            "code": 2693
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 387,
+            "length": 4,
+            "messageText": "Cannot find name 'rest'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 392,
+            "length": 3,
+            "messageText": "Cannot find name 'sep'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 520,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 522,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 528,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'cont'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 533,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 535,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'sep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 539,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 540,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 541,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 547,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 891,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 893,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 899,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 901,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 902,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 903,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 909,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 919,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 921,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 925,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 926,
+            "length": 25,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ FillWithChar1<rest, rep>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1034,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1036,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1042,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1044,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1046,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1052,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1055,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1056,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1057,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1063,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1073,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1075,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1079,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1081,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1085,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1086,
+            "length": 25,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ FillWithChar2<rest, rep>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1215,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1217,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1223,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1225,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1227,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1233,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1236,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1238,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1244,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1246,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1248,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1254,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1257,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1258,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1259,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1265,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1275,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1277,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1281,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1283,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1287,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1289,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1293,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1295,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1299,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1300,
+            "length": 25,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ FillWithChar4<rest, rep>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1576,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1578,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1584,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1586,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1588,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1594,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1597,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1599,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1605,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1607,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1609,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1615,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1618,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1620,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1626,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1628,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1630,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1636,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1639,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1641,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1647,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1649,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1651,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1657,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1660,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1661,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1662,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1668,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1678,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1680,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1684,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1686,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1690,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1692,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1696,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1698,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1702,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1704,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1708,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1710,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1714,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1716,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1720,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1722,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1726,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1727,
+            "length": 24,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ FillWithChar<rest, rep>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1858,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1860,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1866,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1868,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1870,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1876,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1879,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1881,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1887,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1889,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1891,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1897,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1900,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1902,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1908,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1910,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1912,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1918,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1921,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1923,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1929,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1931,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1933,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1939,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1942,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1944,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1950,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1952,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1954,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1960,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1963,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1965,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1971,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1973,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1975,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1981,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1984,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1986,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1992,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1994,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 1996,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2002,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2005,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2007,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2013,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'F'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2015,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2017,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2023,
+            "length": 2,
+            "messageText": "No value exists in scope for the shorthand property 'ff'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2026,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2027,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2028,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2034,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2044,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2046,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2050,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2052,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2056,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2058,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2062,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2064,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2068,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2070,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2074,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2076,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2080,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2082,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2086,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2088,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2092,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2094,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2098,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2100,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2104,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2106,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2110,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2112,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2116,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2118,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2122,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2124,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2128,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2130,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2134,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2136,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'rep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2140,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2141,
+            "length": 26,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ FillWithChar16<rest, rep>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2389,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2390,
+            "length": 23,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ Split<x>(): any; \"\": boolean; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2974,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2976,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2982,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'cont'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2987,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2989,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'sep'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2993,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2994,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; rest: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 2995,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3001,
+            "length": 4,
+            "messageText": "No value exists in scope for the shorthand property 'rest'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3287,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3289,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3295,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'a'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3298,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3299,
+            "length": 9,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ infer: any; T: any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3300,
+            "length": 5,
+            "messageText": "No value exists in scope for the shorthand property 'infer'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/string.ts",
+            "start": 3306,
+            "length": 1,
+            "messageText": "No value exists in scope for the shorthand property 'T'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          }
+        ]
+      ],
+      [
+        "./src/test.ts",
+        [
+          {
+            "file": "./src/test.ts",
+            "start": 17,
+            "length": 9,
+            "messageText": "Module '\".\"' has no exported member 'SNumToBin'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 27,
+            "length": 10,
+            "messageText": "Module '\".\"' has no exported member 'LogicToBin'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 49,
+            "length": 9,
+            "messageText": "Module '\".\"' has no exported member 'BinToSNum'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 59,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'sMul'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 64,
+            "length": 6,
+            "messageText": "Module '\".\"' has no exported member 'sEqual'. Did you mean 'Equal'?",
+            "category": 1,
+            "code": 2724
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 74,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'Zero'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 79,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'sDec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 85,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'sDiv'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 91,
+            "length": 11,
+            "messageText": "Module '\".\"' has no exported member 'LogicToSNum'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 104,
+            "length": 3,
+            "messageText": "Module '\".\"' declares 'Dec' locally, but it is not exported.",
+            "category": 1,
+            "code": 2459,
+            "relatedInformation": [
+              {
+                "file": "./src/index.ts",
+                "start": 62,
+                "length": 3,
+                "messageText": "'Dec' is declared here.",
+                "category": 3,
+                "code": 2728
+              }
+            ]
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 108,
+            "length": 4,
+            "messageText": "Module '\".\"' has no exported member 'sSub'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 670,
+            "length": 52,
+            "messageText": "Type parameter 'H' has a circular default.",
+            "category": 1,
+            "code": 2716
+          },
+          {
+            "file": "./src/test.ts",
+            "start": 961,
+            "length": 4,
+            "code": 2339,
+            "category": 1,
+            "messageText": "Property 'test' does not exist on type 'unknown'."
+          }
+        ]
+      ],
+      [
+        "./src/tree.ts",
+        [
+          {
+            "file": "./src/tree.ts",
+            "start": 254,
+            "length": 8,
+            "messageText": "Type alias 'ToDouble' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 419,
+            "length": 14,
+            "messageText": "Type 'ToDouble' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 473,
+            "length": 4,
+            "messageText": "Type alias 'Tree' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 516,
+            "length": 11,
+            "messageText": "Type 'ToDouble' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 576,
+            "length": 17,
+            "messageText": "Type 'Tree' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 581,
+            "length": 11,
+            "messageText": "Type 'ToDouble' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 742,
+            "length": 7,
+            "messageText": "Type alias 'Flatten' circularly references itself.",
+            "category": 1,
+            "code": 2456
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 825,
+            "length": 10,
+            "messageText": "Type 'Flatten' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 947,
+            "length": 13,
+            "messageText": "Type 'Flatten' is not generic.",
+            "category": 1,
+            "code": 2315
+          },
+          {
+            "file": "./src/tree.ts",
+            "start": 964,
+            "length": 14,
+            "messageText": "Type 'Flatten' is not generic.",
+            "category": 1,
+            "code": 2315
+          }
+        ]
+      ],
+      [
+        "./src/types.ts",
+        [
+          {
+            "file": "./src/types.ts",
+            "start": 9,
+            "length": 6,
+            "messageText": "Module '\"./math\"' has no exported member 'sEqual'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 17,
+            "length": 4,
+            "messageText": "Module '\"./math\"' has no exported member 'Zero'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 23,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'One'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 28,
+            "length": 3,
+            "messageText": "Module '\"./math\"' has no exported member 'Dec'.",
+            "category": 1,
+            "code": 2305
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1795,
+            "length": 4,
+            "messageText": "'Head' only refers to a type, but is being used as a value here.",
+            "category": 1,
+            "code": 2693
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1800,
+            "length": 2,
+            "messageText": "Cannot find name 'ar'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1818,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1842,
+            "length": 2,
+            "messageText": "Cannot find name 'ar'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1859,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1860,
+            "length": 26,
+            "messageText": "Operator '<' cannot be applied to types '{ _StringifyArray<Tail>(): any; }' and 'number'.",
+            "category": 1,
+            "code": 2365
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1882,
+            "length": 2,
+            "messageText": "Cannot find name 'ar'.",
+            "category": 1,
+            "code": 2304
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 1982,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 2185,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 2187,
+            "length": 3,
+            "messageText": "No value exists in scope for the shorthand property 'idx'. Either declare one or provide an initializer.",
+            "category": 1,
+            "code": 18004
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 2192,
+            "length": 1,
+            "messageText": "Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i @types/jquery`.",
+            "category": 1,
+            "code": 2581
+          },
+          {
+            "file": "./src/types.ts",
+            "start": 2193,
+            "length": 12,
+            "code": 2349,
+            "category": 1,
+            "messageText": {
+              "messageText": "This expression is not callable.",
+              "category": 1,
+              "code": 2349,
+              "next": [
+                {
+                  "messageText": "Type '{ TypeMap<S>(): any; }' has no call signatures.",
+                  "category": 1,
+                  "code": 2757
+                }
+              ]
+            }
+          }
+        ]
+      ]
+    ],
+    "affectedFilesPendingEmit": [
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2015.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2016.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2017.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2018.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2019.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.es2020.d.ts",
+        1
+      ],
+      [
+        "c:/users/administrator/.vscode/extensions/basarat.god-0.0.99/node_modules/typescript/lib/lib.esnext.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript-tuple/index.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript-tuple/lib/index.d.ts",
+        1
+      ],
+      [
+        "./node_modules/typescript-tuple/lib/utils.d.ts",
+        1
+      ],
+      [
+        "./src/array.ts",
+        1
+      ],
+      [
+        "./src/common.ts",
+        1
+      ],
+      [
+        "./src/index.ts",
+        1
+      ],
+      [
+        "./src/logic.ts",
+        1
+      ],
+      [
+        "./src/math.ts",
+        1
+      ],
+      [
+        "./src/objecttype.ts",
+        1
+      ],
+      [
+        "./src/string.ts",
+        1
+      ],
+      [
+        "./src/test.ts",
+        1
+      ],
+      [
+        "./src/tree.ts",
+        1
+      ],
+      [
+        "./src/types.ts",
+        1
+      ]
+    ]
   },
-  "version": "4.1.3"
+  "version": "4.0.3"
 }
